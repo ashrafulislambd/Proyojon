@@ -21,6 +21,57 @@ const pool = new Pool({
 });
 
 // ==========================================
+// Authentication Endpoints
+// ==========================================
+
+// Register
+app.post('/api/auth/register', async (req, res) => {
+    const { name, email, password, phone, nid, address } = req.body;
+    try {
+        const result = await pool.query(
+            `SELECT * FROM register_user_func($1::VARCHAR, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::TEXT)`,
+            [name, email, password, phone, nid || null, address]
+        );
+
+        const { new_user_id, message } = result.rows[0];
+
+        if (!new_user_id) {
+            return res.status(400).json({ error: message });
+        }
+
+        res.json({ message, userId: new_user_id });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// Login
+app.post('/api/auth/login', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const result = await pool.query(
+            `SELECT * FROM login_user_func($1, $2)`,
+            [email, password]
+        );
+
+        const { user_id, user_name, user_role, message } = result.rows[0];
+
+        if (!user_id) {
+            return res.status(401).json({ error: message });
+        }
+
+        res.json({
+            message,
+            user: { id: user_id, name: user_name, role: user_role }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Login failed' });
+    }
+});
+
+// ==========================================
 // API Endpoints (Logic in PL/SQL)
 // ==========================================
 

@@ -15,6 +15,7 @@ if ($LASTEXITCODE -eq 0) {
 # 2. Run SQL Files
 $files = @(
     "sql/schema.sql",
+    "sql/auth.sql",
     "sql/constraints.sql",
     "sql/seed.sql",
     "sql/functions.sql",
