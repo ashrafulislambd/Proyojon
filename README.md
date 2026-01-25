@@ -41,6 +41,25 @@ You need **PostgreSQL** installed.
     psql -d proyojon_db -f queries.sql
     ```
 
+## How to Run Application (Full Stack Demo)
+
+### 1. Start Backend API
+```bash
+cd src/server
+npm install
+node index.js
+```
+*Server runs on port 3000.*
+
+### 2. Start Frontend UI
+Open a new terminal:
+```bash
+cd src/client
+npm install
+npm run dev
+```
+*Client runs on port 5173.*
+
 ## Features Implemented
 - **Schema**: 15 Tables (3NF) including `users`, `merchants`, `orders`, `transactions`, `installments`.
 - **Advanced SQL**: CUBE, ROLLUP, Window Functions, CTEs using `sql/queries.sql`.

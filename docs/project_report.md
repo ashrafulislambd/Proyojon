@@ -26,7 +26,15 @@ We implemented complex reporting queries using:
   - `trg_audit_users`: Automatically logs all changes to sensitive user data to a JSON-backed `audit_logs` table.
   - `trg_enforce_credit_limit`: Stops orders before insertion if the user exceeds their limit.
 
-## 4. Team Contributions
+### 4. Application Demo
+We implemented a **Full Stack Application** to demonstrate the database capabilities:
+- **Backend (Node.js)**: Acts as a thin wrapper, calling PostgreSQL stored procedures for all business logic (e.g., `CALL process_order_proc(...)`).
+- **Frontend (React)**: a User Interface for:
+  - **Shop**: Listing products using `SELECT` queries.
+  - **Dashboard**: Visualizing user credit health from Views.
+  - **Admin**: Monitoring merchant performance via Analytical queries.
+
+## 5. Team Contributions
 - **Zannatul Ferdous Maliha**: User & Transaction schema, Credit Score function.
 - **Abrar Shahriar**: Merchant & Product schema, Sales analytics queries.
 - **Mahdeen Mannaf**: Prescription & Notification schema, Triggers.
