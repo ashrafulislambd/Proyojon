@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
 
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +16,8 @@ function App() {
             <Link to="/" className="text-2xl font-bold">Proyojon</Link>
             <div className="space-x-4">
               <Link to="/" className="hover:text-indigo-200">Shop</Link>
+              <Link to="/login" className="hover:text-indigo-200">Login</Link>
+              <Link to="/register" className="hover:text-indigo-200">Register</Link>
               <Link to="/dashboard/1" className="hover:text-indigo-200">My Dashboard</Link>
               <Link to="/admin" className="hover:text-indigo-200">Admin</Link>
             </div>
@@ -22,6 +27,8 @@ function App() {
         <div className="container mx-auto p-4">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/dashboard/:userId" element={<Dashboard />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
