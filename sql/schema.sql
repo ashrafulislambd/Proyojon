@@ -45,6 +45,7 @@ CREATE TABLE users (
     address TEXT,
     selfie_url VARCHAR(255),
     credit_limit DECIMAL(10, 2) DEFAULT 0.00,
+    password_hash VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
