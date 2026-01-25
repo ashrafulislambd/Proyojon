@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -13,11 +13,11 @@ app.use(bodyParser.json());
 
 // Database Connection
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'proyojon_db',
-    password: 'kolarmocha', // User provided password
-    port: 5432,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
 });
 
 // ==========================================
