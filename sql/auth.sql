@@ -34,17 +34,22 @@ BEGIN
         RETURN;
     END IF;
 
-    -- Insert new user
-    INSERT INTO users (name, email, password_hash, phone, nid_info, address)
+    -- Insert new user with default credit limit
+    INSERT INTO users (name, email, password_hash, phone, nid_info, address, credit_limit)
     VALUES (
         p_name, 
         p_email, 
         crypt(p_password, gen_salt('bf')), 
         p_phone, 
         p_nid, 
-        p_address
+        p_address,
+        50000.00 -- Default starting credit limit
     )
     RETURNING id INTO v_user_id;
+
+    -- Insert a starting credit score
+    INSERT INTO credit_scores (user_id, score)
+    VALUES (v_user_id, 720);
 
     RETURN QUERY SELECT v_user_id, 'User registered successfully'::VARCHAR;
 END;

@@ -11,10 +11,10 @@ INSERT INTO admins (name, email, password_hash, role_id) VALUES
 ('System Admin', 'admin@proyojon.com', 'hashed_secret_password', 1);
 
 -- 3. Users
-INSERT INTO users (name, email, phone, nid_info, address, credit_limit) VALUES
-('Alice Karim', 'alice@example.com', '01711223344', '1234567890', 'Dhaka, Bangladesh', 50000.00),
-('Bob Rahim', 'bob@example.com', '01811223344', '0987654321', 'Chittagong, Bangladesh', 30000.00),
-('Charlie Khan', 'charlie@example.com', '01911223344', '1122334455', 'Sylhet, Bangladesh', 80000.00);
+INSERT INTO users (name, email, phone, nid_info, address, credit_limit, password_hash) VALUES
+('Alice Karim', 'alice@example.com', '01711223344', '1234567890', 'Dhaka, Bangladesh', 50000.00, crypt('password123', gen_salt('bf'))),
+('Bob Rahim', 'bob@example.com', '01811223344', '0987654321', 'Chittagong, Bangladesh', 30000.00, crypt('password123', gen_salt('bf'))),
+('Charlie Khan', 'charlie@example.com', '01911223344', '1122334455', 'Sylhet, Bangladesh', 80000.00, crypt('password123', gen_salt('bf')));
 
 -- 4. Product Categories
 INSERT INTO product_categories (name, description) VALUES
@@ -31,11 +31,17 @@ INSERT INTO merchants (name, type, contact_email, address) VALUES
 -- 6. Products
 INSERT INTO products (merchant_id, category_id, name, price, stock_quantity) VALUES
 (1, 1, 'Smartphone X', 25000.00, 50),
-(1, 1, 'Wireless Earbuds', 3000.00, 100),
-(2, 2, 'Rice (5kg)', 450.00, 200),
-(2, 2, 'Soybean Oil (1L)', 180.00, 150),
-(3, 3, 'Napa Extra', 2.50, 5000),
-(3, 3, 'Ace Plus', 3.00, 5000);
+(1, 1, 'Wireless Earbuds Pro', 4500.00, 100),
+(1, 1, 'MacBook Air M2', 125000.00, 10),
+(1, 1, 'Mechanical Keyboard', 5500.00, 30),
+(2, 2, 'Organic Honey (500g)', 850.00, 45),
+(2, 2, 'Fresh Mangoes (1kg)', 220.00, 150),
+(2, 2, 'Premium Basmati Rice (5kg)', 1200.00, 60),
+(2, 2, 'Pure Soybeans Oil (5L)', 850.00, 40),
+(3, 3, 'Napa Extra (Pack of 10)', 25.00, 1000),
+(3, 3, 'Ace Plus (Pack of 10)', 30.00, 1000),
+(3, 3, 'First Aid Kit', 1500.00, 20),
+(3, 3, 'Digital Thermometer', 450.00, 15);
 
 -- 7. Orders
 INSERT INTO orders (user_id, merchant_id, total_amount, status) VALUES

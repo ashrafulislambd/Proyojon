@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-function Register() {
+function Register({ setUser }) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -35,7 +35,10 @@ function Register() {
             if (response.ok) {
                 // Store user info
                 localStorage.setItem('user', JSON.stringify(data.user));
-                navigate('/');
+                if (typeof setUser === 'function') {
+                    setUser(data.user);
+                }
+                navigate(`/dashboard/${data.user.id}`);
             } else {
                 setError(data.error || 'Registration failed');
             }
@@ -47,7 +50,7 @@ function Register() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center px-4 py-8"
+        <div className="min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden"
             style={{
                 background: '#FFFFFF',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'

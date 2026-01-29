@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-function Login() {
+function Login({ setUser }) {
     const [identifier, setIdentifier] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -25,7 +25,10 @@ function Login() {
             if (response.ok) {
                 // Store user info if needed
                 localStorage.setItem('user', JSON.stringify(data.user));
-                navigate('/');
+                if (typeof setUser === 'function') {
+                    setUser(data.user);
+                }
+                navigate(`/dashboard/${data.user.id}`);
             } else {
                 setError(data.error || 'Login failed');
             }
@@ -37,7 +40,7 @@ function Login() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center px-4"
+        <div className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
             style={{
                 background: '#FFFFFF',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'

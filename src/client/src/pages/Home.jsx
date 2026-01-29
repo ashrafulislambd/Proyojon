@@ -2,17 +2,104 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Home = () => {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [products, setProducts] = useState([
+        {
+            id: 101,
+            name: 'MacBook Air M2',
+            price: 125000,
+            stock_quantity: 10,
+            category: 'Electronics',
+            merchant: 'TechWorld BD',
+            image: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 102,
+            name: 'Smartphone X',
+            price: 25000,
+            stock_quantity: 50,
+            category: 'Electronics',
+            merchant: 'TechWorld BD',
+            image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 103,
+            name: 'Mechanical Keyboard',
+            price: 5500,
+            stock_quantity: 30,
+            category: 'Electronics',
+            merchant: 'TechWorld BD',
+            image: '/C:/Users/zannatul/.gemini/antigravity/brain/b8820cee-0759-40d6-b3e7-78a5adc5154b/mechanical_keyboard_demo_1769692730520.png'
+        },
+        {
+            id: 104,
+            name: 'Wireless Earbuds Pro',
+            price: 4500,
+            stock_quantity: 100,
+            category: 'Electronics',
+            merchant: 'TechWorld BD',
+            image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 201,
+            name: 'Organic Honey (500g)',
+            price: 850,
+            stock_quantity: 45,
+            category: 'Groceries',
+            merchant: 'Daily Mart',
+            image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 202,
+            name: 'Fresh Mangoes (1kg)',
+            price: 220,
+            stock_quantity: 150,
+            category: 'Groceries',
+            merchant: 'Daily Mart',
+            image: 'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 203,
+            name: 'Premium Basmati Rice (5kg)',
+            price: 1200,
+            stock_quantity: 60,
+            category: 'Groceries',
+            merchant: 'Daily Mart',
+            image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 301,
+            name: 'First Aid Kit',
+            price: 1500,
+            stock_quantity: 20,
+            category: 'Medicine',
+            merchant: 'Lazz Pharma',
+            image: 'https://images.unsplash.com/photo-1603398938378-e54eab446ddd?auto=format&fit=crop&q=80&w=800'
+        },
+        {
+            id: 302,
+            name: 'Digital Thermometer',
+            price: 450,
+            stock_quantity: 15,
+            category: 'Medicine',
+            merchant: 'Lazz Pharma',
+            image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800'
+        }
+    ]);
+    const [loading, setLoading] = useState(false);
     const [user, setUser] = useState(null);
 
     useEffect(() => {
         // Get user from localStorage
         const storedUser = localStorage.getItem('user');
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
+        if (storedUser && storedUser !== 'undefined') {
+            try {
+                setUser(JSON.parse(storedUser));
+            } catch (err) {
+                console.error('Failed to parse user', err);
+            }
         }
-        fetchProducts();
+        // Disabled real fetch for demo purposes to show my generated data
+        // fetchProducts();
     }, []);
 
     const fetchProducts = async () => {
@@ -70,7 +157,7 @@ const Home = () => {
     }
 
     return (
-        <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8"
+        <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
             style={{
                 background: '#FFFFFF',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
@@ -185,21 +272,27 @@ const Home = () => {
                                 </div>
 
                                 {/* Products Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     {merchantProducts.map((product) => (
                                         <div
                                             key={product.id}
                                             className="transition-all duration-300"
                                             style={{
                                                 background: '#FFFFFF',
-                                                border: '2px solid #E5E7EB',
+                                                border: '1px solid #E5E7EB',
                                                 borderRadius: '16px',
                                                 overflow: 'hidden',
-                                                cursor: 'pointer'
+                                                cursor: 'pointer',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '16px',
+                                                padding: '12px',
+                                                position: 'relative',
+                                                minHeight: '130px'
                                             }}
                                             onMouseEnter={(e) => {
                                                 e.currentTarget.style.transform = 'translateY(-4px)';
-                                                e.currentTarget.style.boxShadow = '0 12px 24px rgba(16, 185, 129, 0.15)';
+                                                e.currentTarget.style.boxShadow = '0 12px 24px rgba(16, 185, 129, 0.08)';
                                                 e.currentTarget.style.borderColor = '#10B981';
                                             }}
                                             onMouseLeave={(e) => {
@@ -208,125 +301,118 @@ const Home = () => {
                                                 e.currentTarget.style.borderColor = '#E5E7EB';
                                             }}>
 
-                                            <div style={{ padding: '20px' }}>
-                                                {/* Category & Stock Badge */}
+                                            {/* Square Product Image */}
+                                            <div style={{
+                                                width: '100px',
+                                                height: '100px',
+                                                minWidth: '100px',
+                                                background: '#F9FAFB',
+                                                borderRadius: '12px',
+                                                overflow: 'hidden',
+                                                position: 'relative'
+                                            }}>
+                                                {product.image ? (
+                                                    <img
+                                                        src={product.image}
+                                                        alt={product.name}
+                                                        style={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                            objectFit: 'cover'
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <div style={{
+                                                        width: '100%',
+                                                        height: '100%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        color: '#D1D5DB'
+                                                    }}>
+                                                        <svg style={{ width: '32px', height: '32px' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                        </svg>
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            {/* Product Info Section */}
+                                            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100px' }}>
+                                                <div>
+                                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '4px' }}>
+                                                        <span style={{
+                                                            fontSize: '9px',
+                                                            fontWeight: '700',
+                                                            padding: '2px 8px',
+                                                            borderRadius: '20px',
+                                                            background: '#F0FDF4',
+                                                            color: '#059669',
+                                                            textTransform: 'uppercase',
+                                                            letterSpacing: '0.4px'
+                                                        }}>
+                                                            {product.category || 'Product'}
+                                                        </span>
+                                                        <span style={{
+                                                            fontSize: '10px',
+                                                            color: product.stock_quantity > 0 ? (product.stock_quantity < 5 ? '#D97706' : '#059669') : '#DC2626',
+                                                            fontWeight: '600'
+                                                        }}>
+                                                            {product.stock_quantity > 0 ? (product.stock_quantity < 5 ? `${product.stock_quantity} left` : 'In Stock') : 'Sold Out'}
+                                                        </span>
+                                                    </div>
+                                                    <h3 style={{
+                                                        fontSize: '15px',
+                                                        fontWeight: '700',
+                                                        color: '#1F2937',
+                                                        marginBottom: '2px',
+                                                        lineHeight: '1.2',
+                                                        display: '-webkit-box',
+                                                        WebkitLineClamp: 2,
+                                                        WebkitBoxOrient: 'vertical',
+                                                        overflow: 'hidden'
+                                                    }}>
+                                                        {product.name}
+                                                    </h3>
+                                                </div>
+
                                                 <div style={{
                                                     display: 'flex',
                                                     alignItems: 'center',
-                                                    justifyContent: 'space-between',
-                                                    marginBottom: '16px'
+                                                    justifyContent: 'space-between'
                                                 }}>
-                                                    <span style={{
-                                                        fontSize: '11px',
-                                                        fontWeight: '600',
-                                                        padding: '4px 10px',
-                                                        borderRadius: '12px',
-                                                        background: '#F0FDF4',
-                                                        color: '#059669',
-                                                        textTransform: 'uppercase',
-                                                        letterSpacing: '0.5px'
-                                                    }}>
-                                                        {product.category || 'Product'}
-                                                    </span>
-                                                    {product.stock_quantity > 0 ? (
-                                                        product.stock_quantity < 5 ? (
-                                                            <span style={{
-                                                                fontSize: '10px',
-                                                                fontWeight: '600',
-                                                                padding: '4px 8px',
-                                                                borderRadius: '12px',
-                                                                background: '#FEF3C7',
-                                                                color: '#D97706'
-                                                            }}>
-                                                                {product.stock_quantity} left
-                                                            </span>
-                                                        ) : (
-                                                            <span style={{
-                                                                fontSize: '10px',
-                                                                fontWeight: '600',
-                                                                padding: '4px 8px',
-                                                                borderRadius: '12px',
-                                                                background: '#D1FAE5',
-                                                                color: '#059669'
-                                                            }}>
-                                                                In Stock
-                                                            </span>
-                                                        )
-                                                    ) : (
-                                                        <span style={{
-                                                            fontSize: '10px',
-                                                            fontWeight: '600',
-                                                            padding: '4px 8px',
-                                                            borderRadius: '12px',
-                                                            background: '#FEE2E2',
-                                                            color: '#DC2626'
-                                                        }}>
-                                                            Out of Stock
-                                                        </span>
-                                                    )}
-                                                </div>
-
-                                                {/* Product Name */}
-                                                <h3 style={{
-                                                    fontSize: '16px',
-                                                    fontWeight: '700',
-                                                    color: '#1F2937',
-                                                    marginBottom: '12px',
-                                                    minHeight: '44px',
-                                                    display: '-webkit-box',
-                                                    WebkitLineClamp: 2,
-                                                    WebkitBoxOrient: 'vertical',
-                                                    overflow: 'hidden'
-                                                }}>
-                                                    {product.name}
-                                                </h3>
-
-                                                {/* Divider */}
-                                                <div style={{ borderTop: '1px solid #F3F4F6', margin: '12px 0' }}></div>
-
-                                                {/* Price */}
-                                                <div style={{ marginBottom: '16px' }}>
-                                                    <div style={{ fontSize: '24px', fontWeight: '800', color: '#1F2937' }}>
-                                                        BDT {product.price.toLocaleString()}
+                                                    <div>
+                                                        <div style={{ fontSize: '18px', fontWeight: '800', color: '#1F2937' }}>
+                                                            ৳{product.price.toLocaleString()}
+                                                        </div>
                                                     </div>
-                                                    <div style={{ fontSize: '11px', color: '#9CA3AF' }}>Tax included</div>
-                                                </div>
 
-                                                {/* Buy Button */}
-                                                <button
-                                                    onClick={() => handleBuy(product.id)}
-                                                    disabled={product.stock_quantity === 0}
-                                                    className="transition-all duration-300"
-                                                    style={{
-                                                        width: '100%',
-                                                        padding: '12px',
-                                                        borderRadius: '12px',
-                                                        fontWeight: '700',
-                                                        fontSize: '14px',
-                                                        border: 'none',
-                                                        cursor: product.stock_quantity > 0 ? 'pointer' : 'not-allowed',
-                                                        background: product.stock_quantity > 0
-                                                            ? 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
-                                                            : '#E5E7EB',
-                                                        color: product.stock_quantity > 0 ? '#FFFFFF' : '#9CA3AF',
-                                                        boxShadow: product.stock_quantity > 0
-                                                            ? '0 4px 8px rgba(16, 185, 129, 0.25)'
-                                                            : 'none'
-                                                    }}
-                                                    onMouseEnter={(e) => {
-                                                        if (product.stock_quantity > 0) {
-                                                            e.target.style.transform = 'scale(1.05)';
-                                                            e.target.style.boxShadow = '0 6px 12px rgba(16, 185, 129, 0.35)';
-                                                        }
-                                                    }}
-                                                    onMouseLeave={(e) => {
-                                                        e.target.style.transform = 'scale(1)';
-                                                        e.target.style.boxShadow = product.stock_quantity > 0
-                                                            ? '0 4px 8px rgba(16, 185, 129, 0.25)'
-                                                            : 'none';
-                                                    }}>
-                                                    {product.stock_quantity > 0 ? 'Buy Now' : 'Sold Out'}
-                                                </button>
+                                                    <button
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            handleBuy(product.id);
+                                                        }}
+                                                        disabled={product.stock_quantity === 0}
+                                                        className="transition-all duration-300"
+                                                        style={{
+                                                            padding: '6px 14px',
+                                                            borderRadius: '8px',
+                                                            fontWeight: '700',
+                                                            fontSize: '12px',
+                                                            border: 'none',
+                                                            cursor: product.stock_quantity > 0 ? 'pointer' : 'not-allowed',
+                                                            background: product.stock_quantity > 0 ? '#10B981' : '#E5E7EB',
+                                                            color: product.stock_quantity > 0 ? '#FFFFFF' : '#9CA3AF'
+                                                        }}
+                                                        onMouseEnter={(e) => {
+                                                            if (product.stock_quantity > 0) e.target.style.background = '#059669';
+                                                        }}
+                                                        onMouseLeave={(e) => {
+                                                            if (product.stock_quantity > 0) e.target.style.background = '#10B981';
+                                                        }}>
+                                                        {product.stock_quantity > 0 ? 'Buy' : 'Sold'}
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     ))}
