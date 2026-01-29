@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
-    const [identifier, setIdentifier] = useState('');
+function AdminLogin() {
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -14,18 +14,16 @@ function Login() {
         setLoading(true);
 
         try {
-            const response = await fetch('http://localhost:3000/api/auth/login', {
+            const response = await fetch('http://localhost:3000/api/admin/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: identifier, password }),
+                body: JSON.stringify({ email, password }),
             });
 
             const data = await response.json();
 
             if (response.ok) {
-                // Store user info if needed
-                localStorage.setItem('user', JSON.stringify(data.user));
-                navigate('/');
+                navigate('/admin');
             } else {
                 setError(data.error || 'Login failed');
             }
@@ -43,7 +41,7 @@ function Login() {
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
             }}>
 
-            {/* Decorative green circles */}
+            {/* Decorative blue circles */}
             <div style={{
                 position: 'absolute',
                 top: '-100px',
@@ -51,7 +49,7 @@ function Login() {
                 width: '300px',
                 height: '300px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                background: 'linear-gradient(135deg, #2196F3 0%, #1976D2 100%)',
                 opacity: 0.1,
                 zIndex: 0
             }}></div>
@@ -62,7 +60,7 @@ function Login() {
                 width: '400px',
                 height: '400px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #34D399 0%, #10B981 100%)',
+                background: 'linear-gradient(135deg, #42A5F5 0%, #2196F3 100%)',
                 opacity: 0.08,
                 zIndex: 0
             }}></div>
@@ -72,11 +70,11 @@ function Login() {
                 {/* Welcome Header */}
                 <div className="text-center mb-6">
                     <h1 className="font-bold mb-2" style={{ fontSize: '28px', letterSpacing: '-0.5px', color: '#1F2937' }}>
-                        Welcome Back!
+                        Admin Login
                     </h1>
                     <p className="leading-relaxed" style={{ fontSize: '12px', color: '#6B7280', lineHeight: '1.5' }}>
-                        Welcome back to the best<br />
-                        We're always here, waiting for you
+                        Welcome back to admin panel<br />
+                        Please login with your credentials
                     </p>
                 </div>
 
@@ -86,10 +84,10 @@ function Login() {
                         style={{
                             width: '48px',
                             height: '48px',
-                            backgroundColor: '#F0FDF4',
-                            borderColor: '#10B981'
+                            backgroundColor: '#EBF5FF',
+                            borderColor: '#2196F3'
                         }}>
-                        <svg className="text-green-600" style={{ width: '22px', height: '22px' }} fill="currentColor" viewBox="0 0 24 24">
+                        <svg className="text-blue-600" style={{ width: '22px', height: '22px' }} fill="currentColor" viewBox="0 0 24 24">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                         </svg>
                     </button>
@@ -97,10 +95,10 @@ function Login() {
                         style={{
                             width: '48px',
                             height: '48px',
-                            backgroundColor: '#F0FDF4',
-                            borderColor: '#10B981'
+                            backgroundColor: '#EBF5FF',
+                            borderColor: '#2196F3'
                         }}>
-                        <svg className="text-green-600" style={{ width: '22px', height: '22px' }} fill="currentColor" viewBox="0 0 24 24">
+                        <svg className="text-blue-600" style={{ width: '22px', height: '22px' }} fill="currentColor" viewBox="0 0 24 24">
                             <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                         </svg>
                     </button>
@@ -108,7 +106,7 @@ function Login() {
 
                 {/* Or use your email account */}
                 <p className="text-center mb-4" style={{ fontSize: '10.5px', color: '#6B7280' }}>
-                    Or use your email account:
+                    Or use your admin account:
                 </p>
 
                 {/* Error Message */}
@@ -133,14 +131,14 @@ function Login() {
                     <div className="relative mb-3">
                         <div className="absolute flex items-center pointer-events-none"
                             style={{ top: '50%', transform: 'translateY(-50%)', left: '16px' }}>
-                            <svg style={{ width: '16px', height: '16px', color: '#10B981' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg style={{ width: '16px', height: '16px', color: '#2196F3' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                             </svg>
                         </div>
                         <input
                             type="email"
-                            value={identifier}
-                            onChange={(e) => setIdentifier(e.target.value)}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             className="w-full transition-all focus:outline-none"
                             placeholder="Email"
                             required
@@ -155,7 +153,7 @@ function Login() {
                                 fontSize: '13px',
                                 color: '#1F2937'
                             }}
-                            onFocus={(e) => e.target.style.borderColor = '#10B981'}
+                            onFocus={(e) => e.target.style.borderColor = '#2196F3'}
                             onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         />
                     </div>
@@ -164,7 +162,7 @@ function Login() {
                     <div className="relative mb-3">
                         <div className="absolute flex items-center pointer-events-none"
                             style={{ top: '50%', transform: 'translateY(-50%)', left: '16px' }}>
-                            <svg style={{ width: '16px', height: '16px', color: '#10B981' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg style={{ width: '16px', height: '16px', color: '#2196F3' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                         </div>
@@ -186,23 +184,16 @@ function Login() {
                                 fontSize: '13px',
                                 color: '#1F2937'
                             }}
-                            onFocus={(e) => e.target.style.borderColor = '#10B981'}
+                            onFocus={(e) => e.target.style.borderColor = '#2196F3'}
                             onBlur={(e) => e.target.style.borderColor = '#E5E7EB'}
                         />
                     </div>
 
                     {/* Forgot Password */}
                     <div className="text-center" style={{ marginTop: '12px', marginBottom: '8px' }}>
-                        <a href="#" className="hover:underline" style={{ fontSize: '10.5px', color: '#10B981', fontWeight: '500' }}>
+                        <a href="#" className="hover:underline" style={{ fontSize: '10.5px', color: '#2196F3', fontWeight: '500' }}>
                             Forgot Password?
                         </a>
-                    </div>
-
-                    {/* Don't have account */}
-                    <div className="text-center" style={{ marginBottom: '12px' }}>
-                        <p style={{ fontSize: '10.5px', color: '#6B7280' }}>
-                            Don't have an account? <Link to="/register" className="underline hover:no-underline" style={{ color: '#10B981', fontWeight: '500' }}>Sign up</Link>
-                        </p>
                     </div>
 
                     {/* Login Button */}
@@ -212,14 +203,14 @@ function Login() {
                             disabled={loading}
                             className="focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                             style={{
-                                background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                                background: 'linear-gradient(135deg, #2196F3 0%, #1976D2 100%)',
                                 color: '#FFFFFF',
                                 fontWeight: '700',
                                 padding: '12px 48px',
                                 borderRadius: '25px',
                                 fontSize: '14px',
                                 border: 'none',
-                                boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)',
+                                boxShadow: '0 4px 12px rgba(33, 150, 243, 0.3)',
                                 cursor: 'pointer',
                                 letterSpacing: '0.3px'
                             }}
@@ -235,4 +226,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default AdminLogin;
