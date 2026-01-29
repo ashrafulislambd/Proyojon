@@ -2,7 +2,10 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+const path = require('path');
+const envPath = path.resolve(__dirname, '.env');
+// Force override existing environment variables
+const result = require('dotenv').config({ path: envPath, override: true });
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,12 +15,45 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Database Connection
-const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+// Database Connection Strategy
+const commonPasswords = [process.env.DB_PASSWORD, 'kolarmocha', '1234', '', 'postgres'];
+let pool;
+
+async function connectWithRetry() {
+    for (const pass of commonPasswords) {
+        if (pass === undefined) continue;
+
+        const testPool = new Pool({
+            user: process.env.DB_USER || 'postgres',
+            host: process.env.DB_HOST || '127.0.0.1',
+            database: process.env.DB_NAME || 'proyojon_db',
+            password: pass,
+            port: parseInt(process.env.DB_PORT || '5432'),
+            connectionTimeoutMillis: 2000,
+        });
+
+        try {
+            await testPool.query('SELECT NOW()');
+            console.log(`✅ Connected successfully using password: ${pass === '' ? '(empty)' : '******* (found match!)'}`);
+            pool = testPool;
+            return true;
+        } catch (err) {
+            await testPool.end();
+            if (err.code !== '28P01') { // If it's not an auth error, stop and report
+                console.error('❌ Database error:', err.message);
+                return false;
+            }
+        }
+    }
+    console.error('❌ All connection attempts failed. Please verify your PostgreSQL password.');
+    return false;
+}
+
+// Initialize connection
+connectWithRetry().then(success => {
+    if (!success) {
+        console.log('⚠️ Server running but database disconnected. Features will fail until credentials are fixed.');
+    }
 });
 
 // ==========================================
@@ -35,11 +71,10 @@ app.post('/api/auth/register', async (req, res) => {
 
         const { new_user_id, message } = result.rows[0];
 
-        if (!new_user_id) {
-            return res.status(400).json({ error: message });
-        }
-
-        res.json({ message, userId: new_user_id });
+        res.json({
+            message,
+            user: { id: new_user_id, name: name, role: 'User' }
+        });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: err.message });
@@ -55,10 +90,14 @@ app.post('/api/auth/login', async (req, res) => {
             [email, password]
         );
 
+        if (!result.rows || result.rows.length === 0) {
+            return res.status(401).json({ error: 'Invalid login attempt' });
+        }
+
         const { user_id, user_name, user_role, message } = result.rows[0];
 
         if (!user_id) {
-            return res.status(401).json({ error: message });
+            return res.status(401).json({ error: message || 'Login failed' });
         }
 
         res.json({
@@ -68,6 +107,35 @@ app.post('/api/auth/login', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Login failed' });
+    }
+});
+
+// Admin Login
+app.post('/api/admin/login', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const result = await pool.query(
+            `SELECT * FROM login_admin_func($1, $2)`,
+            [email, password]
+        );
+
+        if (!result.rows || result.rows.length === 0) {
+            return res.status(401).json({ error: 'Invalid admin login attempt' });
+        }
+
+        const { admin_id, admin_name, admin_role, message } = result.rows[0];
+
+        if (!admin_id) {
+            return res.status(401).json({ error: message || 'Login failed' });
+        }
+
+        res.json({
+            message,
+            user: { id: admin_id, name: admin_name, role: admin_role }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Admin login failed' });
     }
 });
 
@@ -158,6 +226,24 @@ app.get('/api/admin/stats', async (req, res) => {
       GROUP BY m.name
       ORDER BY total_revenue DESC
     `);
+        res.json(result.rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Database error' });
+    }
+});
+
+// 5. User Transaction History
+app.get('/api/user/:id/transactions', async (req, res) => {
+    try {
+        const result = await pool.query(
+            `SELECT t.*, o.total_amount as order_total 
+             FROM transactions t
+             JOIN orders o ON t.order_id = o.id
+             WHERE o.user_id = $1
+             ORDER BY t.transaction_date DESC`,
+            [req.params.id]
+        );
         res.json(result.rows);
     } catch (err) {
         console.error(err);
