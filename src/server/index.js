@@ -110,6 +110,35 @@ app.post('/api/auth/login', async (req, res) => {
     }
 });
 
+// Admin Login
+app.post('/api/admin/login', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const result = await pool.query(
+            `SELECT * FROM login_admin_func($1, $2)`,
+            [email, password]
+        );
+
+        if (!result.rows || result.rows.length === 0) {
+            return res.status(401).json({ error: 'Invalid admin login attempt' });
+        }
+
+        const { admin_id, admin_name, admin_role, message } = result.rows[0];
+
+        if (!admin_id) {
+            return res.status(401).json({ error: message || 'Login failed' });
+        }
+
+        res.json({
+            message,
+            user: { id: admin_id, name: admin_name, role: admin_role }
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Admin login failed' });
+    }
+});
+
 // ==========================================
 // API Endpoints (Logic in PL/SQL)
 // ==========================================
@@ -197,6 +226,24 @@ app.get('/api/admin/stats', async (req, res) => {
       GROUP BY m.name
       ORDER BY total_revenue DESC
     `);
+        res.json(result.rows);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Database error' });
+    }
+});
+
+// 5. User Transaction History
+app.get('/api/user/:id/transactions', async (req, res) => {
+    try {
+        const result = await pool.query(
+            `SELECT t.*, o.total_amount as order_total 
+             FROM transactions t
+             JOIN orders o ON t.order_id = o.id
+             WHERE o.user_id = $1
+             ORDER BY t.transaction_date DESC`,
+            [req.params.id]
+        );
         res.json(result.rows);
     } catch (err) {
         console.error(err);
