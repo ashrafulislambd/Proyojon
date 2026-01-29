@@ -23,20 +23,25 @@ GROUP BY m.id, m.name, m.type;
 -- Shows user credit limit, spent amount (unpaid), and remaining credit
 -- =========================================================
 CREATE OR REPLACE VIEW vw_user_credit_health AS
+WITH latest_scores AS (
+    SELECT DISTINCT ON (user_id) user_id, score
+    FROM credit_scores
+    ORDER BY user_id, calculated_at DESC
+)
 SELECT 
     u.id,
     u.name,
     u.credit_limit,
     COALESCE(SUM(i.amount), 0) AS total_due_installments,
     (u.credit_limit - COALESCE(SUM(i.amount), 0)) AS remaining_credit,
-    cs.score AS latest_credit_score
+    COALESCE(ls.score, 0) AS latest_credit_score
 FROM users u
+LEFT JOIN latest_scores ls ON u.id = ls.user_id
 LEFT JOIN orders o ON u.id = o.user_id
 LEFT JOIN transactions t ON o.id = t.order_id
 LEFT JOIN installment_plans ip ON t.id = ip.transaction_id
 LEFT JOIN installments i ON ip.id = i.plan_id AND i.status IN ('Pending', 'Overdue')
-LEFT JOIN credit_scores cs ON u.id = cs.user_id
-GROUP BY u.id, u.name, u.credit_limit, cs.score;
+GROUP BY u.id, u.name, u.credit_limit, ls.score;
 
 -- =========================================================
 -- 3. View: Daily Revenue Report

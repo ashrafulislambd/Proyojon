@@ -5,11 +5,22 @@ import axios from 'axios';
 const Dashboard = () => {
     const { userId } = useParams();
     const [data, setData] = useState(null);
+    const [transactions, setTransactions] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchUserData();
+        fetchTransactions();
     }, [userId]);
+
+    const fetchTransactions = async () => {
+        try {
+            const res = await axios.get(`http://localhost:3000/api/user/${userId}/transactions`);
+            setTransactions(res.data);
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     const fetchUserData = async () => {
         try {
@@ -39,12 +50,14 @@ const Dashboard = () => {
     }
 
     // Fallbacks for profile data
-    const profileData = profile || {
+    const profileData = data?.profile || {
         name: 'User',
         latest_credit_score: 'N/A',
         credit_limit: 0,
         remaining_credit: 0
     };
+
+    const orders = data?.recent_orders || [];
 
     return (
         <div className="max-w-7xl mx-auto">
@@ -117,7 +130,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="overflow-x-auto">
-                    {recent_orders && recent_orders.length > 0 ? (
+                    {orders && orders.length > 0 ? (
                         <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">
                                 <tr>
@@ -128,7 +141,7 @@ const Dashboard = () => {
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
-                                {recent_orders.map((order) => (
+                                {orders.map((order) => (
                                     <tr key={order.id} className="hover:bg-green-50 transition-all duration-300">
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center gap-2">
@@ -175,6 +188,62 @@ const Dashboard = () => {
                             <h3 className="text-lg font-semibold text-gray-900 mb-1">No orders yet</h3>
                             <p className="text-gray-500 max-w-xs mx-auto">You haven't placed any orders yet. Start shopping to see your history here!</p>
                             <Link to="/" className="inline-block mt-4 text-green-600 font-bold hover:text-green-700 transition-colors">Browse Shop &rarr;</Link>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* Transaction History Card */}
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden mt-8">
+                <div className="bg-gradient-to-r from-gray-50 to-white p-6 border-b border-gray-200">
+                    <div className="flex items-center gap-3">
+                        <div className="bg-blue-100 text-blue-600 p-2 rounded-lg">
+                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900">Transaction History</h2>
+                            <p className="text-sm text-gray-600">Payments and records</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="overflow-x-auto">
+                    {transactions && transactions.length > 0 ? (
+                        <table className="min-w-full divide-y divide-gray-200">
+                            <thead className="bg-gray-50">
+                                <tr>
+                                    <th className="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Date</th>
+                                    <th className="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Amount</th>
+                                    <th className="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Method</th>
+                                    <th className="px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody className="bg-white divide-y divide-gray-200">
+                                {transactions.map((t) => (
+                                    <tr key={t.id} className="hover:bg-blue-50 transition-all duration-300">
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <div className="text-sm text-gray-700">{new Date(t.transaction_date).toLocaleDateString('en-GB')}</div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <div className="text-lg font-bold text-gray-900">BDT {Number(t.amount).toLocaleString()}</div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <div className="text-sm text-gray-600">{t.payment_method}</div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${t.status === 'Success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                                                {t.status}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    ) : (
+                        <div className="p-12 text-center text-gray-500">
+                            No transaction records found.
                         </div>
                     )}
                 </div>
