@@ -8,7 +8,7 @@ INSERT INTO roles (name, description) VALUES
 
 -- 2. Admins
 INSERT INTO admins (name, email, password_hash, role_id) VALUES
-('System Admin', 'admin@proyojon.com', 'hashed_secret_password', 1);
+('System Admin', 'admin@proyojon.com', crypt('admin123', gen_salt('bf')), 1);
 
 -- 3. Users
 INSERT INTO users (name, email, phone, nid_info, address, credit_limit, password_hash) VALUES
@@ -29,19 +29,19 @@ INSERT INTO merchants (name, type, contact_email, address) VALUES
 ('Lazz Pharma', 'Pharmacy', 'info@lazzpharma.com', 'Kalabagan, Dhaka');
 
 -- 6. Products
-INSERT INTO products (merchant_id, category_id, name, price, stock_quantity) VALUES
-(1, 1, 'Smartphone X', 25000.00, 50),
-(1, 1, 'Wireless Earbuds Pro', 4500.00, 100),
-(1, 1, 'MacBook Air M2', 125000.00, 10),
-(1, 1, 'Mechanical Keyboard', 5500.00, 30),
-(2, 2, 'Organic Honey (500g)', 850.00, 45),
-(2, 2, 'Fresh Mangoes (1kg)', 220.00, 150),
-(2, 2, 'Premium Basmati Rice (5kg)', 1200.00, 60),
-(2, 2, 'Pure Soybeans Oil (5L)', 850.00, 40),
-(3, 3, 'Napa Extra (Pack of 10)', 25.00, 1000),
-(3, 3, 'Ace Plus (Pack of 10)', 30.00, 1000),
-(3, 3, 'First Aid Kit', 1500.00, 20),
-(3, 3, 'Digital Thermometer', 450.00, 15);
+INSERT INTO products (merchant_id, category_id, name, price, stock_quantity, image_url) VALUES
+(1, 1, 'Smartphone X', 25000.00, 50, 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=800'),
+(1, 1, 'Wireless Earbuds Pro', 4500.00, 100, 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800'),
+(1, 1, 'MacBook Air M2', 125000.00, 10, 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=800'),
+(1, 1, 'Mechanical Keyboard', 5500.00, 30, '/C:/Users/zannatul/.gemini/antigravity/brain/b8820cee-0759-40d6-b3e7-78a5adc5154b/mechanical_keyboard_demo_1769692730520.png'),
+(2, 2, 'Organic Honey (500g)', 850.00, 45, 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=800'),
+(2, 2, 'Fresh Mangoes (1kg)', 220.00, 150, 'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&q=80&w=800'),
+(2, 2, 'Premium Basmati Rice (5kg)', 1200.00, 60, 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=800'),
+(2, 2, 'Pure Soybeans Oil (5L)', 850.00, 40, NULL),
+(3, 3, 'Napa Extra (Pack of 10)', 25.00, 1000, NULL),
+(3, 3, 'Ace Plus (Pack of 10)', 30.00, 1000, NULL),
+(3, 3, 'First Aid Kit', 1500.00, 20, 'https://images.unsplash.com/photo-1603398938378-e54eab446ddd?auto=format&fit=crop&q=80&w=800'),
+(3, 3, 'Digital Thermometer', 450.00, 15, 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800');
 
 -- 7. Orders
 INSERT INTO orders (user_id, merchant_id, total_amount, status) VALUES
