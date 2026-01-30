@@ -1,9 +1,5 @@
--- Proyojon Complex SQL Queries
--- DBMS: PostgreSQL
 
--- =========================================================
--- 1. Multi-table Join: Get full order details for a specific user
--- =========================================================
+-- Get full order details for a specific user
 SELECT 
     o.id AS order_id,
     o.created_at,
@@ -18,9 +14,7 @@ JOIN order_items oi ON o.id = oi.order_id
 JOIN products p ON oi.product_id = p.id
 WHERE o.user_id = 1;
 
--- =========================================================
--- 2. Aggregation & Grouping: Total sales per Merchant
--- =========================================================
+-- Aggregation & Grouping: Total sales per Merchant
 SELECT 
     m.name AS merchant_name,
     COUNT(o.id) AS total_orders,
@@ -31,9 +25,7 @@ WHERE o.status = 'Delivered'
 GROUP BY m.name
 ORDER BY total_revenue DESC;
 
--- =========================================================
--- 3. ROLLUP: Sales Report by Category and Product
--- =========================================================
+-- Sales Report by Category and Product
 SELECT 
     c.name AS category_name,
     p.name AS product_name,
@@ -46,9 +38,7 @@ JOIN orders o ON oi.order_id = o.id
 WHERE o.status != 'Cancelled'
 GROUP BY ROLLUP(c.name, p.name);
 
--- =========================================================
--- 4. Nested Subquery: Find Users who spent more than average
--- =========================================================
+-- Find Users who spent more than average
 SELECT id, name, email 
 FROM users 
 WHERE id IN (
@@ -61,9 +51,8 @@ WHERE id IN (
     )
 );
 
--- =========================================================
--- 5. CUBE: Analyze Revenue by Year, Month, and Merchant Type
--- =========================================================
+
+-- Analyze Revenue by Year, Month, and Merchant Type
 SELECT 
     EXTRACT(YEAR FROM o.created_at) AS year,
     EXTRACT(MONTH FROM o.created_at) AS month,
@@ -73,9 +62,7 @@ FROM orders o
 JOIN merchants m ON o.merchant_id = m.id
 GROUP BY CUBE (year, month, merchant_type);
 
--- =========================================================
--- 6. Window Function: Rank Products by Price within Category
--- =========================================================
+-- Rank Products by Price within Category
 SELECT 
     p.name,
     c.name AS category,
@@ -84,9 +71,7 @@ SELECT
 FROM products p
 JOIN product_categories c ON p.category_id = c.id;
 
--- =========================================================
--- 7. CTE (Common Table Expression): Users with Overdue Installments
--- =========================================================
+-- Users with Overdue Installments
 WITH OverdueUsers AS (
     SELECT DISTINCT u.id, u.name, u.phone
     FROM users u
@@ -95,8 +80,7 @@ WITH OverdueUsers AS (
     WHERE i.status = 'Overdue'
 )
 SELECT * FROM OverdueUsers;
--- Correction: Join path is User -> Order -> Transaction -> Plan -> Installment
--- Corrected Query:
+
 SELECT DISTINCT u.name, u.phone, i.due_date, i.amount
 FROM users u
 JOIN orders o ON u.id = o.user_id
@@ -105,9 +89,7 @@ JOIN installment_plans ip ON t.id = ip.transaction_id
 JOIN installments i ON ip.id = i.plan_id
 WHERE i.status = 'Overdue';
 
--- =========================================================
--- 8. Analytical: Monthly Growth Rate of Revenue
--- =========================================================
+-- Monthly Growth Rate of Revenue
 SELECT 
     DATE_TRUNC('month', created_at) AS sales_month,
     SUM(total_amount) AS current_sales,
@@ -117,27 +99,21 @@ FROM orders
 WHERE status = 'Delivered'
 GROUP BY 1;
 
--- =========================================================
--- 9. NOT EXISTS: Find Products that have never been sold
--- =========================================================
+-- Find Products that have never been sold
 SELECT name, stock_quantity 
 FROM products p
 WHERE NOT EXISTS (
     SELECT 1 FROM order_items oi WHERE oi.product_id = p.id
 );
 
--- =========================================================
--- 10. Complex Filter: Pending Pharmacy Prescriptions older than 24 hours
--- =========================================================
+-- Pending Pharmacy Prescriptions older than 24 hours
 SELECT u.name, p.details, p.uploaded_at
 FROM prescriptions p
 JOIN users u ON p.user_id = u.id
 WHERE p.status = 'Pending' 
 AND p.uploaded_at < NOW() - INTERVAL '24 hours';
 
--- =========================================================
--- 11. Grouping Sets: Revenue by Payment Method and Status
--- =========================================================
+-- Grouping Sets: Revenue by Payment Method and Status
 SELECT 
     payment_method,
     status,

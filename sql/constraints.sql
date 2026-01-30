@@ -1,20 +1,8 @@
--- Proyojon Database Constraints & Indexes
--- DBMS: PostgreSQL
-
--- ==========================================
--- 1. Indexing Strategy
--- ==========================================
-
--- A. Search Optimization Indexes
--- Users often search for products by name or category
 CREATE INDEX idx_products_name ON products(name);
 CREATE INDEX idx_products_category ON products(category_id);
 
--- Merchants are searched by type (e.g., 'Pharmacy')
 CREATE INDEX idx_merchants_type ON merchants(type);
 
--- B. Performance Indexes for Joins and FKs
--- Frequently used in WHERE clauses and JOINs
 CREATE INDEX idx_orders_user_id ON orders(user_id);
 CREATE INDEX idx_orders_merchant_id ON orders(merchant_id);
 CREATE INDEX idx_order_items_order_id ON order_items(order_id);

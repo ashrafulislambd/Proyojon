@@ -148,7 +148,7 @@ app.get('/api/products', async (req, res) => {
     try {
         // Simple Select
         const result = await pool.query(`
-      SELECT p.id, p.name, p.price, p.stock_quantity, c.name as category, m.name as merchant 
+      SELECT p.id, p.name, p.price, p.stock_quantity, p.image_url as image, c.name as category, m.name as merchant 
       FROM products p
       JOIN product_categories c ON p.category_id = c.id
       JOIN merchants m ON p.merchant_id = m.id
@@ -222,7 +222,7 @@ app.get('/api/admin/stats', async (req, res) => {
           SUM(o.total_amount) AS total_revenue
       FROM merchants m
       JOIN orders o ON m.id = o.merchant_id
-      WHERE o.status = 'Delivered'
+      WHERE o.status != 'Cancelled'
       GROUP BY m.name
       ORDER BY total_revenue DESC
     `);

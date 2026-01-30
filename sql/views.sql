@@ -1,10 +1,3 @@
--- Proyojon Views
--- DBMS: PostgreSQL
-
--- =========================================================
--- 1. View: Merchant Performance Dashboard
--- Summary of sales, active products, and order counts per merchant
--- =========================================================
 CREATE OR REPLACE VIEW vw_merchant_performance AS
 SELECT 
     m.id AS merchant_id,
@@ -18,10 +11,6 @@ LEFT JOIN products p ON m.id = p.merchant_id
 LEFT JOIN orders o ON m.id = o.merchant_id AND o.status = 'Delivered'
 GROUP BY m.id, m.name, m.type;
 
--- =========================================================
--- 2. View: User Credit Health
--- Shows user credit limit, spent amount (unpaid), and remaining credit
--- =========================================================
 CREATE OR REPLACE VIEW vw_user_credit_health AS
 WITH latest_scores AS (
     SELECT DISTINCT ON (user_id) user_id, score
@@ -43,10 +32,6 @@ LEFT JOIN installment_plans ip ON t.id = ip.transaction_id
 LEFT JOIN installments i ON ip.id = i.plan_id AND i.status IN ('Pending', 'Overdue')
 GROUP BY u.id, u.name, u.credit_limit, ls.score;
 
--- =========================================================
--- 3. View: Daily Revenue Report
--- Aggregated daily sales for fast reporting
--- =========================================================
 CREATE OR REPLACE VIEW vw_daily_revenue AS
 SELECT 
     DATE(transaction_date) AS date,
