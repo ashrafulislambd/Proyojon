@@ -1,8 +1,5 @@
--- Proyojon Database Schema
--- DBMS: PostgreSQL
-
--- Drop tables if they exist to start fresh
 DROP TABLE IF EXISTS audit_logs CASCADE;
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
 DROP TABLE IF EXISTS notifications CASCADE;
 DROP TABLE IF EXISTS installments CASCADE;
 DROP TABLE IF EXISTS installment_plans CASCADE;
@@ -18,14 +15,12 @@ DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS roles CASCADE;
 DROP TABLE IF EXISTS admins CASCADE;
 
--- 1. Roles (RBAC)
 CREATE TABLE roles (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) UNIQUE NOT NULL,
     description TEXT
 );
 
--- 2. Admins
 CREATE TABLE admins (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -35,7 +30,6 @@ CREATE TABLE admins (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 3. Users
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -49,7 +43,6 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 4. Merchants (Includes Pharmacies)
 CREATE TABLE merchants (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -60,14 +53,12 @@ CREATE TABLE merchants (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 5. Product Categories
 CREATE TABLE product_categories (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) UNIQUE NOT NULL,
     description TEXT
 );
 
--- 6. Products
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
     merchant_id INT REFERENCES merchants(id) ON DELETE CASCADE,
@@ -76,10 +67,10 @@ CREATE TABLE products (
     description TEXT,
     price DECIMAL(10, 2) NOT NULL,
     stock_quantity INT DEFAULT 0 CHECK (stock_quantity >= 0),
+    image_url VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 7. Prescriptions (For Pharmacy orders)
 CREATE TABLE prescriptions (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
@@ -89,7 +80,6 @@ CREATE TABLE prescriptions (
     uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 8. Orders
 CREATE TABLE orders (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
@@ -99,7 +89,6 @@ CREATE TABLE orders (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 9. Order Items
 CREATE TABLE order_items (
     id SERIAL PRIMARY KEY,
     order_id INT REFERENCES orders(id) ON DELETE CASCADE,
@@ -108,7 +97,6 @@ CREATE TABLE order_items (
     unit_price DECIMAL(10, 2) NOT NULL
 );
 
--- 10. Transactions
 CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
     order_id INT REFERENCES orders(id),
@@ -118,7 +106,6 @@ CREATE TABLE transactions (
     status VARCHAR(20) DEFAULT 'Success'
 );
 
--- 11. Installment Plans
 CREATE TABLE installment_plans (
     id SERIAL PRIMARY KEY,
     transaction_id INT REFERENCES transactions(id) ON DELETE CASCADE,
@@ -127,7 +114,6 @@ CREATE TABLE installment_plans (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 12. Installments
 CREATE TABLE installments (
     id SERIAL PRIMARY KEY,
     plan_id INT REFERENCES installment_plans(id) ON DELETE CASCADE,
@@ -137,7 +123,6 @@ CREATE TABLE installments (
     paid_at TIMESTAMP
 );
 
--- 13. Credit Scores
 CREATE TABLE credit_scores (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
@@ -145,7 +130,6 @@ CREATE TABLE credit_scores (
     calculated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 14. Notifications
 CREATE TABLE notifications (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id) ON DELETE CASCADE,
@@ -155,7 +139,6 @@ CREATE TABLE notifications (
     sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 15. Audit Logs (For system monitoring)
 CREATE TABLE audit_logs (
     id SERIAL PRIMARY KEY,
     table_name VARCHAR(50) NOT NULL,
