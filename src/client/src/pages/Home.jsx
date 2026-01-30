@@ -2,89 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Home = () => {
-    const [products, setProducts] = useState([
-        {
-            id: 101,
-            name: 'MacBook Air M2',
-            price: 125000,
-            stock_quantity: 10,
-            category: 'Electronics',
-            merchant: 'TechWorld BD',
-            image: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 102,
-            name: 'Smartphone X',
-            price: 25000,
-            stock_quantity: 50,
-            category: 'Electronics',
-            merchant: 'TechWorld BD',
-            image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 103,
-            name: 'Mechanical Keyboard',
-            price: 5500,
-            stock_quantity: 30,
-            category: 'Electronics',
-            merchant: 'TechWorld BD',
-            image: '/C:/Users/zannatul/.gemini/antigravity/brain/b8820cee-0759-40d6-b3e7-78a5adc5154b/mechanical_keyboard_demo_1769692730520.png'
-        },
-        {
-            id: 104,
-            name: 'Wireless Earbuds Pro',
-            price: 4500,
-            stock_quantity: 100,
-            category: 'Electronics',
-            merchant: 'TechWorld BD',
-            image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 201,
-            name: 'Organic Honey (500g)',
-            price: 850,
-            stock_quantity: 45,
-            category: 'Groceries',
-            merchant: 'Daily Mart',
-            image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 202,
-            name: 'Fresh Mangoes (1kg)',
-            price: 220,
-            stock_quantity: 150,
-            category: 'Groceries',
-            merchant: 'Daily Mart',
-            image: 'https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 203,
-            name: 'Premium Basmati Rice (5kg)',
-            price: 1200,
-            stock_quantity: 60,
-            category: 'Groceries',
-            merchant: 'Daily Mart',
-            image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 301,
-            name: 'First Aid Kit',
-            price: 1500,
-            stock_quantity: 20,
-            category: 'Medicine',
-            merchant: 'Lazz Pharma',
-            image: 'https://images.unsplash.com/photo-1603398938378-e54eab446ddd?auto=format&fit=crop&q=80&w=800'
-        },
-        {
-            id: 302,
-            name: 'Digital Thermometer',
-            price: 450,
-            stock_quantity: 15,
-            category: 'Medicine',
-            merchant: 'Lazz Pharma',
-            image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800'
-        }
-    ]);
+    const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [user, setUser] = useState(null);
 
@@ -99,7 +17,7 @@ const Home = () => {
             }
         }
         // Disabled real fetch for demo purposes to show my generated data
-        // fetchProducts();
+        fetchProducts();
     }, []);
 
     const fetchProducts = async () => {
