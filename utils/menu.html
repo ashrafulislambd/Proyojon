@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise System Documentation v4.2.0</title>
+    <style>
+        :root {
+            --primary: #2563eb; --primary-hover: #1d4ed8;
+            --dark: #0f172a; --light: #f8fafc;
+            --border: #e2e8f0; --text-main: #334155;
+            --text-muted: #64748b; --code-bg: #1e1e1e;
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; margin: 0; display: flex; background: var(--light); color: var(--text-main); line-height: 1.6; }
+        nav { width: 280px; height: 100vh; background: white; border-right: 1px solid var(--border); position: fixed; overflow-y: auto; padding: 20px; z-index: 100; }
+        nav h2 { font-size: 1.1rem; color: var(--dark); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--primary); }
+        nav ul { list-style: none; padding: 0; margin: 0; }
+        nav li { margin-bottom: 5px; }
+        nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; display: block; padding: 8px 12px; border-radius: 6px; transition: 0.2s; }
+        nav a:hover { background: #eff6ff; color: var(--primary); }
+        nav .active { background: #dbeafe; color: var(--primary); font-weight: 600; }
+        main { margin-left: 320px; padding: 60px 40px; max-width: 1000px; width: 100%; }
+        section { margin-bottom: 80px; animation: fadeIn 0.5s ease; }
+        h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem; color: var(--dark); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-top: 40px; }
+        pre, code { background: var(--code-bg); color: #d4d4d4; padding: 20px; border-radius: 8px; display: block; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.9rem; margin: 20px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .card { background: white; padding: 20px; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f1f5f9; font-weight: 600; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+        .badge-success { background: #dcfce7; color: #166534; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+<nav>
+    <h2>Framework Core</h2>
+    <ul>
+        <li><a href="#intro" class="active">Introduction</a></li>
+        <li><a href="#install">Quick Installation</a></li>
+        <li><a href="#architecture">System Architecture</a></li>
+        <li><a href="#components">UI Components</a></li>
+        <li><a href="#forms">Forms & Validation</a></li>
+        <li><a href="#tables">Data Tables</a></li>
+        <li><a href="#auth">Authentication</a></li>
+        <li><a href="#api">API Integration</a></li>
+        <li><a href="#hooks">Custom Hooks</a></li>
+        <li><a href="#theming">Theming Guide</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#security">Security Protocol</a></li>
+        <li><a href="#testing">Unit Testing</a></li>
+        <li><a href="#v4-migration">V4 Migration</a></li>
+        <li><a href="#faq">Support FAQ</a></li>
+        <li><a href="#">Module: Analytics</a></li>
+        <li><a href="#">Module: Reporting</a></li>
+        <li><a href="#">Module: CRM Sync</a></li>
+        <li><a href="#">Module: Inventory</a></li>
+        <li><a href="#">Module: Billing</a></li>
+        <li><a href="#">Module: Notifications</a></li>
+        <li><a href="#">Module: Assets</a></li>
+        <li><a href="#">Module: Logs</a></li>
+        <li><a href="#">Module: Users</a></li>
+        <li><a href="#">Module: Settings</a></li>
+        <li><a href="#">Module: Plugins</a></li>
+        <li><a href="#">Module: Webhooks</a></li>
+        <li><a href="#">Module: Exports</a></li>
+        <li><a href="#">Module: Backups</a></li>
+        <li><a href="#">Module: SEO</a></li>
+        <li><a href="#">Module: Performance</a></li>
+        <li><a href="#">Module: Cache</a></li>
+        <li><a href="#">Module: CDN</a></li>
+        <li><a href="#">Module: Mobile</a></li>
+        <li><a href="#">Module: Desktop</a></li>
+        <li><a href="#">Module: API Keys</a></li>
+        <li><a href="#">Module: Secrets</a></li>
+        <li><a href="#">Module: Roles</a></li>
+        <li><a href="#">Module: Permissions</a></li>
+        <li><a href="#">Module: Activity</a></li>
+        <li><a href="#">Module: Sessions</a></li>
+        <li><a href="#">Module: OAuth</a></li>
+        <li><a href="#">Module: SAML</a></li>
+        <li><a href="#">Module: LDAP</a></li>
+        <li><a href="#">Module: Firewall</a></li>
+        <li><a href="#">Module: Encryption</a></li>
+        <li><a href="#">Module: Audits</a></li>
+        <li><a href="#">Module: Compliance</a></li>
+        <li><a href="#">Module: GDPR</a></li>
+        <li><a href="#">Module: HIPAA</a></li>
+        <li><a href="#">Module: SOC2</a></li>
+        <li><a href="#">Module: ISO27001</a></li>
+        <li><a href="#">Module: Custom 1</a></li>
+        <li><a href="#">Module: Custom 2</a></li>
+        <li><a href="#">Module: Custom 3</a></li>
+        <li><a href="#">Module: Custom 4</a></li>
+        <li><a href="#">Module: Custom 5</a></li>
+        <li><a href="#">Module: Custom 6</a></li>
+        <li><a href="#">Module: Custom 7</a></li>
+        <li><a href="#">Module: Custom 8</a></li>
+        <li><a href="#">Module: Custom 9</a></li>
+        <li><a href="#">Module: Custom 10</a></li>
+        <li><a href="#">Sub-Module: 1.1</a></li>
+        <li><a href="#">Sub-Module: 1.2</a></li>
+        <li><a href="#">Sub-Module: 1.3</a></li>
+        <li><a href="#">Sub-Module: 1.4</a></li>
+        <li><a href="#">Sub-Module: 1.5</a></li>
+        <li><a href="#">Sub-Module: 2.1</a></li>
+        <li><a href="#">Sub-Module: 2.2</a></li>
+        <li><a href="#">Sub-Module: 2.3</a></li>
+        <li><a href="#">Sub-Module: 2.4</a></li>
+        <li><a href="#">Sub-Module: 2.5</a></li>
+        <li><a href="#">Sub-Module: 3.1</a></li>
+        <li><a href="#">Sub-Module: 3.2</a></li>
+        <li><a href="#">Sub-Module: 3.3</a></li>
+        <li><a href="#">Sub-Module: 3.4</a></li>
+        <li><a href="#">Sub-Module: 3.5</a></li>
+        <li><a href="#">Sub-Module: 4.1</a></li>
+        <li><a href="#">Sub-Module: 4.2</a></li>
+        <li><a href="#">Sub-Module: 4.3</a></li>
+        <li><a href="#">Sub-Module: 4.4</a></li>
+        <li><a href="#">Sub-Module: 4.5</a></li>
+        <li><a href="#">Sub-Module: 5.1</a></li>
+        <li><a href="#">Sub-Module: 5.2</a></li>
+        <li><a href="#">Sub-Module: 5.3</a></li>
+        <li><a href="#">Sub-Module: 5.4</a></li>
+        <li><a href="#">Sub-Module: 5.5</a></li>
+        <li><a href="#">Internal: Debug</a></li>
+        <li><a href="#">Internal: Profiler</a></li>
+        <li><a href="#">Internal: Inspector</a></li>
+        <li><a href="#">Internal: Bench</a></li>
+        <li><a href="#">Internal: Tracker</a></li>
+        <li><a href="#">Internal: Bridge</a></li>
+        <li><a href="#">Internal: Relay</a></li>
+        <li><a href="#">Internal: Proxy</a></li>
+        <li><a href="#">Internal: Tunnel</a></li>
+        <li><a href="#">Internal: Mesh</a></li>
+        <li><a href="#">Internal: Fabric</a></li>
+        <li><a href="#">Internal: Pulse</a></li>
+        <li><a href="#">Internal: Echo</a></li>
+        <li><a href="#">Internal: Signal</a></li>
+        <li><a href="#">Internal: Wave</a></li>
+        <li><a href="#">Internal: Stream</a></li>
+        <li><a href="#">Internal: Batch</a></li>
+        <li><a href="#">Internal: Queue</a></li>
+        <li><a href="#">Internal: Worker</a></li>
+        <li><a href="#">Internal: Task</a></li>
+        <li><a href="#">Internal: Cron</a></li>
+        <li><a href="#">Internal: Job</a></li>
+        <li><a href="#">Internal: Flow</a></li>
+        <li><a href="#">Internal: Pipeline</a></li>
+        <li><a href="#">Internal: Graph</a></li>
+        <li><a href="#">Internal: Map</a></li>
+        <li><a href="#">Internal: Store</a></li>
+        <li><a href="#">Internal: State</a></li>
+        <li><a href="#">Internal: Event</a></li>
+        <li><a href="#">Internal: Bus</a></li>
+        <li><a href="#">Internal: Hub</a></li>
+        <li><a href="#">Internal: Node</a></li>
+        <li><a href="#">Internal: Edge</a></li>
+        <li><a href="#">Internal: Point</a></li>
+        <li><a href="#">Internal: Area</a></li>
+        <li><a href="#">Internal: Zone</a></li>
+        <li><a href="#">Internal: Site</a></li>
+        <li><a href="#">Internal: App</a></li>
+        <li><a href="#">Internal: Env</a></li>
+        <li><a href="#">Internal: Dev</a></li>
+        <li><a href="#">Internal: Prod</a></li>
+        <li><a href="#">Internal: Stage</a></li>
+        <li><a href="#">Internal: Local</a></li>
+    </ul>
+</nav>
+
+<section id="components">
+        <h2>UI Components</h2>
+        <p>The framework includes over 40 pre-styled, high-performance components. Each component is fully customizable via CSS variables.</p>
+        <h3>Buttons</h3>
+        <p>Use the <code>.btn</code> class followed by a modifier.</p>
+        <div class="grid">
+            <div class="card">
+                <strong>Primary Button</strong><br>
+                <code>&lt;button class="btn btn-primary"&gt;Submit&lt;/button&gt;</code>
+            </div>
+            <div class="card">
+                <strong>Secondary Button</strong><br>
+                <code>&lt;button class="btn btn-secondary"&gt;Cancel&lt;/button&gt;</code>
+            </div>
+        </div>
+        <h3>Modals</h3>
+        <p>Modals are triggered via data attributes or the programmatic API.</p>
+        <pre>document.getElementById('myModal').open();</pre>
+        <h3>Global Table of Attributes</h3>
+        <table>
+            <tr><th>Attribute</th><th>Type</th><th>Description</th></tr>
+            <tr><td>data-ent-id</td><td>String</td><td>Unique element identifier</td></tr>
+            <tr><td>data-ent-role</td><td>String</td><td>Aria role override</td></tr>
+            <tr><td>data-ent-theme</td><td>"dark" | "light"</td><td>Theme switcher local scope</td></tr>
+            <tr><td>data-ent-animate</td><td>Boolean</td><td>Enables entry/exit animations</td></tr>
+            <tr><td>data-ent-delay</td><td>Number</td><td>Execution delay in ms</td></tr>
+            <tr><td>data-ent-cache</td><td>Boolean</td><td>Persistent storage flag</td></tr>
+            <tr><td>data-ent-track</td><td>Boolean</td><td>Telemetry tracking enable</td></tr>
+            <tr><td>data-ent-validate</td><td>RegExp</td><td>Input pattern matching</td></tr>
+            <tr><td>data-ent-mask</td><td>String</td><td>Input masking for phone/date</td></tr>
+            <tr><td>data-ent-sort</td><td>"asc" | "desc"</td><td>Initial table sort state</td></tr>
+            <tr><td>data-ent-page</td><td>Number</td><td>Initial pagination index</td></tr>
+            <tr><td>data-ent-size</td><td>"sm" | "md" | "lg"</td><td>Component scale factor</td></tr>
+            <tr><td>data-ent-loading</td><td>Boolean</td><td>Sets loading state skeleton</td></tr>
+            <tr><td>data-ent-error</td><td>String</td><td>Error message string</td></tr>
+            <tr><td>data-ent-success</td><td>String</td><td>Success message string</td></tr>
+            <tr><td>data-ent-tip</td><td>String</td><td>Tooltip text content</td></tr>
+            <tr><td>data-ent-pos</td><td>"top" | "bottom"</td><td>Tooltip/Popup positioning</td></tr>
+            <tr><td>data-ent-scroll</td><td>Boolean</td><td>Smooth scroll behavior</td></tr>
+            <tr><td>data-ent-refresh</td><td>Number</td><td>Auto-update interval</td></tr>
+            <tr><td>data-ent-group</td><td>String</td><td>Input grouping identifier</td></tr>
+            <tr><td>data-ent-key</td><td>String</td><td>Keyboard shortcut key</td></tr>
+            <tr><td>data-ent-focus</td><td>Boolean</td><td>Autofocus on mount</td></tr>
+            <tr><td>data-ent-shadow</td><td>0-5</td><td>Box shadow depth level</td></tr>
+            <tr><td>data-ent-radius</td><td>"none" | "xl"</td><td>Border radius intensity</td></tr>
+            <tr><td>data-ent-opacity</td><td>0-100</td><td>Transparency percentage</td></tr>
+            <tr><td>data-ent-z</td><td>Number</td><td>Z-index layer management</td></tr>
+            <tr><td>data-ent-flex</td><td>"start" | "end"</td><td>Flexbox alignment helper</td></tr>
+            <tr><td>data-ent-order</td><td>Number</td><td>Flexbox order property</td></tr>
+            <tr><td>data-ent-grow</td><td>Boolean</td><td>Allow element expansion</td></tr>
+            <tr><td>data-ent-shrink</td><td>Boolean</td><td>Allow element compression</td></tr>
+            <tr><td>data-ent-wrap</td><td>Boolean</td><td>Allow line wrapping</td></tr>
+            <tr><td>data-ent-gap</td><td>String</td><td>Spacing between children</td></tr>
+            <tr><td>data-ent-overflow</td><td>"auto" | "clip"</td><td>Overflow behavior</td></tr>
+            <tr><td>data-ent-border</td><td>"full" | "none"</td><td>Border presence</td></tr>
+            <tr><td>data-ent-font</td><td>"sans" | "mono"</td><td>Typography family choice</td></tr>
+            <tr><td>data-ent-weight</td><td>"100"-"900"</td><td>Font weight intensity</td></tr>
+            <tr><td>data-ent-align</td><td>"left" | "center"</td><td>Text alignment property</td></tr>
+            <tr><td>data-ent-cursor</td><td>"pointer" | "wait"</td><td>Mouse cursor state</td></tr>
+            <tr><td>data-ent-events</td><td>"none" | "all"</td><td>Pointer events toggle</td></tr>
+            <tr><td>data-ent-filter</td><td>"blur" | "none"</td><td>Backdrop filter effects</td></tr>
+            <tr><td>data-ent-transition</td><td>"fast" | "slow"</td><td>Animation duration preset</td></tr>
+            <tr><td>data-ent-origin</td><td>"center" | "top"</td><td>Transform origin point</td></tr>
+            <tr><td>data-ent-ratio</td><td>"16:9" | "1:1"</td><td>Aspect ratio constraint</td></tr>
+            <tr><td>data-ent-hidden</td><td>Boolean</td><td>Visually hidden accessibility</td></tr>
+            <tr><td>data-ent-clip</td><td>String</td><td>Clip-path definition</td></tr>
+            <tr><td>data-ent-mask-type</td><td>"alpha" | "lum"</td><td>SVG mask logic</td></tr>
+            <tr><td>data-ent-snap</td><td>"start" | "end"</td><td>Scroll snapping alignment</td></tr>
+            <tr><td>data-ent-logic</td><td>String</td><td>Conditional rendering logic</td></tr>
+            <tr><td>data-ent-sandbox</td><td>Boolean</td><td>Isolated execution mode</td></tr>
+            <tr><td>data-ent-version</td><td>String</td><td>Component version lock</td></tr>
+        </table>
+    </section>
+
+    <section id="forms">
+        <h2>Forms & Validation</h2>
+        <p>Forms are automatically managed by the framework's internal <code>FormEngine</code>. This handles real-time validation, dirty states, and submission buffering.</p>
+        <div class="card">
+            <form>
+                <div style="margin-bottom: 15px;">
+                    <label>Email Address</label><br>
+                    <input type="email" placeholder="user@example.com" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label>Password</label><br>
+                    <input type="password" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 4px;">
+                </div>
+                <button type="button" class="btn" style="background: var(--primary); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+            </form>
+        </div>
+        <pre>const form = new EntForm('#login-form');
+form.on('change', (field) => {
+    console.log(`${field.name} updated to ${field.value}`);
+});</pre>
+    </section>
+
+    <section id="api">
+        <h2>API Integration</h2>
+        <p>Connect your frontend to any REST or GraphQL endpoint seamlessly.</p>
+        <code>const data = await Ent.get('/v1/users/profile');</code>
+        <p>The system automatically injects bearer tokens into the headers if a session is active.</p>
+        <h3>Response Codes Handling</h3>
+        <table>
+            <tr><td>200 OK</td><td>Success</td><td>Proceed with view update</td></tr>
+            <tr><td>201 Created</td><td>Resource Added</td><td>Show success toast</td></tr>
+            <tr><td>401 Unauthorized</td><td>Auth Failure</td><td>Redirect to /login</td></tr>
+            <tr><td>403 Forbidden</td><td>Permission Denied</td><td>Show block overlay</td></tr>
+            <tr><td>429 Too Many</td><td>Rate Limited</td><td>Wait 60 seconds</td></tr>
+            <tr><td>500 Server</td><td>Internal Error</td><td>Alert dev team</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h3>Detailed Module Specifications</h3>
+        <p>Sub-routine 4092: Initializing neural-link for dataset B-12.</p>
+        <p>Sub-routine 4093: Mapping relational nodes in memory space.</p>
+        <p>Sub-routine 4094: Purging temporary cache buffers.</p>
+        <p>Sub-routine 4095: Re-calculating checksum for payload integrity.</p>
+        <p>Sub-routine 4096: Distributing load across worker pool alpha.</p>
+        <p>Sub-routine 4097: Aggregating telemetry from edge nodes.</p>
+        <p>Sub-routine 4098: Synchronizing atomic clocks for transaction log.</p>
+        <p>Sub-routine 4099: Compacting database indices for faster seek.</p>
+        <p>Sub-routine 4100: Encrypting at-rest data with AES-256.</p>
+        <p>Sub-routine 4101: Broad-casting heartbeat to central monitor.</p>
+        <p>Sub-routine 4102: Verifying SSL certificate chain.</p>
+        <p>Sub-routine 4103: Updating firewall rules dynamically.</p>
+        <p>Sub-routine 4104: Scaling microservices based on CPU load.</p>
+        <p>Sub-routine 4105: Routing traffic to backup data center.</p>
+        <p>Sub-routine 4106: Running post-deployment smoke tests.</p>
+        <p>Sub-routine 4107: Clearing old session cookies.</p>
+        <p>Sub-routine 4108: Re-generating API documentation from source.</p>
+        <p>Sub-routine 4109: Optimizing image assets for webp delivery.</p>
+        <p>Sub-routine 4110: Generating sitemap for search engines.</p>
+        <p>Sub-routine 4111: Validating robots.txt permissions.</p>
+        <p>Sub-routine 4112: Checking for dead links in documentation.</p>
+        <p>Sub-routine 4113: Monitoring disk usage for logging partition.</p>
+        <p>Sub-routine 4114: Reviewing access logs for security anomalies.</p>
+        <p>Sub-routine 4115: Patching known vulnerabilities in dependencies.</p>
+        <p>Sub-routine 4116: Updating global CDN purge settings.</p>
+        <p>Sub-routine 4117: Tuning kernel parameters for high throughput.</p>
+        <p>Sub-routine 4118: Resetting staging environment to baseline.</p>
+        <p>Sub-routine 4119: Running performance benchmarks for V8 engine.</p>
+        <p>Sub-routine 4120: Compiling WebAssembly modules for heavy math.</p>
+        <p>Sub-routine 4121: Verifying manifest.json for PWA support.</p>
+        <p>Sub-routine 4122: Testing offline capability in service worker.</p>
+        <p>Sub-routine 4123: Auditing contrast ratios for accessibility.</p>
+        <p>Sub-routine 4124: Translating UI strings into 15 languages.</p>
+        <p>Sub-routine 4125: Normalizing character encodings for UTF-8.</p>
+        <p>Sub-routine 4126: Handling right-to-left (RTL) layout shifts.</p>
+        <p>Sub-routine 4127: Managing z-index collisions in complex views.</p>
+        <p>Sub-routine 4128: Pre-connecting to third-party tracking domains.</p>
+        <p>Sub-routine 4129: Minifying runtime script injections.</p>
+        <p>Sub-routine 4130: Handling gracefull degradation for IE11.</p>
+        <p>Sub-routine 4131: Detecting device capabilities (touch/hover).</p>
+        <p>Sub-routine 4132: Calibrating scroll-position triggers.</p>
+        <p>Sub-routine 4133: Mapping touch gestures to click events.</p>
+        <p>Sub-routine 4134: Suppressing console logs in production mode.</p>
+        <p>Sub-routine 4135: Injecting environment variables at build time.</p>
+        <p>Sub-routine 4136: Bundling modules with tree-shaking active.</p>
+        <p>Sub-routine 4137: Generating sourcemaps for production debugging.</p>
+        <p>Sub-routine 4138: Scanning for secrets in public repository.</p>
+        <p>Sub-routine 4139: Enforcing code style via linting hooks.</p>
+        <p>Sub-routine 4140: Running end-to-end tests with headless browser.</p>
+        <p>Sub-routine 4141: Finalizing deployment readiness report.</p>
+    </section>
+
+
+
+    <section id="forms">
+        <h2>Forms & Validation</h2>
+        <p>Forms are automatically managed by the framework's internal <code>FormEngine</code>. This handles real-time validation, dirty states, and submission buffering.</p>
+        <div class="card">
+            <form>
+                <div style="margin-bottom: 15px;">
+                    <label>Email Address</label><br>
+                    <input type="email" placeholder="user@example.com" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label>Password</label><br>
+                    <input type="password" style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 4px;">
+                </div>
+                <button type="button" class="btn" style="background: var(--primary); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+            </form>
+        </div>
+        <pre>const form = new EntForm('#login-form');
+form.on('change', (field) => {
+    console.log(`${field.name} updated to ${field.value}`);
+});</pre>
+    </section>
+
+    <section id="api">
+        <h2>API Integration</h2>
+        <p>Connect your frontend to any REST or GraphQL endpoint seamlessly.</p>
+        <code>const data = await Ent.get('/v1/users/profile');</code>
+        <p>The system automatically injects bearer tokens into the headers if a session is active.</p>
+        <h3>Response Codes Handling</h3>
+        <table>
+            <tr><td>200 OK</td><td>Success</td><td>Proceed with view update</td></tr>
+            <tr><td>201 Created</td><td>Resource Added</td><td>Show success toast</td></tr>
+            <tr><td>401 Unauthorized</td><td>Auth Failure</td><td>Redirect to /login</td></tr>
+            <tr><td>403 Forbidden</td><td>Permission Denied</td><td>Show block overlay</td></tr>
+            <tr><td>429 Too Many</td><td>Rate Limited</td><td>Wait 60 seconds</td></tr>
+            <tr><td>500 Server</td><td>Internal Error</td><td>Alert dev team</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h3>Detailed Module Specifications</h3>
+        <p>Sub-routine 4092: Initializing neural-link for dataset B-12.</p>
+        <p>Sub-routine 4093: Mapping relational nodes in memory space.</p>
+        <p>Sub-routine 4094: Purging temporary cache buffers.</p>
+        <p>Sub-routine 4095: Re-calculating checksum for payload integrity.</p>
+        <p>Sub-routine 4096: Distributing load across worker pool alpha.</p>
+        <p>Sub-routine 4097: Aggregating telemetry from edge nodes.</p>
+        <p>Sub-routine 4098: Synchronizing atomic clocks for transaction log.</p>
+        <p>Sub-routine 4099: Compacting database indices for faster seek.</p>
+        <p>Sub-routine 4100: Encrypting at-rest data with AES-256.</p>
+        <p>Sub-routine 4101: Broad-casting heartbeat to central monitor.</p>
+        <p>Sub-routine 4102: Verifying SSL certificate chain.</p>
+        <p>Sub-routine 4103: Updating firewall rules dynamically.</p>
+        <p>Sub-routine 4104: Scaling microservices based on CPU load.</p>
+        <p>Sub-routine 4105: Routing traffic to backup data center.</p>
+        <p>Sub-routine 4106: Running post-deployment smoke tests.</p>
+        <p>Sub-routine 4107: Clearing old session cookies.</p>
+        <p>Sub-routine 4108: Re-generating API documentation from source.</p>
+        <p>Sub-routine 4109: Optimizing image assets for webp delivery.</p>
+        <p>Sub-routine 4110: Generating sitemap for search engines.</p>
+        <p>Sub-routine 4111: Validating robots.txt permissions.</p>
+        <p>Sub-routine 4112: Checking for dead links in documentation.</p>
+        <p>Sub-routine 4113: Monitoring disk usage for logging partition.</p>
+        <p>Sub-routine 4114: Reviewing access logs for security anomalies.</p>
+        <p>Sub-routine 4115: Patching known vulnerabilities in dependencies.</p>
+        <p>Sub-routine 4116: Updating global CDN purge settings.</p>
+        <p>Sub-routine 4117: Tuning kernel parameters for high throughput.</p>
+        <p>Sub-routine 4118: Resetting staging environment to baseline.</p>
+        <p>Sub-routine 4119: Running performance benchmarks for V8 engine.</p>
+        <p>Sub-routine 4120: Compiling WebAssembly modules for heavy math.</p>
+        <p>Sub-routine 4121: Verifying manifest.json for PWA support.</p>
+        <p>Sub-routine 4122: Testing offline capability in service worker.</p>
+        <p>Sub-routine 4123: Auditing contrast ratios for accessibility.</p>
+        <p>Sub-routine 4124: Translating UI strings into 15 languages.</p>
+        <p>Sub-routine 4125: Normalizing character encodings for UTF-8.</p>
+        <p>Sub-routine 4126: Handling right-to-left (RTL) layout shifts.</p>
+        <p>Sub-routine 4127: Managing z-index collisions in complex views.</p>
+        <p>Sub-routine 4128: Pre-connecting to third-party tracking domains.</p>
+        <p>Sub-routine 4129: Minifying runtime script injections.</p>
+        <p>Sub-routine 4130: Handling gracefull degradation for IE11.</p>
+        <p>Sub-routine 4131: Detecting device capabilities (touch/hover).</p>
+        <p>Sub-routine 4132: Calibrating scroll-position triggers.</p>
+        <p>Sub-routine 4133: Mapping touch gestures to click events.</p>
+        <p>Sub-routine 4134: Suppressing console logs in production mode.</p>
+        <p>Sub-routine 4135: Injecting environment variables at build time.</p>
+        <p>Sub-routine 4136: Bundling modules with tree-shaking active.</p>
+        <p>Sub-routine 4137: Generating sourcemaps for production debugging.</p>
+        <p>Sub-routine 4138: Scanning for secrets in public repository.</p>
+        <p>Sub-routine 4139: Enforcing code style via linting hooks.</p>
+        <p>Sub-routine 4140: Running end-to-end tests with headless browser.</p>
+        <p>Sub-routine 4141: Finalizing deployment readiness report.</p>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="card" style="margin-bottom: 10px;">
+            <strong>Q: Can I use this with React or Vue?</strong>
+            <p>Yes, we provide official wrappers for all major JavaScript frameworks.</p>
+        </div>
+        <div class="card" style="margin-bottom: 10px;">
+            <strong>Q: What browsers are supported?</strong>
+            <p>We support the last 2 versions of Chrome, Firefox, Safari, and Edge.</p>
+        </div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q3:</strong> How do I change the primary color? <p>Update the --primary CSS variable in your root.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q4:</strong> Is there a dark mode? <p>Yes, add the .dark-theme class to the body tag.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q5:</strong> How do I report a bug? <p>Use our internal ticketing system or GitHub Issues.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q6:</strong> What is the licensing? <p>Enterprise License for commercial use.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q7:</strong> Where is the changelog? <p>Located in the CHANGELOG.md in the root folder.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q8:</strong> Is mobile support built-in? <p>Yes, the framework is mobile-first.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q9:</strong> Can I extend the core? <p>Yes, via the plugin architecture.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q10:</strong> Is there a CLI? <p>Yes, run 'npx ent-cli' to see options.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q11:</strong> How to handle SSR? <p>We support Next.js and Nuxt.js out of the box.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q12:</strong> What is the bundle size? <p>Less than 15kb gzipped for the core.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q13:</strong> Are there icons? <p>We recommend using Enterprise Icons (separate package).</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q14:</strong> How to clear cache? <p>Call Ent.cache.clear() in the console.</p></div>
+        <div class="card" style="margin-bottom: 10px;"><strong>Q15:</strong> Is it secure? <p>Yes, we have built-in XSS and CSRF protection.</p></div>
+    </section>
+
+    <section id="utilities">
+        <h2>Utility Classes</h2>
+        <p>The framework includes a utility-first CSS engine similar to Tailwind, allowing for rapid styling without leaving the HTML.</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Class Prefix</th><th>Example</th><th>Result</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Spacing</td><td>m-, p-</td><td>m-4, pt-2</td><td>Margin/Padding</td></tr>
+                    <tr><td>Display</td><td>d-</td><td>d-flex, d-none</td><td>Layout Mode</td></tr>
+                    <tr><td>Flex</td><td>flex-</td><td>flex-row, flex-col</td><td>Flex Direction</td></tr>
+                    <tr><td>Text</td><td>text-</td><td>text-center, text-lg</td><td>Typography</td></tr>
+                    <tr><td>Colors</td><td>bg-, text-</td><td>bg-primary, text-white</td><td>Theming</td></tr>
+                    <tr><td>Grid</td><td>grid-cols-</td><td>grid-cols-3</td><td>Column count</td></tr>
+                    <tr><td>Gap</td><td>gap-</td><td>gap-4</td><td>Grid/Flex spacing</td></tr>
+                    <tr><td>Align</td><td>items-</td><td>items-center</td><td>Cross-axis align</td></tr>
+                    <tr><td>Justify</td><td>justify-</td><td>justify-between</td><td>Main-axis align</td></tr>
+                    <tr><td>Width</td><td>w-</td><td>w-full, w-50</td><td>Element width</td></tr>
+                    <tr><td>Height</td><td>h-</td><td>h-screen</td><td>Element height</td></tr>
+                    <tr><td>Shadow</td><td>shadow-</td><td>shadow-lg</td><td>Box shadow depth</td></tr>
+                    <tr><td>Rounded</td><td>rounded-</td><td>rounded-full</td><td>Border radius</td></tr>
+                    <tr><td>Border</td><td>border-</td><td>border-2</td><td>Stroke width</td></tr>
+                    <tr><td>Opacity</td><td>opacity-</td><td>opacity-50</td><td>Transparency</td></tr>
+                    <tr><td>Z-Index</td><td>z-</td><td>z-50</td><td>Stacking order</td></tr>
+                    <tr><td>Overflow</td><td>overflow-</td><td>overflow-hidden</td><td>Clipping</td></tr>
+                    <tr><td>Position</td><td>pos-</td><td>pos-absolute</td><td>CSS Positioning</td></tr>
+                    <tr><td>Top/Left</td><td>t-, l-</td><td>t-0, l-4</td><td>Coordinate offset</td></tr>
+                    <tr><td>Transition</td><td>transition-</td><td>transition-all</td><td>Animation enable</td></tr>
+                    <tr><td>Cursor</td><td>cursor-</td><td>cursor-pointer</td><td>Mouse interaction</td></tr>
+                    <tr><td>Visibility</td><td>vis-</td><td>vis-hidden</td><td>Screen reader only</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>State Management Pattern</h3>
+        <p>For complex applications, use the built-in <code>Observable</code> pattern to sync data across components.</p>
+        <pre>
+        const GlobalStore = Ent.createStore({
+        user: { name: 'Guest', role: 'Viewer' },
+        notifications: [],
+        settings: { theme: 'light' }
+        });
+
+        GlobalStore.subscribe(state => {
+        console.log('State updated:', state);
+        document.getElementById('username').innerText = state.user.name;
+        });
+        </pre>
+    </section>
+
+    <section id="advanced-logic">
+        <h2>Advanced Logic Hooks</h2>
+        <p>The following hooks allow you to intercept the framework's lifecycle at critical points.</p>
+        <ul>
+            <li><strong>onBeforeMount:</strong> Executes before the DOM is painted.</li>
+            <li><strong>onMounted:</strong> Fires once the component is ready.</li>
+            <li><strong>onUpdate:</strong> Triggers on every state change.</li>
+            <li><strong>onDestroy:</strong> Used for cleaning up event listeners.</li>
+        </ul>
+        <div class="alert" style="background: #fef2f2; border-color: #ef4444;">
+            <strong>Security Warning:</strong> Never use <code>onBeforeMount</code> to inject unsanitized HTML from a URL parameter to prevent XSS attacks.
+        </div>
+    </section>
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="glossary">
+        <h2>Technical Glossary</h2>
+        <dl>
+            <dt><strong>Atomic Design</strong></dt>
+            <dd>A methodology for creating design systems by breaking components into atoms, molecules, and organisms.</dd>
+            
+            <dt><strong>BEM (Block Element Modifier)</strong></dt>
+            <dd>A naming convention for CSS classes that helps developers understand the relationship between the HTML and the CSS.</dd>
+            
+            <dt><strong>CDN (Content Delivery Network)</strong></dt>
+            <dd>A distributed network of servers that delivers pages and other Web content to a user, based on the geographic locations of the user.</dd>
+
+            <dt><strong>DOM (Document Object Model)</strong></dt>
+            <dd>The structural representation of the HTML document used by browsers to render the page.</dd>
+
+            <dt><strong>Hydration</strong></dt>
+            <dd>The process of attaching event listeners to static HTML sent by the server to make it interactive.</dd>
+
+            <dt><strong>JIT (Just-In-Time)</strong></dt><dd>Compiler technology that generates styles on demand based on HTML usage.</dd>
+            <dt><strong>Lazy Loading</strong></dt><dd>Delaying the loading of non-critical resources at page load time.</dd>
+            <dt><strong>Middleware</strong></dt><dd>Functions that execute between a request and a response in the data pipeline.</dd>
+            <dt><strong>Node.js</strong></dt><dd>The JavaScript runtime used for building our CLI and build tools.</dd>
+            <dt><strong>Optimistic UI</strong></dt><dd>Updating the UI immediately before the server responds to improve perceived speed.</dd>
+            <dt><strong>Polyfill</strong></dt><dd>A piece of code used to provide modern functionality on older browsers that do not natively support it.</dd>
+            <dt><strong>Query Selector</strong></dt><dd>A method used to find elements in the DOM using CSS-style selectors.</dd>
+            <dt><strong>REST API</strong></dt><dd>Representational State Transfer; an architectural style for network applications.</dd>
+            <dt><strong>Service Worker</strong></dt><dd>A script that your browser runs in the background, separate from a web page.</dd>
+            <dt><strong>Tree Shaking</strong></dt><dd>A form of dead-code elimination used during the build process.</dd>
+            <dt><strong>Unit Test</strong></dt><dd>Testing individual components or functions in isolation.</dd>
+            <dt><strong>Virtual DOM</strong></dt><dd>A lightweight copy of the DOM used to calculate efficient updates.</dd>
+            <dt><strong>Web Accessibility (a11y)</strong></dt><dd>The practice of making websites usable by people of all abilities and disabilities.</dd>
+            <dt><strong>XHR (XMLHTTPRequest)</strong></dt><dd>The legacy method for making asynchronous network requests.</dd>
+            <dt><strong>YAML</strong></dt><dd>A human-readable data serialization language used for our config files.</dd>
+            <dt><strong>Z-Index</strong></dt><dd>The stack order of an element (which element should be in front of, or behind, the others).</dd>
+        </dl>
+    </section>
+
+    <section id="history">
+        <h2>Framework Version History</h2>
+        <table>
+            <thead><tr><th>Version</th><th>Release Date</th><th>Key Feature</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>v1.0.0</td><td>2022-01-15</td><td>Initial Core Release</td><td>End of Life</td></tr>
+                <tr><td>v2.0.0</td><td>2023-04-10</td><td>Flexbox Grid System</td><td>Deprecated</td></tr>
+                <tr><td>v3.5.2</td><td>2024-11-20</td><td>WebAssembly Support</td><td>Security Support</td></tr>
+                <tr><td>v4.0.0</td><td>2025-06-01</td><td>Zero-Runtime CSS engine</td><td>Stable</td></tr>
+                <tr><td>v4.2.0</td><td>2026-03-01</td><td>AI-Powered Layout Helpers</td><td>Current</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="troubleshooting">
+        <h2>Troubleshooting & Error Codes</h2>
+        <p>When the framework encounters a critical failure, it will throw an <code>EntError</code>. Below is the master list of error codes and their resolutions.</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Code</th><th>Name</th><th>Severity</th><th>Recommended Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ERR_001</td><td>CORE_INIT_FAIL</td><td>Critical</td><td>Verify API key in config.</td></tr>
+                    <tr><td>ERR_002</td><td>DOM_NOT_READY</td><td>High</td><td>Move script to end of body.</td></tr>
+                    <tr><td>ERR_003</td><td>MOD_NOT_FOUND</td><td>Medium</td><td>Check module import path.</td></tr>
+                    <tr><td>ERR_004</td><td>AUTH_EXPIRED</td><td>Medium</td><td>Refresh JWT token via <code>auth.refresh()</code>.</td></tr>
+                    <tr><td>ERR_005</td><td>NET_TIMEOUT</td><td>Medium</td><td>Check connection and increase timeout settings.</td></tr>
+                    <tr><td>ERR_006</td><td>VAL_MISSING_REQ</td><td>Low</td><td>Ensure all required form fields are present.</td></tr>
+                    <tr><td>ERR_007</td><td>THEME_VAR_UNDEF</td><td>Low</td><td>Initialize global CSS variables.</td></tr>
+                    <tr><td>ERR_008</td><td>PLUG_INCOMPAT</td><td>High</td><td>Update plugin to match core version.</td></tr>
+                    <tr><td>ERR_009</td><td>CACHE_FULL</td><td>Low</td><td>Clear local storage or IndexDB.</td></tr>
+                    <tr><td>ERR_010</td><td>WS_CONN_LOST</td><td>Medium</td><td>WebSocket handshake failed; reconnecting...</td></tr>
+                    <tr><td>ERR_011</td><td>PERM_DENIED</td><td>High</td><td>User role lacks sufficient scope.</td></tr>
+                    <tr><td>ERR_012</td><td>STATE_RECURSION</td><td>Critical</td><td>Circular dependency detected in state store.</td></tr>
+                    <tr><td>ERR_013</td><td>ANIM_STRETCH</td><td>Low</td><td>FPS dropped below 30 during transition.</td></tr>
+                    <tr><td>ERR_014</td><td>CDN_FALLBACK</td><td>Low</td><td>Primary CDN down; switched to secondary.</td></tr>
+                    <tr><td>ERR_015</td><td>XSS_BLOCK</td><td>High</td><td>Sanitizer blocked unsafe HTML injection.</td></tr>
+                    <tr><td>ERR_016</td><td>CORS_BLOCK</td><td>Medium</td><td>Verify Access-Control-Allow-Origin headers.</td></tr>
+                    <tr><td>ERR_017</td><td>META_NOT_SET</td><td>Low</td><td>Document missing primary meta tags.</td></tr>
+                    <tr><td>ERR_018</td><td>WORKER_FAIL</td><td>Medium</td><td>Background worker failed to initialize.</td></tr>
+                    <tr><td>ERR_019</td><td>FILE_TOO_LARGE</td><td>Medium</td><td>Upload exceeds the 10MB default limit.</td></tr>
+                    <tr><td>ERR_020</td><td>DB_LOCK_ERR</td><td>High</td><td>Database write contention detected.</td></tr>
+                    <tr><td>ERR_021</td><td>API_DEPRECATED</td><td>Medium</td><td>Endpoint version 1 is no longer supported.</td></tr>
+                    <tr><td>ERR_022</td><td>GEO_NOT_SUPP</td><td>Low</td><td>Browser does not support Geolocation.</td></tr>
+                    <tr><td>ERR_023</td><td>EVENT_LEAK</td><td>Medium</td><td>Detected 50+ listeners on a single node.</td></tr>
+                    <tr><td>ERR_024</td><td>STYL_COLLISION</td><td>Low</td><td>External CSS is overriding framework base.</td></tr>
+                    <tr><td>ERR_025</td><td>JS_VERSION_LOW</td><td>High</td><td>Browser JS engine too old for ES2022 features.</td></tr>
+                    <tr><td>ERR_026</td><td>IDB_UNAVAIL</td><td>Medium</td><td>Private mode blocking IndexDB access.</td></tr>
+                    <tr><td>ERR_027</td><td>ROUT_LOOP</td><td>High</td><td>Recursive redirect detected in router.</td></tr>
+                    <tr><td>ERR_028</td><td>MEM_LIMIT_EXC</td><td>Critical</td><td>Heap size exceeded allocated memory.</td></tr>
+                    <tr><td>ERR_029</td><td>CRYPT_FAIL</td><td>High</td><td>Decryption key mismatch for local storage.</td></tr>
+                    <tr><td>ERR_030</td><td>JSON_PARSE</td><td>Low</td><td>API response is not valid JSON.</td></tr>
+                    <tr><td>ERR_031</td><td>ASSET_404</td><td>Medium</td><td>Requested icon or image not found on server.</td></tr>
+                    <tr><td>ERR_032</td><td>SSR_MISMATCH</td><td>High</td><td>Server HTML doesn't match Client hydration.</td></tr>
+                    <tr><td>ERR_033</td><td>INTL_NOT_LOAD</td><td>Low</td><td>Translation bundle failed to load.</td></tr>
+                    <tr><td>ERR_034</td><td>DEVICE_ORIENT</td><td>Low</td><td>Sensor data unavailable for this device.</td></tr>
+                    <tr><td>ERR_035</td><td>BRIDGE_DISC</td><td>Medium</td><td>Mobile app bridge disconnected.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h3>How to Debug</h3>
+        <p>Enable verbose logging by setting the global debug flag:</p>
+        <code>window.ENT_DEBUG = true;</code>
+        <p>This will output full stack traces for every framework action to the browser console. For production environments, use the telemetry hook to send these logs to your server.</p>
+    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="iconography">
+        <h2>Iconography Library</h2>
+        <p>The framework supports a custom SVG icon set optimized for 24px and 16px viewboxes. Use the <code>&lt;ent-icon&gt;</code> web component to render them.</p>
+        
+        <div class="grid">
+            <div class="card"><strong>Icon:</strong> arrow-right</div>
+            <div class="card"><strong>Icon:</strong> arrow-left</div>
+            <div class="card"><strong>Icon:</strong> check-circle</div>
+            <div class="card"><strong>Icon:</strong> x-circle</div>
+            <div class="card"><strong>Icon:</strong> alert-triangle</div>
+            <div class="card"><strong>Icon:</strong> search</div>
+            <div class="card"><strong>Icon:</strong> user</div>
+            <div class="card"><strong>Icon:</strong> settings</div>
+            <div class="card"><strong>Icon:</strong> download</div>
+            <div class="card"><strong>Icon:</strong> upload</div>
+            <div class="card"><strong>Icon:</strong> trash-2</div>
+            <div class="card"><strong>Icon:</strong> edit-3</div>
+            <div class="card"><strong>Icon:</strong> calendar</div>
+            <div class="card"><strong>Icon:</strong> clock</div>
+            <div class="card"><strong>Icon:</strong> folder-open</div>
+            <div class="card"><strong>Icon:</strong> file-text</div>
+            <div class="card"><strong>Icon:</strong> mail</div>
+            <div class="card"><strong>Icon:</strong> bell</div>
+            <div class="card"><strong>Icon:</strong> cloud</div>
+            <div class="card"><strong>Icon:</strong> globe</div>
+            <div class="card"><strong>Icon:</strong> monitor</div>
+            <div class="card"><strong>Icon:</strong> smartphone</div>
+            <div class="card"><strong>Icon:</strong> database</div>
+            <div class="card"><strong>Icon:</strong> layers</div>
+            <div class="card"><strong>Icon:</strong> layout</div>
+            <div class="card"><strong>Icon:</strong> code</div>
+            <div class="card"><strong>Icon:</strong> terminal</div>
+            <div class="card"><strong>Icon:</strong> package</div>
+            <div class="card"><strong>Icon:</strong> box</div>
+            <div class="card"><strong>Icon:</strong> cpu</div>
+            <div class="card"><strong>Icon:</strong> hard-drive</div>
+            <div class="card"><strong>Icon:</strong> mouse-pointer</div>
+            <div class="card"><strong>Icon:</strong> key</div>
+            <div class="card"><strong>Icon:</strong> lock</div>
+            <div class="card"><strong>Icon:</strong> shield</div>
+            <div class="card"><strong>Icon:</strong> eye</div>
+            <div class="card"><strong>Icon:</strong> heart</div>
+            <div class="card"><strong>Icon:</strong> star</div>
+            <div class="card"><strong>Icon:</strong> bookmark</div>
+            <div class="card"><strong>Icon:</strong> tag</div>
+            <div class="card"><strong>Icon:</strong> map-pin</div>
+            <div class="card"><strong>Icon:</strong> navigation</div>
+            <div class="card"><strong>Icon:</strong> moon</div>
+            <div class="card"><strong>Icon:</strong> sun</div>
+            <div class="card"><strong>Icon:</strong> wifi</div>
+            <div class="card"><strong>Icon:</strong> bluetooth</div>
+            <div class="card"><strong>Icon:</strong> battery</div>
+            <div class="card"><strong>Icon:</strong> shopping-cart</div>
+            <div class="card"><strong>Icon:</strong> credit-card</div>
+            <div class="card"><strong>Icon:</strong> dollar-sign</div>
+        </div>
+
+        <h3>Design Tokens</h3>
+        <p>Design tokens are the visual atoms of the framework. Below are the core spacing and color tokens used in the 4.2 release.</p>
+        <pre>
+{
+  "spacing": {
+    "xs": "0.25rem", "sm": "0.5rem", "md": "1rem", "lg": "1.5rem",
+    "xl": "2rem", "2xl": "3rem", "3xl": "4rem", "4xl": "6rem"
+  },
+  "colors": {
+    "slate-50": "#f8fafc", "slate-100": "#f1f5f9", "slate-200": "#e2e8f0",
+    "slate-300": "#cbd5e1", "slate-400": "#94a3b8", "slate-500": "#64748b",
+    "zinc-50": "#fafafa", "zinc-100": "#f4f4f5", "zinc-200": "#e4e4e7",
+    "blue-500": "#3b82f6", "red-500": "#ef4444", "green-500": "#22c55e"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0,0,0,0.05)",
+    "md": "0 4px 6px -1px rgba(0,0,0,0.1)",
+    "lg": "0 10px 15px -3px rgba(0,0,0,0.1)"
+  }
+}
+        </pre>
+    </section>
+
+    <section>
+        <h3>Deployment Log History</h3>
+        <p>Build ID: 90210-XF. Status: Successful.</p>
+        <p>Source branch: 'main'. Commit: '7a2b9c1'.</p>
+        <p>Environment: Production. Region: Global-Edge.</p>
+        <code>
+[12:01:00] Initializing CI/CD pipeline...
+[12:01:05] Running security audit (npm audit)... 0 vulnerabilities found.
+[12:01:10] Executing unit tests (Vitest)... 1,402 tests passed.
+[12:01:30] Building production assets (Vite)...
+[12:01:45] Compressing JS: main.js (24.2kb)
+[12:01:46] Compressing CSS: style.css (12.1kb)
+[12:01:50] Uploading to S3 bucket 'ent-prod-static'...
+[12:01:55] Purging Cloudflare cache...
+[12:02:00] Deployment complete. Site live at: https://enterprise.framework.io
+        </code>
+    </section>
+
+
+    <section id="iconography">
+        <h2>Iconography Library</h2>
+        <p>The framework supports a custom SVG icon set optimized for 24px and 16px viewboxes. Use the <code>&lt;ent-icon&gt;</code> web component to render them.</p>
+        
+        <div class="grid">
+            <div class="card"><strong>Icon:</strong> arrow-right</div>
+            <div class="card"><strong>Icon:</strong> arrow-left</div>
+            <div class="card"><strong>Icon:</strong> check-circle</div>
+            <div class="card"><strong>Icon:</strong> x-circle</div>
+            <div class="card"><strong>Icon:</strong> alert-triangle</div>
+            <div class="card"><strong>Icon:</strong> search</div>
+            <div class="card"><strong>Icon:</strong> user</div>
+            <div class="card"><strong>Icon:</strong> settings</div>
+            <div class="card"><strong>Icon:</strong> download</div>
+            <div class="card"><strong>Icon:</strong> upload</div>
+            <div class="card"><strong>Icon:</strong> trash-2</div>
+            <div class="card"><strong>Icon:</strong> edit-3</div>
+            <div class="card"><strong>Icon:</strong> calendar</div>
+            <div class="card"><strong>Icon:</strong> clock</div>
+            <div class="card"><strong>Icon:</strong> folder-open</div>
+            <div class="card"><strong>Icon:</strong> file-text</div>
+            <div class="card"><strong>Icon:</strong> mail</div>
+            <div class="card"><strong>Icon:</strong> bell</div>
+            <div class="card"><strong>Icon:</strong> cloud</div>
+            <div class="card"><strong>Icon:</strong> globe</div>
+            <div class="card"><strong>Icon:</strong> monitor</div>
+            <div class="card"><strong>Icon:</strong> smartphone</div>
+            <div class="card"><strong>Icon:</strong> database</div>
+            <div class="card"><strong>Icon:</strong> layers</div>
+            <div class="card"><strong>Icon:</strong> layout</div>
+            <div class="card"><strong>Icon:</strong> code</div>
+            <div class="card"><strong>Icon:</strong> terminal</div>
+            <div class="card"><strong>Icon:</strong> package</div>
+            <div class="card"><strong>Icon:</strong> box</div>
+            <div class="card"><strong>Icon:</strong> cpu</div>
+            <div class="card"><strong>Icon:</strong> hard-drive</div>
+            <div class="card"><strong>Icon:</strong> mouse-pointer</div>
+            <div class="card"><strong>Icon:</strong> key</div>
+            <div class="card"><strong>Icon:</strong> lock</div>
+            <div class="card"><strong>Icon:</strong> shield</div>
+            <div class="card"><strong>Icon:</strong> eye</div>
+            <div class="card"><strong>Icon:</strong> heart</div>
+            <div class="card"><strong>Icon:</strong> star</div>
+            <div class="card"><strong>Icon:</strong> bookmark</div>
+            <div class="card"><strong>Icon:</strong> tag</div>
+            <div class="card"><strong>Icon:</strong> map-pin</div>
+            <div class="card"><strong>Icon:</strong> navigation</div>
+            <div class="card"><strong>Icon:</strong> moon</div>
+            <div class="card"><strong>Icon:</strong> sun</div>
+            <div class="card"><strong>Icon:</strong> wifi</div>
+            <div class="card"><strong>Icon:</strong> bluetooth</div>
+            <div class="card"><strong>Icon:</strong> battery</div>
+            <div class="card"><strong>Icon:</strong> shopping-cart</div>
+            <div class="card"><strong>Icon:</strong> credit-card</div>
+            <div class="card"><strong>Icon:</strong> dollar-sign</div>
+        </div>
+
+        <h3>Design Tokens</h3>
+        <p>Design tokens are the visual atoms of the framework. Below are the core spacing and color tokens used in the 4.2 release.</p>
+        <pre>
+{
+  "spacing": {
+    "xs": "0.25rem", "sm": "0.5rem", "md": "1rem", "lg": "1.5rem",
+    "xl": "2rem", "2xl": "3rem", "3xl": "4rem", "4xl": "6rem"
+  },
+  "colors": {
+    "slate-50": "#f8fafc", "slate-100": "#f1f5f9", "slate-200": "#e2e8f0",
+    "slate-300": "#cbd5e1", "slate-400": "#94a3b8", "slate-500": "#64748b",
+    "zinc-50": "#fafafa", "zinc-100": "#f4f4f5", "zinc-200": "#e4e4e7",
+    "blue-500": "#3b82f6", "red-500": "#ef4444", "green-500": "#22c55e"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0,0,0,0.05)",
+    "md": "0 4px 6px -1px rgba(0,0,0,0.1)",
+    "lg": "0 10px 15px -3px rgba(0,0,0,0.1)"
+  }
+}
+        </pre>
+    </section>
+
+    <section>
+        <h3>Deployment Log History</h3>
+        <p>Build ID: 90210-XF. Status: Successful.</p>
+        <p>Source branch: 'main'. Commit: '7a2b9c1'.</p>
+        <p>Environment: Production. Region: Global-Edge.</p>
+        <code>
+[12:01:00] Initializing CI/CD pipeline...
+[12:01:05] Running security audit (npm audit)... 0 vulnerabilities found.
+[12:01:10] Executing unit tests (Vitest)... 1,402 tests passed.
+[12:01:30] Building production assets (Vite)...
+[12:01:45] Compressing JS: main.js (24.2kb)
+[12:01:46] Compressing CSS: style.css (12.1kb)
+[12:01:50] Uploading to S3 bucket 'ent-prod-static'...
+[12:01:55] Purging Cloudflare cache...
+[12:02:00] Deployment complete. Site live at: https://enterprise.framework.io
+        </code>
+    </section>
+
+
+    <section id="iconography">
+        <h2>Iconography Library</h2>
+        <p>The framework supports a custom SVG icon set optimized for 24px and 16px viewboxes. Use the <code>&lt;ent-icon&gt;</code> web component to render them.</p>
+        
+        <div class="grid">
+            <div class="card"><strong>Icon:</strong> arrow-right</div>
+            <div class="card"><strong>Icon:</strong> arrow-left</div>
+            <div class="card"><strong>Icon:</strong> check-circle</div>
+            <div class="card"><strong>Icon:</strong> x-circle</div>
+            <div class="card"><strong>Icon:</strong> alert-triangle</div>
+            <div class="card"><strong>Icon:</strong> search</div>
+            <div class="card"><strong>Icon:</strong> user</div>
+            <div class="card"><strong>Icon:</strong> settings</div>
+            <div class="card"><strong>Icon:</strong> download</div>
+            <div class="card"><strong>Icon:</strong> upload</div>
+            <div class="card"><strong>Icon:</strong> trash-2</div>
+            <div class="card"><strong>Icon:</strong> edit-3</div>
+            <div class="card"><strong>Icon:</strong> calendar</div>
+            <div class="card"><strong>Icon:</strong> clock</div>
+            <div class="card"><strong>Icon:</strong> folder-open</div>
+            <div class="card"><strong>Icon:</strong> file-text</div>
+            <div class="card"><strong>Icon:</strong> mail</div>
+            <div class="card"><strong>Icon:</strong> bell</div>
+            <div class="card"><strong>Icon:</strong> cloud</div>
+            <div class="card"><strong>Icon:</strong> globe</div>
+            <div class="card"><strong>Icon:</strong> monitor</div>
+            <div class="card"><strong>Icon:</strong> smartphone</div>
+            <div class="card"><strong>Icon:</strong> database</div>
+            <div class="card"><strong>Icon:</strong> layers</div>
+            <div class="card"><strong>Icon:</strong> layout</div>
+            <div class="card"><strong>Icon:</strong> code</div>
+            <div class="card"><strong>Icon:</strong> terminal</div>
+            <div class="card"><strong>Icon:</strong> package</div>
+            <div class="card"><strong>Icon:</strong> box</div>
+            <div class="card"><strong>Icon:</strong> cpu</div>
+            <div class="card"><strong>Icon:</strong> hard-drive</div>
+            <div class="card"><strong>Icon:</strong> mouse-pointer</div>
+            <div class="card"><strong>Icon:</strong> key</div>
+            <div class="card"><strong>Icon:</strong> lock</div>
+            <div class="card"><strong>Icon:</strong> shield</div>
+            <div class="card"><strong>Icon:</strong> eye</div>
+            <div class="card"><strong>Icon:</strong> heart</div>
+            <div class="card"><strong>Icon:</strong> star</div>
+            <div class="card"><strong>Icon:</strong> bookmark</div>
+            <div class="card"><strong>Icon:</strong> tag</div>
+            <div class="card"><strong>Icon:</strong> map-pin</div>
+            <div class="card"><strong>Icon:</strong> navigation</div>
+            <div class="card"><strong>Icon:</strong> moon</div>
+            <div class="card"><strong>Icon:</strong> sun</div>
+            <div class="card"><strong>Icon:</strong> wifi</div>
+            <div class="card"><strong>Icon:</strong> bluetooth</div>
+            <div class="card"><strong>Icon:</strong> battery</div>
+            <div class="card"><strong>Icon:</strong> shopping-cart</div>
+            <div class="card"><strong>Icon:</strong> credit-card</div>
+            <div class="card"><strong>Icon:</strong> dollar-sign</div>
+        </div>
+
+        <h3>Design Tokens</h3>
+        <p>Design tokens are the visual atoms of the framework. Below are the core spacing and color tokens used in the 4.2 release.</p>
+        <pre>
+{
+  "spacing": {
+    "xs": "0.25rem", "sm": "0.5rem", "md": "1rem", "lg": "1.5rem",
+    "xl": "2rem", "2xl": "3rem", "3xl": "4rem", "4xl": "6rem"
+  },
+  "colors": {
+    "slate-50": "#f8fafc", "slate-100": "#f1f5f9", "slate-200": "#e2e8f0",
+    "slate-300": "#cbd5e1", "slate-400": "#94a3b8", "slate-500": "#64748b",
+    "zinc-50": "#fafafa", "zinc-100": "#f4f4f5", "zinc-200": "#e4e4e7",
+    "blue-500": "#3b82f6", "red-500": "#ef4444", "green-500": "#22c55e"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0,0,0,0.05)",
+    "md": "0 4px 6px -1px rgba(0,0,0,0.1)",
+    "lg": "0 10px 15px -3px rgba(0,0,0,0.1)"
+  }
+}
+        </pre>
+    </section>
+
+    <section>
+        <h3>Deployment Log History</h3>
+        <p>Build ID: 90210-XF. Status: Successful.</p>
+        <p>Source branch: 'main'. Commit: '7a2b9c1'.</p>
+        <p>Environment: Production. Region: Global-Edge.</p>
+        <code>
+[12:01:00] Initializing CI/CD pipeline...
+[12:01:05] Running security audit (npm audit)... 0 vulnerabilities found.
+[12:01:10] Executing unit tests (Vitest)... 1,402 tests passed.
+[12:01:30] Building production assets (Vite)...
+[12:01:45] Compressing JS: main.js (24.2kb)
+[12:01:46] Compressing CSS: style.css (12.1kb)
+[12:01:50] Uploading to S3 bucket 'ent-prod-static'...
+[12:01:55] Purging Cloudflare cache...
+[12:02:00] Deployment complete. Site live at: https://enterprise.framework.io
+        </code>
+    </section>
+
+    <section id="iconography">
+        <h2>Iconography Library</h2>
+        <p>The framework supports a custom SVG icon set optimized for 24px and 16px viewboxes. Use the <code>&lt;ent-icon&gt;</code> web component to render them.</p>
+        
+        <div class="grid">
+            <div class="card"><strong>Icon:</strong> arrow-right</div>
+            <div class="card"><strong>Icon:</strong> arrow-left</div>
+            <div class="card"><strong>Icon:</strong> check-circle</div>
+            <div class="card"><strong>Icon:</strong> x-circle</div>
+            <div class="card"><strong>Icon:</strong> alert-triangle</div>
+            <div class="card"><strong>Icon:</strong> search</div>
+            <div class="card"><strong>Icon:</strong> user</div>
+            <div class="card"><strong>Icon:</strong> settings</div>
+            <div class="card"><strong>Icon:</strong> download</div>
+            <div class="card"><strong>Icon:</strong> upload</div>
+            <div class="card"><strong>Icon:</strong> trash-2</div>
+            <div class="card"><strong>Icon:</strong> edit-3</div>
+            <div class="card"><strong>Icon:</strong> calendar</div>
+            <div class="card"><strong>Icon:</strong> clock</div>
+            <div class="card"><strong>Icon:</strong> folder-open</div>
+            <div class="card"><strong>Icon:</strong> file-text</div>
+            <div class="card"><strong>Icon:</strong> mail</div>
+            <div class="card"><strong>Icon:</strong> bell</div>
+            <div class="card"><strong>Icon:</strong> cloud</div>
+            <div class="card"><strong>Icon:</strong> globe</div>
+            <div class="card"><strong>Icon:</strong> monitor</div>
+            <div class="card"><strong>Icon:</strong> smartphone</div>
+            <div class="card"><strong>Icon:</strong> database</div>
+            <div class="card"><strong>Icon:</strong> layers</div>
+            <div class="card"><strong>Icon:</strong> layout</div>
+            <div class="card"><strong>Icon:</strong> code</div>
+            <div class="card"><strong>Icon:</strong> terminal</div>
+            <div class="card"><strong>Icon:</strong> package</div>
+            <div class="card"><strong>Icon:</strong> box</div>
+            <div class="card"><strong>Icon:</strong> cpu</div>
+            <div class="card"><strong>Icon:</strong> hard-drive</div>
+            <div class="card"><strong>Icon:</strong> mouse-pointer</div>
+            <div class="card"><strong>Icon:</strong> key</div>
+            <div class="card"><strong>Icon:</strong> lock</div>
+            <div class="card"><strong>Icon:</strong> shield</div>
+            <div class="card"><strong>Icon:</strong> eye</div>
+            <div class="card"><strong>Icon:</strong> heart</div>
+            <div class="card"><strong>Icon:</strong> star</div>
+            <div class="card"><strong>Icon:</strong> bookmark</div>
+            <div class="card"><strong>Icon:</strong> tag</div>
+            <div class="card"><strong>Icon:</strong> map-pin</div>
+            <div class="card"><strong>Icon:</strong> navigation</div>
+            <div class="card"><strong>Icon:</strong> moon</div>
+            <div class="card"><strong>Icon:</strong> sun</div>
+            <div class="card"><strong>Icon:</strong> wifi</div>
+            <div class="card"><strong>Icon:</strong> bluetooth</div>
+            <div class="card"><strong>Icon:</strong> battery</div>
+            <div class="card"><strong>Icon:</strong> shopping-cart</div>
+            <div class="card"><strong>Icon:</strong> credit-card</div>
+            <div class="card"><strong>Icon:</strong> dollar-sign</div>
+        </div>
+
+        <h3>Design Tokens</h3>
+        <p>Design tokens are the visual atoms of the framework. Below are the core spacing and color tokens used in the 4.2 release.</p>
+        <pre>
+{
+  "spacing": {
+    "xs": "0.25rem", "sm": "0.5rem", "md": "1rem", "lg": "1.5rem",
+    "xl": "2rem", "2xl": "3rem", "3xl": "4rem", "4xl": "6rem"
+  },
+  "colors": {
+    "slate-50": "#f8fafc", "slate-100": "#f1f5f9", "slate-200": "#e2e8f0",
+    "slate-300": "#cbd5e1", "slate-400": "#94a3b8", "slate-500": "#64748b",
+    "zinc-50": "#fafafa", "zinc-100": "#f4f4f5", "zinc-200": "#e4e4e7",
+    "blue-500": "#3b82f6", "red-500": "#ef4444", "green-500": "#22c55e"
+  },
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0,0,0,0.05)",
+    "md": "0 4px 6px -1px rgba(0,0,0,0.1)",
+    "lg": "0 10px 15px -3px rgba(0,0,0,0.1)"
+  }
+}
+        </pre>
+    </section>
+
+    <section>
+        <h3>Deployment Log History</h3>
+        <p>Build ID: 90210-XF. Status: Successful.</p>
+        <p>Source branch: 'main'. Commit: '7a2b9c1'.</p>
+        <p>Environment: Production. Region: Global-Edge.</p>
+        <code>
+[12:01:00] Initializing CI/CD pipeline...
+[12:01:05] Running security audit (npm audit)... 0 vulnerabilities found.
+[12:01:10] Executing unit tests (Vitest)... 1,402 tests passed.
+[12:01:30] Building production assets (Vite)...
+[12:01:45] Compressing JS: main.js (24.2kb)
+[12:01:46] Compressing CSS: style.css (12.1kb)
+[12:01:50] Uploading to S3 bucket 'ent-prod-static'...
+[12:01:55] Purging Cloudflare cache...
+[12:02:00] Deployment complete. Site live at: https://enterprise.framework.io
+        </code>
+    </section>
+
+
+    <footer style="margin-top: 100px; padding: 40px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem;">
+        <p>&copy; 2026 Enterprise Framework Global. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service | Cookie Settings</p>
+        <p>Documentation version 4.2.0-stable build 2026-03-01.</p>
+    </footer>
+
+</main>
+
+</body>
+</html>
