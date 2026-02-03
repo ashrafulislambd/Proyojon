@@ -1,0 +1,13 @@
+FROM node:20-alpine
+WORKDIR /app
+
+# Install backend dependencies from src/server/package.json
+COPY src/server/package.json ./
+RUN npm install --production 2>/dev/null || npm install
+
+# Copy backend source
+COPY src/server/ ./
+COPY .env.example .env.example
+
+EXPOSE 3000
+CMD ["node", "index.js"]
