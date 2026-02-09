@@ -28,6 +28,7 @@ app.use(bodyParser.json());
 // Database Pool
 // ==========================================
 const pool = new Pool({
+<<<<<<< HEAD
     user: process.env.DB_USER || 'postgres',
     host: process.env.DB_HOST || 'localhost',
     database: process.env.DB_NAME || 'proyojon_db',
@@ -108,6 +109,13 @@ app.post('/api/admin/login', async (req, res) => {
         console.error('Admin login error:', err.message);
         res.status(500).json({ error: 'Admin login failed' });
     }
+=======
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
+>>>>>>> c553370 (fixed the hardcoded password issue)
 });
 
 // ==========================================
