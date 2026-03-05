@@ -106,3 +106,85 @@ BEGIN
     RETURN QUERY SELECT TRUE, NULL::VARCHAR;
 END;
 $$ LANGUAGE plpgsql;
+
+
+-- Get user financial summary for dashboard
+CREATE OR REPLACE FUNCTION get_user_financial_summary(p_user_id INT)
+RETURNS JSONB AS $$
+DECLARE
+    v_total_debt DECIMAL;
+    v_active_plans INT;
+    v_next_due DATE;
+    v_credit_score INT;
+    v_result JSONB;
+BEGIN
+    SELECT COALESCE(SUM(outstanding_balance), 0) INTO v_total_debt
+    FROM orders WHERE user_id = p_user_id AND status != 'Cancelled';
+
+    SELECT COUNT(*) INTO v_active_plans
+    FROM installment_plans ip
+    JOIN orders o ON ip.order_id = o.id
+    WHERE o.user_id = p_user_id AND o.status NOT IN ('Delivered', 'Cancelled');
+
+    SELECT MIN(due_date) INTO v_next_due
+    FROM installments i
+    JOIN installment_plans ip ON i.plan_id = ip.id
+    JOIN orders o ON ip.order_id = o.id
+    WHERE o.user_id = p_user_id AND i.status = 'Pending';
+
+    SELECT score INTO v_credit_score
+    FROM credit_scores WHERE user_id = p_user_id
+    ORDER BY calculated_at DESC LIMIT 1;
+
+    v_result := jsonb_build_object(
+        'total_debt', v_total_debt,
+        'active_plans', v_active_plans,
+        'next_due_date', v_next_due,
+        'credit_score', COALESCE(v_credit_score, 500)
+    );
+
+    RETURN v_result;
+END;
+$$ LANGUAGE plpgsql;
+
+
+-- Check if user is eligible for a specific BNPL purchase
+CREATE OR REPLACE FUNCTION is_user_eligible_for_bnpl(p_user_id INT, p_amount DECIMAL)
+RETURNS BOOLEAN AS $$
+DECLARE
+    v_remaining_credit DECIMAL;
+    v_credit_score INT;
+BEGIN
+    -- Get remaining credit from the view
+    SELECT remaining_credit, credit_score INTO v_remaining_credit, v_credit_score
+    FROM vw_user_credit_health WHERE id = p_user_id;
+
+    -- Eligibility criteria: enough credit and score > 500
+    IF v_remaining_credit >= p_amount AND v_credit_score >= 500 THEN
+        RETURN TRUE;
+    ELSE
+        RETURN FALSE;
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
+
+
+-- Calculate late fee for an installment
+CREATE OR REPLACE FUNCTION calculate_late_fee_func(p_installment_id INT)
+RETURNS DECIMAL AS $$
+DECLARE
+    v_due_date DATE;
+    v_amount DECIMAL;
+    v_late_fee DECIMAL := 0.00;
+BEGIN
+    SELECT due_date, amount INTO v_due_date, v_amount
+    FROM installments WHERE id = p_installment_id;
+
+    -- If more than 3 days late, apply 5% fee
+    IF v_due_date < (CURRENT_DATE - INTERVAL '3 days') THEN
+        v_late_fee := v_amount * 0.05;
+    END IF;
+
+    RETURN v_late_fee;
+END;
+$$ LANGUAGE plpgsql;

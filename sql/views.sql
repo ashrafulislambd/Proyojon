@@ -60,6 +60,63 @@ SELECT
     o.id AS order_id
 FROM installments i
 JOIN installment_plans ip ON i.plan_id = ip.id
+FROM installments i
+JOIN installment_plans ip ON i.plan_id = ip.id
 JOIN orders o ON ip.order_id = o.id
 JOIN users u ON o.user_id = u.id
 WHERE i.status = 'Pending' AND i.due_date < CURRENT_DATE;
+
+
+-- Top selling products view
+CREATE OR REPLACE VIEW vw_top_selling_products AS
+SELECT
+    p.id,
+    p.name,
+    p.brand,
+    c.name AS category_name,
+    m.name AS merchant_name,
+    SUM(oi.quantity) AS total_sold,
+    SUM(oi.quantity * oi.unit_price) AS total_revenue
+FROM products p
+JOIN order_items oi ON p.id = oi.product_id
+JOIN orders o ON oi.order_id = o.id
+JOIN product_categories c ON p.category_id = c.id
+JOIN merchants m ON p.merchant_id = m.id
+WHERE o.status != 'Cancelled'
+GROUP BY p.id, p.name, p.brand, c.name, m.name
+ORDER BY total_sold DESC;
+
+
+-- Upcoming installments view (next 7 days)
+CREATE OR REPLACE VIEW vw_upcoming_installments AS
+SELECT
+    i.id AS installment_id,
+    i.due_date,
+    i.amount,
+    u.name AS user_name,
+    u.phone AS user_phone,
+    o.id AS order_id
+FROM installments i
+JOIN installment_plans ip ON i.plan_id = ip.id
+JOIN orders o ON ip.order_id = o.id
+JOIN users u ON o.user_id = u.id
+WHERE i.status = 'Pending'
+  AND i.due_date BETWEEN CURRENT_DATE AND (CURRENT_DATE + INTERVAL '7 days');
+
+
+-- Recent activity log view (combined audit and notifications)
+CREATE OR REPLACE VIEW vw_recent_activity_log AS
+SELECT
+    'AUDIT' AS activity_type,
+    changed_at AS activity_date,
+    table_name || ' ' || action AS activity_title,
+    'Record ID: ' || record_id AS description
+FROM audit_logs
+UNION ALL
+SELECT
+    'NOTIFICATION' AS activity_type,
+    sent_at AS activity_date,
+    title AS activity_title,
+    message AS description
+FROM notifications
+ORDER BY activity_date DESC;

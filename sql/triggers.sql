@@ -117,3 +117,42 @@ BEGIN
     RETURN v_count;
 END;
 $$ LANGUAGE plpgsql;
+
+
+-- Trigger function: Update merchant stats on delivery
+CREATE OR REPLACE FUNCTION update_merchant_stats_tf()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.status = 'Delivered' AND OLD.status != 'Delivered' THEN
+        UPDATE merchants
+        SET total_sales = total_sales + NEW.total_amount,
+            pending_settlement = pending_settlement + NEW.total_amount
+        WHERE id = NEW.merchant_id;
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER trg_update_merchant_stats
+AFTER UPDATE ON orders
+FOR EACH ROW EXECUTE FUNCTION update_merchant_stats_tf();
+
+
+-- Trigger function: Log transaction status changes
+CREATE OR REPLACE FUNCTION log_transaction_status_change_tf()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.status != OLD.status THEN
+        INSERT INTO audit_logs (table_name, action, record_id, old_data, new_data, changed_by)
+        VALUES ('transactions', 'STATUS_CHANGE', NEW.id,
+            jsonb_build_object('status', OLD.status),
+            jsonb_build_object('status', NEW.status),
+            'System_Trigger');
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE TRIGGER trg_log_transaction_status_change
+AFTER UPDATE ON transactions
+FOR EACH ROW EXECUTE FUNCTION log_transaction_status_change_tf();
