@@ -70,7 +70,7 @@ INSERT INTO products (merchant_id, category_id, name, description, brand, price,
 INSERT INTO credit_scores (user_id, score) VALUES
 (1, 750),
 (2, 680),
-(3, 590);
+(3, 720);
 
 -- 8. Sample Order for Alice (3months plan)
 INSERT INTO orders (user_id, merchant_id, total_amount, outstanding_balance, payment_plan, status, credit_score_used) VALUES

@@ -159,7 +159,7 @@ DECLARE
     v_i INT;
 BEGIN
     -- Get user credit info
-    SELECT COALESCE((SELECT score FROM credit_scores WHERE user_id = p_user_id ORDER BY calculated_at DESC LIMIT 1), 300),
+    SELECT COALESCE((SELECT score FROM credit_scores WHERE user_id = p_user_id ORDER BY calculated_at DESC LIMIT 1), 720),
            u.credit_limit
     INTO v_credit_score, v_credit_limit
     FROM users u WHERE u.id = p_user_id;

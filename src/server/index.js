@@ -89,7 +89,12 @@ app.post('/api/auth/login', async (req, res) => {
         const rows = await callFunc('login_user_func($1, $2)', [email, password]);
         const { user_id, user_name, user_role, message } = rows[0];
         if (!user_id) return res.status(401).json({ error: message });
-        res.json({ message, user: { id: user_id, name: user_name, role: user_role } });
+
+        // Fetch full profile
+        const profileRows = await callFunc('get_user_profile_func($1)', [user_id]);
+        const userProfile = profileRows[0];
+
+        res.json({ message, user: { ...userProfile, role: user_role } });
     } catch (err) {
         console.error('Login error:', err.message);
         res.status(500).json({ error: 'Login failed' });
@@ -134,6 +139,50 @@ app.get('/api/products/:id', async (req, res) => {
     } catch (err) {
         console.error('Get product error:', err.message);
         res.status(500).json({ error: 'Failed to fetch product' });
+    }
+});
+
+// POST create product
+app.post('/api/products', async (req, res) => {
+    const { name, description, brand, price, stock, image, category, merchantId } = req.body;
+    try {
+        const rows = await callFunc(
+            'add_product_func($1, $2, $3, $4, $5, $6, $7, $8)',
+            [name, description || null, brand || null, price, stock, image || null, category, merchantId || 1]
+        );
+        res.json({ id: rows[0].add_product_func, message: 'Product added successfully' });
+    } catch (err) {
+        console.error('Add product error:', err.message);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// PUT update product
+app.put('/api/products/:id', async (req, res) => {
+    const { name, description, brand, price, stock, image, category } = req.body;
+    try {
+        const result = await pool.query(
+            'SELECT update_product_func($1, $2, $3, $4, $5, $6, $7, $8) AS message',
+            [req.params.id, name || null, description || null, brand || null, price || null, stock || null, image || null, category || null]
+        );
+        res.json({ message: result.rows[0].message });
+    } catch (err) {
+        console.error('Update product error:', err.message);
+        res.status(500).json({ error: err.message });
+    }
+});
+
+// DELETE product
+app.delete('/api/products/:id', async (req, res) => {
+    try {
+        const result = await pool.query(
+            'SELECT delete_product_func($1) AS message',
+            [req.params.id]
+        );
+        res.json({ message: result.rows[0].message });
+    } catch (err) {
+        console.error('Delete product error:', err.message);
+        res.status(500).json({ error: err.message });
     }
 });
 

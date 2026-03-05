@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Bell, CheckCircle, AlertTriangle, DollarSign, Info } from 'lucide-react';
-import { format } from 'date-fns';
+import { formatDate } from '../utils/dateUtils';
 
 const typeConfig = (type: string) => {
   switch (type) {
@@ -23,10 +23,10 @@ export function Notifications() {
     fetchNotifications();
   }, []);
 
-  const unread = notifications.filter(n => !n.is_read);
-  const read = notifications.filter(n => n.is_read);
+  const unread = notifications.filter(n => !n.read);
+  const read = notifications.filter(n => n.read);
 
-  const handleMarkRead = async (id: number) => {
+  const handleMarkRead = async (id: string) => {
     await markNotificationAsRead(id);
   };
 
@@ -66,8 +66,8 @@ export function Notifications() {
             return (
               <Card
                 key={notification.id}
-                className={`border cursor-pointer transition-opacity ${cfg.bg} ${notification.is_read ? 'opacity-70' : ''}`}
-                onClick={() => !notification.is_read && handleMarkRead(notification.id)}
+                className={`border cursor-pointer transition-opacity ${cfg.bg} ${notification.read ? 'opacity-70' : ''}`}
+                onClick={() => !notification.read && handleMarkRead(notification.id)}
               >
                 <CardContent className="p-4">
                   <div className="flex items-start gap-4">
@@ -80,12 +80,12 @@ export function Notifications() {
                           <p className="font-semibold text-gray-900">{notification.title}</p>
                           <p className="text-sm text-gray-700 mt-1">{notification.message}</p>
                         </div>
-                        {!notification.is_read && (
+                        {!notification.read && (
                           <Badge className="bg-blue-500 ml-2 shrink-0">New</Badge>
                         )}
                       </div>
                       <p className="text-xs text-gray-500 mt-2">
-                        {format(new Date(notification.sent_at), 'MMM dd, yyyy h:mm a')}
+                        {formatDate(notification.date, 'MMM dd, yyyy h:mm a')}
                       </p>
                     </div>
                   </div>

@@ -4,8 +4,8 @@ import { useApp } from '../context/AppContext';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
+import { formatDate } from '../utils/dateUtils';
 import { Package, ShoppingCart, Loader2 } from 'lucide-react';
-import { format } from 'date-fns';
 
 const statusColor = (status: string) => {
   switch (status) {
@@ -72,18 +72,18 @@ export function Orders() {
 
       <div className="space-y-4">
         {orders.map((order) => (
-          <Card key={order.order_id}>
+          <Card key={order.id}>
             <CardHeader>
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                 <div>
-                  <CardTitle className="text-lg">Order #{order.order_id}</CardTitle>
+                  <CardTitle className="text-lg">Order #{order.id}</CardTitle>
                   <p className="text-sm text-gray-500">
-                    {format(new Date(order.created_at), 'MMM dd, yyyy h:mm a')}
+                    {formatDate(order.date, 'MMM dd, yyyy h:mm a')}
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
                   <Badge className={statusColor(order.status)}>{order.status}</Badge>
-                  <Badge variant="outline">{planLabel(order.payment_plan)}</Badge>
+                  <Badge variant="outline">{planLabel(order.paymentPlan)}</Badge>
                 </div>
               </div>
             </CardHeader>
@@ -98,7 +98,7 @@ export function Orders() {
                     )}
                     <div>
                       <p className="font-medium text-sm">{item.name}</p>
-                      <p className="text-xs text-gray-500">Qty: {item.quantity} × ${Number(item.unitPrice).toFixed(2)}</p>
+                      <p className="text-xs text-gray-500">Qty: {item.quantity} × ${Number(item.price).toFixed(2)}</p>
                     </div>
                   </div>
                 ))}
@@ -108,18 +108,18 @@ export function Orders() {
               <div className="bg-gray-50 rounded-lg p-4 space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Order Total</span>
-                  <span className="font-medium">${Number(order.total_amount).toFixed(2)}</span>
+                  <span className="font-medium">${Number(order.total).toFixed(2)}</span>
                 </div>
-                {Number(order.outstanding_balance) > 0 && (
+                {Number(order.outstandingBalance) > 0 && (
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">Outstanding Balance</span>
-                    <span className="font-medium text-orange-600">${Number(order.outstanding_balance).toFixed(2)}</span>
+                    <span className="font-medium text-orange-600">${Number(order.outstandingBalance).toFixed(2)}</span>
                   </div>
                 )}
-                {order.credit_score_used && (
+                {order.creditScoreUsed && (
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">Credit Score at Order</span>
-                    <span className="font-medium">{order.credit_score_used}</span>
+                    <span className="font-medium">{order.creditScoreUsed}</span>
                   </div>
                 )}
               </div>
@@ -131,12 +131,12 @@ export function Orders() {
                   <div className="grid grid-cols-3 gap-2">
                     {order.installment_info.installments?.map((inst) => (
                       <div key={inst.id} className={`text-center p-2 rounded-lg text-xs border ${inst.status === 'Paid' ? 'bg-green-50 border-green-200 text-green-800' :
-                          inst.status === 'Overdue' ? 'bg-red-50 border-red-200 text-red-800' :
-                            'bg-gray-50 border-gray-200 text-gray-700'
+                        inst.status === 'Overdue' ? 'bg-red-50 border-red-200 text-red-800' :
+                          'bg-gray-50 border-gray-200 text-gray-700'
                         }`}>
                         <p className="font-medium">#{inst.number}</p>
                         <p>${Number(inst.amount).toFixed(2)}</p>
-                        <p className="text-xs">{format(new Date(inst.dueDate), 'MMM dd')}</p>
+                        <p className="text-xs">{formatDate(inst.dueDate, 'MMM dd')}</p>
                         <p className="font-semibold">{inst.status}</p>
                       </div>
                     ))}

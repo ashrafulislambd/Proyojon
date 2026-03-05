@@ -24,7 +24,12 @@ export function ProductDetail() {
         const res = await fetch(`${API}/api/products/${id}`);
         if (!res.ok) throw new Error('Product not found');
         const data = await res.json();
-        setProduct(data);
+        const mappedProduct = {
+          ...data,
+          image: data.image || data.image_url,
+          bnplEligible: data.bnplEligible !== undefined ? data.bnplEligible : data.bnpl_eligible
+        };
+        setProduct(mappedProduct);
       } catch (err) {
         toast.error('Failed to load product');
         navigate('/home');
@@ -58,7 +63,7 @@ export function ProductDetail() {
         <div>
           <div className="aspect-square rounded-lg overflow-hidden bg-gray-100">
             <img
-              src={product.image_url}
+              src={product.image}
               alt={product.name}
               className="w-full h-full object-cover"
               onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/500x500?text=No+Image'; }}
@@ -71,7 +76,7 @@ export function ProductDetail() {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <Badge variant="secondary">{product.category}</Badge>
-              {product.bnpl_eligible && <Badge className="bg-green-500">BNPL Eligible</Badge>}
+              {product.bnplEligible && <Badge className="bg-green-500">BNPL Eligible</Badge>}
             </div>
             <h1 className="text-3xl font-bold">{product.name}</h1>
             {product.brand && <p className="text-gray-500">by {product.brand}</p>}
@@ -79,7 +84,7 @@ export function ProductDetail() {
 
           <div>
             <p className="text-4xl font-bold">${Number(product.price).toFixed(2)}</p>
-            {product.bnpl_eligible && (
+            {product.bnplEligible && (
               <p className="text-sm text-gray-500 mt-1">
                 or ${monthlyPrice}/month for 3 months (0% interest)
               </p>
@@ -119,7 +124,7 @@ export function ProductDetail() {
             </Button>
           </div>
 
-          {product.bnpl_eligible && (
+          {product.bnplEligible && (
             <Card className="bg-blue-50 border-blue-200">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm flex items-center gap-2">

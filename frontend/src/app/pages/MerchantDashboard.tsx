@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Button } from '../components/ui/button';
+import { formatDate } from '../utils/dateUtils';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
@@ -260,7 +261,7 @@ export function MerchantDashboard() {
                     <div>
                       <p className="font-medium">{settlement.merchantName}</p>
                       <p className="text-sm text-gray-500">
-                        {format(new Date(settlement.date), 'MMM dd, yyyy')}
+                        {formatDate(settlement.date, 'MMM dd, yyyy')}
                       </p>
                     </div>
                     <div className="text-right">

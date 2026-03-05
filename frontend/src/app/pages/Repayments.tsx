@@ -6,7 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { Progress } from '../components/ui/progress';
 import { Calendar, DollarSign, CheckCircle, Clock, AlertCircle, ShoppingCart } from 'lucide-react';
-import { format } from 'date-fns';
+import { formatDate } from '../utils/dateUtils';
 import { toast } from 'sonner';
 
 export function Repayments() {
@@ -23,8 +23,8 @@ export function Repayments() {
     if (!order.installment_info?.installments) return [];
     return order.installment_info.installments.map(inst => ({
       ...inst,
-      orderId: order.order_id,
-      orderTotal: order.total_amount,
+      orderId: order.id,
+      orderTotal: order.total,
       items: (order.items || []).map(i => i.name),
       totalInstallments: order.installment_info!.totalInstallments,
     }));
@@ -174,7 +174,7 @@ export function Repayments() {
                   <div className="text-left md:text-right">
                     <p className="text-3xl font-bold">${Number(inst.amount).toFixed(2)}</p>
                     <p className="text-sm text-gray-500">
-                      Due: {format(new Date(inst.dueDate), 'MMM dd, yyyy')}
+                      Due: {formatDate(inst.dueDate, 'MMM dd, yyyy')}
                     </p>
                   </div>
                 </div>

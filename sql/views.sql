@@ -16,7 +16,7 @@ SELECT
     u.kyc_status,
     u.email_verified,
     u.phone_verified,
-    COALESCE((SELECT score FROM credit_scores WHERE user_id = u.id ORDER BY calculated_at DESC LIMIT 1), 500) AS credit_score,
+    COALESCE((SELECT score FROM credit_scores WHERE user_id = u.id ORDER BY calculated_at DESC LIMIT 1), 720) AS credit_score,
     u.credit_limit - COALESCE((SELECT SUM(outstanding_balance) FROM orders WHERE user_id = u.id AND status NOT IN ('Delivered', 'Cancelled')), 0) AS remaining_credit,
     COALESCE((SELECT SUM(outstanding_balance) FROM orders WHERE user_id = u.id AND status NOT IN ('Delivered', 'Cancelled')), 0) AS total_due
 FROM users u;

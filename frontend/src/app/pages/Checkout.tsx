@@ -19,13 +19,13 @@ export function Checkout() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [billingData, setBillingData] = useState({
     firstName: '', lastName: '', email: currentUser?.email || '', address: currentUser?.address || '',
-    city: currentUser?.city || '', zip: currentUser?.zip_code || '',
+    city: currentUser?.city || '', zip: currentUser?.zipCode || '',
     cardNumber: '', expiry: '', cvv: '',
   });
 
   const subtotal = cart.reduce((sum, item) => sum + Number(item.price) * item.quantity, 0);
-  const creditScore = currentUser?.credit_score || 0;
-  const creditLimit = currentUser?.credit_limit || 0;
+  const creditScore = currentUser?.creditScore || 0;
+  const creditLimit = currentUser?.creditLimit || 0;
   const isEligible = creditScore >= 500 && subtotal <= creditLimit;
   const maxCreditLimit = creditLimit;
 

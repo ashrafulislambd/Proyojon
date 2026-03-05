@@ -1,8 +1,9 @@
-import { Outlet, Link, useLocation } from 'react-router';
-import { ShoppingCart, Store, Package, User, Menu, CreditCard, Bell, Shield } from 'lucide-react';
+import { Outlet, Link, useLocation, useNavigate } from 'react-router';
+import { ShoppingCart, Store, Package, User, Menu, CreditCard, Bell, Shield, Users, Building2, FileText, LogOut } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { useApp } from '../context/AppContext';
+import { toast } from 'sonner';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,51 +15,85 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 export function Layout() {
-  const { cart, userRole, setUserRole, notifications } = useApp();
+  const { cart, userRole, setUserRole, setCurrentUser, notifications } = useApp();
   const location = useLocation();
+  const navigate = useNavigate();
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
   const unreadNotifications = notifications.filter(n => !n.read).length;
 
   const isActive = (path: string) => location.pathname === path;
 
-  const NavLinks = () => (
-    <>
-      <Link to="/home">
-        <Button variant={isActive('/home') ? 'default' : 'ghost'}>
-          <Store className="h-4 w-4 mr-2" />
-          Shop
-        </Button>
-      </Link>
-      <Link to="/home/orders">
-        <Button variant={isActive('/home/orders') ? 'default' : 'ghost'}>
-          <Package className="h-4 w-4 mr-2" />
-          Orders
-        </Button>
-      </Link>
-      <Link to="/home/repayments">
-        <Button variant={isActive('/home/repayments') ? 'default' : 'ghost'}>
-          <CreditCard className="h-4 w-4 mr-2" />
-          Repayments
-        </Button>
-      </Link>
-      {userRole === 'seller' && (
+  const handleLogout = () => {
+    // Clear state
+    setCurrentUser(null);
+    // Clear any stored data
+    localStorage.clear();
+    // Redirect to login page
+    navigate('/');
+    toast.success('Logged out successfully');
+  };
+
+  const NavLinks = () => {
+    if (userRole === 'admin') {
+      return (
+        <>
+          <Link to="/home/admin">
+            <Button variant={isActive('/home/admin') ? 'default' : 'ghost'}>
+              <Shield className="h-4 w-4 mr-2" />
+              Dashboard
+            </Button>
+          </Link>
+          <Link to="/home/seller">
+            <Button variant={isActive('/home/seller') ? 'default' : 'ghost'}>
+              <Store className="h-4 w-4 mr-2" />
+              Sellers
+            </Button>
+          </Link>
+          <Link to="/home/merchant">
+            <Button variant={isActive('/home/merchant') ? 'default' : 'ghost'}>
+              <Building2 className="h-4 w-4 mr-2" />
+              Merchants
+            </Button>
+          </Link>
+          <Link to="/home/orders">
+            <Button variant={isActive('/home/orders') ? 'default' : 'ghost'}>
+              <FileText className="h-4 w-4 mr-2" />
+              Reports
+            </Button>
+          </Link>
+        </>
+      );
+    }
+
+    return (
+      <>
+        <Link to="/home">
+          <Button variant={isActive('/home') ? 'default' : 'ghost'}>
+            <Store className="h-4 w-4 mr-2" />
+            Shop
+          </Button>
+        </Link>
+        <Link to="/home/orders">
+          <Button variant={isActive('/home/orders') ? 'default' : 'ghost'}>
+            <Package className="h-4 w-4 mr-2" />
+            Orders
+          </Button>
+        </Link>
+        <Link to="/home/repayments">
+          <Button variant={isActive('/home/repayments') ? 'default' : 'ghost'}>
+            <CreditCard className="h-4 w-4 mr-2" />
+            Repayments
+          </Button>
+        </Link>
         <Link to="/home/seller">
           <Button variant={isActive('/home/seller') ? 'default' : 'ghost'}>
-            <Store className="h-4 w-4 mr-2" />
-            Seller Dashboard
+            <Building2 className="h-4 w-4 mr-2" />
+            Seller
           </Button>
         </Link>
-      )}
-      {userRole === 'admin' && (
-        <Link to="/home/admin">
-          <Button variant={isActive('/home/admin') ? 'default' : 'ghost'}>
-            <Shield className="h-4 w-4 mr-2" />
-            Admin Panel
-          </Button>
-        </Link>
-      )}
-    </>
-  );
+      </>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -107,43 +142,22 @@ export function Layout() {
               </Link>
 
               {/* User Menu */}
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="icon">
-                    <User className="h-5 w-5" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>Account</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <Link to="/home/profile">
-                    <DropdownMenuItem>
-                      <User className="h-4 w-4 mr-2" />
-                      Profile
-                    </DropdownMenuItem>
-                  </Link>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuLabel>Switch Mode</DropdownMenuLabel>
-                  <DropdownMenuItem onClick={() => setUserRole('buyer')}>
-                    <div className="flex items-center gap-2">
-                      <div className={`h-2 w-2 rounded-full ${userRole === 'buyer' ? 'bg-green-500' : 'bg-gray-300'}`} />
-                      Buyer Mode
-                    </div>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setUserRole('seller')}>
-                    <div className="flex items-center gap-2">
-                      <div className={`h-2 w-2 rounded-full ${userRole === 'seller' ? 'bg-green-500' : 'bg-gray-300'}`} />
-                      Seller Mode
-                    </div>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setUserRole('admin')}>
-                    <div className="flex items-center gap-2">
-                      <div className={`h-2 w-2 rounded-full ${userRole === 'admin' ? 'bg-green-500' : 'bg-gray-300'}`} />
-                      Admin Mode
-                    </div>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Link to="/home/profile">
+                <Button variant="outline" size="icon" title="Profile">
+                  <User className="h-5 w-5" />
+                </Button>
+              </Link>
+
+              {/* Logout Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleLogout}
+                className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                title="Logout"
+              >
+                <LogOut className="h-5 w-5" />
+              </Button>
 
               {/* Mobile Menu */}
               <Sheet>

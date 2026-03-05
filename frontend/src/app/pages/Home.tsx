@@ -12,11 +12,15 @@ import { toast } from 'sonner';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../components/ui/sheet';
 
 export function Home() {
-  const { products, addToCart, loadingProducts } = useApp();
+  const { products, addToCart, fetchProducts } = useApp();
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [brandFilter, setBrandFilter] = useState('all');
   const [bnplOnly, setBnplOnly] = useState(false);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))];
   const brands = ['all', ...Array.from(new Set(products.map(p => p.brand).filter(Boolean)))];
@@ -26,7 +30,7 @@ export function Home() {
       (product.description || '').toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
     const matchesBrand = brandFilter === 'all' || product.brand === brandFilter;
-    const matchesBnpl = !bnplOnly || product.bnpl_eligible;
+    const matchesBnpl = !bnplOnly || product.bnplEligible;
     return matchesSearch && matchesCategory && matchesBrand && matchesBnpl;
   });
 
@@ -155,61 +159,55 @@ export function Home() {
         )}
       </div>
 
-      {/* Loading / Products Grid */}
-      {loadingProducts ? (
-        <div className="flex justify-center py-16">
-          <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredProducts.map(product => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <Link to={`/home/product/${product.id}`}>
-                <div className="aspect-square overflow-hidden bg-gray-100 relative">
-                  <img
-                    src={product.image_url}
-                    alt={product.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform"
-                    onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/500x500?text=No+Image'; }}
-                  />
-                  {product.bnpl_eligible && (
-                    <Badge className="absolute top-2 right-2 bg-green-500">BNPL</Badge>
-                  )}
-                </div>
-              </Link>
-              <CardHeader>
-                <div className="flex items-start justify-between gap-2">
-                  <CardTitle className="text-lg">{product.name}</CardTitle>
-                  <Badge variant="secondary">{product.category}</Badge>
-                </div>
-                <p className="text-sm text-gray-500 line-clamp-2">{product.description}</p>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <p className="text-2xl font-bold">${Number(product.price).toFixed(2)}</p>
-                  <p className="text-sm text-gray-500">
-                    or ${(Number(product.price) / 3).toFixed(2)}/month for 3 months
-                  </p>
-                  {product.brand && <p className="text-xs text-gray-400">Brand: {product.brand}</p>}
-                  <p className="text-xs text-gray-400">{product.stock} in stock</p>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button
-                  onClick={() => handleAddToCart(product)}
-                  className="w-full"
-                  disabled={product.stock === 0}
-                >
-                  <ShoppingCart className="h-4 w-4 mr-2" />
-                  Add to Cart
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      )}
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {filteredProducts.map(product => (
+          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Link to={`/home/product/${product.id}`}>
+              <div className="aspect-square overflow-hidden bg-gray-100 relative">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform"
+                  onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/500x500?text=No+Image'; }}
+                />
+                {product.bnplEligible && (
+                  <Badge className="absolute top-2 right-2 bg-green-500">BNPL</Badge>
+                )}
+              </div>
+            </Link>
+            <CardHeader>
+              <div className="flex items-start justify-between gap-2">
+                <CardTitle className="text-lg">{product.name}</CardTitle>
+                <Badge variant="secondary">{product.category}</Badge>
+              </div>
+              <p className="text-sm text-gray-500 line-clamp-2">{product.description}</p>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-2">
+                <p className="text-2xl font-bold">${Number(product.price).toFixed(2)}</p>
+                <p className="text-sm text-gray-500">
+                  or ${(Number(product.price) / 3).toFixed(2)}/month for 3 months
+                </p>
+                {product.brand && <p className="text-xs text-gray-400">Brand: {product.brand}</p>}
+                <p className="text-xs text-gray-400">{product.stock} in stock</p>
+              </div>
+            </CardContent>
+            <CardFooter>
+              <Button
+                onClick={() => handleAddToCart(product)}
+                className="w-full"
+                disabled={product.stock === 0}
+              >
+                <ShoppingCart className="h-4 w-4 mr-2" />
+                Add to Cart
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
 
-      {!loadingProducts && filteredProducts.length === 0 && (
+      {filteredProducts.length === 0 && (
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg">No products found</p>
         </div>

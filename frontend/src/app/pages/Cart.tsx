@@ -50,7 +50,7 @@ export function Cart() {
                 <div className="flex gap-4">
                   <Link to={`/product/${item.id}`} className="flex-shrink-0">
                     <img
-                      src={item.image_url}
+                      src={item.image}
                       alt={item.name}
                       className="w-24 h-24 object-cover rounded"
                       onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

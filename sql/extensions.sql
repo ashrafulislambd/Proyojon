@@ -16,7 +16,7 @@ BEGIN
     SELECT jsonb_build_object(
         'user_id', u.id,
         'name', u.name,
-        'credit_score', COALESCE((SELECT score FROM credit_scores WHERE user_id = u.id ORDER BY calculated_at DESC LIMIT 1), 500),
+        'credit_score', COALESCE((SELECT score FROM credit_scores WHERE user_id = u.id ORDER BY calculated_at DESC LIMIT 1), 720),
         'total_orders', (SELECT COUNT(*) FROM orders WHERE user_id = u.id),
         'total_spent', COALESCE((SELECT SUM(total_amount) FROM orders WHERE user_id = u.id AND status != 'Cancelled'), 0),
         'outstanding_balance', COALESCE((SELECT SUM(outstanding_balance) FROM orders WHERE user_id = u.id), 0),

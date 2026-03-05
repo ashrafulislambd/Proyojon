@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { SellerDashboard } from "./pages/SellerDashboard";
@@ -11,6 +11,7 @@ import { Profile } from "./pages/Profile";
 import { MerchantDashboard } from "./pages/MerchantDashboard";
 import { AdminPanel } from "./pages/AdminPanel";
 import { Notifications } from "./pages/Notifications";
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import { Auth } from "./pages/Auth";
 import { NotFound } from "./pages/NotFound";
 
@@ -19,10 +20,12 @@ export const router = createBrowserRouter([
     index: true,
     path: "/",
     Component: Auth,
+    errorElement: <ErrorBoundary />,
   },
   {
     path: "/home",
     Component: Layout,
+    errorElement: <ErrorBoundary />,
     children: [
       { index: true, Component: Home },
       { path: "seller", Component: SellerDashboard },
