@@ -1,0 +1,3199 @@
+[
+    {
+        "id": "LOG-10000",
+        "timestamp": "2026-02-17T13:56:58.028945",
+        "user_id": "USER-955",
+        "action": "LOGIN",
+        "status": "PENDING",
+        "ip_address": "192.168.1.137",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "2577687d2541b86a",
+            "request_path": "/api/v1/resource/88",
+            "response_time_ms": 10,
+            "correlation_id": "dffd69e8d7ebd21f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "5d55c40fa78ee2edf96cafab78cdda7b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10001",
+        "timestamp": "2026-01-10T21:35:58.029373",
+        "user_id": "USER-207",
+        "action": "UPDATE_PROFILE",
+        "status": "PENDING",
+        "ip_address": "192.168.1.29",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "7c98dea15ef0c1de",
+            "request_path": "/api/v1/resource/62",
+            "response_time_ms": 181,
+            "correlation_id": "50572cdfec3db18d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "46b5360982b2be4ec43c0180d3fa8061",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10002",
+        "timestamp": "2026-03-03T02:12:58.029422",
+        "user_id": "USER-325",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.108",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "3cd73e15064082bf",
+            "request_path": "/api/v1/resource/92",
+            "response_time_ms": 169,
+            "correlation_id": "e2fb8a0795b9be7f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "75c79996acd884686b7a317f76f4f53f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10003",
+        "timestamp": "2026-02-27T12:59:58.029448",
+        "user_id": "USER-563",
+        "action": "CHANGE_PASSWORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.211",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "793b228e61b30a68",
+            "request_path": "/api/v1/resource/48",
+            "response_time_ms": 29,
+            "correlation_id": "ff9af5caeba447d0",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "18f31b38a05580e4406ebc5c7032b05f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10004",
+        "timestamp": "2026-01-17T18:47:58.029464",
+        "user_id": "USER-355",
+        "action": "UPDATE_PROFILE",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.230",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "25856e1b97879f94",
+            "request_path": "/api/v1/resource/70",
+            "response_time_ms": 248,
+            "correlation_id": "8ed01037d3843cb1",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "cd8bbe2146cae289159fdfb708ca80ec",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10005",
+        "timestamp": "2026-01-27T17:33:58.029478",
+        "user_id": "USER-854",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.246",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "19819635a4026e4b",
+            "request_path": "/api/v1/resource/31",
+            "response_time_ms": 88,
+            "correlation_id": "5a11f8ecf5615020",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "6a765f14c923e76eec40d9322019ceae",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10006",
+        "timestamp": "2026-02-27T22:00:58.029501",
+        "user_id": "USER-300",
+        "action": "CREATE_REPORT",
+        "status": "WARNING",
+        "ip_address": "192.168.1.130",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "7f3f796b757f4715",
+            "request_path": "/api/v1/resource/40",
+            "response_time_ms": 129,
+            "correlation_id": "665b707ede935a02",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "4afcda1ccbfe85e3b8a8755af7783fab",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10007",
+        "timestamp": "2026-01-22T12:06:58.029516",
+        "user_id": "USER-462",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.117",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "ab8f0432a6d6d4c1",
+            "request_path": "/api/v1/resource/14",
+            "response_time_ms": 350,
+            "correlation_id": "1bae049bd3b9335f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "ac60db6e44a9daacfb06a5cfadd65d7a",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10008",
+        "timestamp": "2026-01-03T14:21:58.029530",
+        "user_id": "USER-388",
+        "action": "UPDATE_PROFILE",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.53",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "527d6a9995bf7c52",
+            "request_path": "/api/v1/resource/13",
+            "response_time_ms": 157,
+            "correlation_id": "a563028459937310",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "29ed3e0f5da39891d77df353689b2f18",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10009",
+        "timestamp": "2026-02-26T08:11:58.029544",
+        "user_id": "USER-639",
+        "action": "DELETE_RECORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.75",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8915ffe38b863870",
+            "request_path": "/api/v1/resource/85",
+            "response_time_ms": 223,
+            "correlation_id": "b39eb1cd6cc04e38",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "7f3ff5c7bca06a4dcb28fe6a2aa02871",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10010",
+        "timestamp": "2026-02-28T06:28:58.029557",
+        "user_id": "USER-671",
+        "action": "UPDATE_PROFILE",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.76",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "11a900417f81cdfd",
+            "request_path": "/api/v1/resource/97",
+            "response_time_ms": 497,
+            "correlation_id": "006e6efe8a8ede52",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "1d6b725fe80bde4147c5a461816d9ed8",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10011",
+        "timestamp": "2026-02-04T16:45:58.029576",
+        "user_id": "USER-217",
+        "action": "CHANGE_PASSWORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.19",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "cb84a487b619806f",
+            "request_path": "/api/v1/resource/13",
+            "response_time_ms": 279,
+            "correlation_id": "f14b69ff739fdc97",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8956bfdf79658486d2a04ebfc5aca41c",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10012",
+        "timestamp": "2026-01-16T10:06:58.029591",
+        "user_id": "USER-196",
+        "action": "EXPORT_DATA",
+        "status": "WARNING",
+        "ip_address": "192.168.1.100",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d6b6fec481b84118",
+            "request_path": "/api/v1/resource/28",
+            "response_time_ms": 223,
+            "correlation_id": "9ebabac9f66c9de0",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "da410d9bccd0e7b5b1f37bd477467602",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10013",
+        "timestamp": "2026-01-17T09:51:58.029604",
+        "user_id": "USER-894",
+        "action": "VIEW_SETTINGS",
+        "status": "WARNING",
+        "ip_address": "192.168.1.102",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "9ef65e99c488a29",
+            "request_path": "/api/v1/resource/42",
+            "response_time_ms": 190,
+            "correlation_id": "c6252132fb1c7a88",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "4b44b3c030a1c3527c5a75ef604dac54",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10014",
+        "timestamp": "2026-01-04T10:04:58.029619",
+        "user_id": "USER-705",
+        "action": "DELETE_RECORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.96",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "6eeb891e98b501b6",
+            "request_path": "/api/v1/resource/33",
+            "response_time_ms": 148,
+            "correlation_id": "ae0c43a3a5f64aa4",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "7bf8ee7956f671fce4a5b8c26bc44031",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10015",
+        "timestamp": "2026-01-06T23:48:58.029632",
+        "user_id": "USER-289",
+        "action": "LOGIN",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.25",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "6f5afbe7f2099760",
+            "request_path": "/api/v1/resource/39",
+            "response_time_ms": 298,
+            "correlation_id": "d10bd7ef4e89ba3d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "00b59268f5bb3cc8bb292d16d9b68642",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10016",
+        "timestamp": "2026-01-06T22:28:58.029645",
+        "user_id": "USER-230",
+        "action": "CHANGE_PASSWORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.109",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "e9caa8ce7473b799",
+            "request_path": "/api/v1/resource/45",
+            "response_time_ms": 264,
+            "correlation_id": "820cb64f006adf08",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "9bc5bb8dbfc79217cad7e1f6d56cdf2b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10017",
+        "timestamp": "2026-01-24T13:49:58.029659",
+        "user_id": "USER-920",
+        "action": "LOGOUT",
+        "status": "WARNING",
+        "ip_address": "192.168.1.43",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8ad7200af5feff39",
+            "request_path": "/api/v1/resource/2",
+            "response_time_ms": 54,
+            "correlation_id": "98bd41b691997192",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "661c112c5e561d8d3113687f50bfbe9f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10018",
+        "timestamp": "2026-02-16T13:19:58.029672",
+        "user_id": "USER-427",
+        "action": "CHANGE_PASSWORD",
+        "status": "WARNING",
+        "ip_address": "192.168.1.151",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8652b4a311aac19",
+            "request_path": "/api/v1/resource/44",
+            "response_time_ms": 455,
+            "correlation_id": "fc5c7e913fce3520",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "197c2b36c0c16ee42228d848ef97015c",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10019",
+        "timestamp": "2026-02-14T03:53:58.029684",
+        "user_id": "USER-228",
+        "action": "VIEW_SETTINGS",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.173",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "c43e144f07708552",
+            "request_path": "/api/v1/resource/49",
+            "response_time_ms": 165,
+            "correlation_id": "b1823666cade2a93",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "47cc73ced91bf6197c544f20d6db5088",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10020",
+        "timestamp": "2026-01-28T02:26:58.029698",
+        "user_id": "USER-812",
+        "action": "CHANGE_PASSWORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.141",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "ecebbcbe53188009",
+            "request_path": "/api/v1/resource/99",
+            "response_time_ms": 357,
+            "correlation_id": "b8d8cc9319928674",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "dd38dedf6591813e08f28a370fcac92d",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10021",
+        "timestamp": "2026-01-30T18:49:58.029712",
+        "user_id": "USER-247",
+        "action": "UPDATE_PROFILE",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.138",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "c55048580b34a524",
+            "request_path": "/api/v1/resource/98",
+            "response_time_ms": 331,
+            "correlation_id": "4b44ee81c36356af",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "5de49a253f253852fb3e4b44079605a1",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10022",
+        "timestamp": "2026-02-18T19:51:58.029727",
+        "user_id": "USER-839",
+        "action": "CHANGE_PASSWORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.240",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "26815d4bcfe7c895",
+            "request_path": "/api/v1/resource/97",
+            "response_time_ms": 21,
+            "correlation_id": "1e989c58359572d4",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "d905c9d94c629b43d51ea02973a02d18",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10023",
+        "timestamp": "2026-03-05T01:14:58.029740",
+        "user_id": "USER-791",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.156",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "5037fe6b07a0d2b6",
+            "request_path": "/api/v1/resource/97",
+            "response_time_ms": 470,
+            "correlation_id": "06fdcbcda5018257",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "7a32db356091e73f9da6c23f94a29394",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10024",
+        "timestamp": "2026-01-24T00:39:58.029753",
+        "user_id": "USER-395",
+        "action": "LOGIN",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.22",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "ec73815aa423cd28",
+            "request_path": "/api/v1/resource/33",
+            "response_time_ms": 53,
+            "correlation_id": "0494664e289d2e95",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "45dc8aa5537ae7d22380985adf358208",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10025",
+        "timestamp": "2026-01-04T20:51:58.029766",
+        "user_id": "USER-648",
+        "action": "EXPORT_DATA",
+        "status": "WARNING",
+        "ip_address": "192.168.1.27",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "ae613cba02b0e60d",
+            "request_path": "/api/v1/resource/35",
+            "response_time_ms": 168,
+            "correlation_id": "35742ffd5fefc4e0",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "f61ca90dd9874bb875fcd03baf0c4f2c",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10026",
+        "timestamp": "2026-02-15T11:21:58.029779",
+        "user_id": "USER-594",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.113",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "3699a5d504e0ae28",
+            "request_path": "/api/v1/resource/26",
+            "response_time_ms": 489,
+            "correlation_id": "296de54a2462e8d5",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "86ccd88209c5712d209960f07ffe4d22",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10027",
+        "timestamp": "2026-02-12T11:00:58.029792",
+        "user_id": "USER-188",
+        "action": "LOGIN",
+        "status": "WARNING",
+        "ip_address": "192.168.1.130",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "c05836267256fa90",
+            "request_path": "/api/v1/resource/16",
+            "response_time_ms": 388,
+            "correlation_id": "c2b4374d8c744b99",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "9af200749953a1b6a34ce374f03cc918",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10028",
+        "timestamp": "2026-02-06T13:48:58.029805",
+        "user_id": "USER-743",
+        "action": "EXPORT_DATA",
+        "status": "WARNING",
+        "ip_address": "192.168.1.10",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "134a82b8333c3243",
+            "request_path": "/api/v1/resource/20",
+            "response_time_ms": 268,
+            "correlation_id": "ec19ded79bf11433",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "5cf98421dad64e172cb6c83476056684",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10029",
+        "timestamp": "2026-02-20T18:05:58.029818",
+        "user_id": "USER-276",
+        "action": "VIEW_SETTINGS",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.185",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f8e5e400421f8a74",
+            "request_path": "/api/v1/resource/100",
+            "response_time_ms": 33,
+            "correlation_id": "e1eb1821e962974b",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8d3e029fedc4ed7bef1937b295a3ecc6",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10030",
+        "timestamp": "2026-02-24T17:34:58.029833",
+        "user_id": "USER-748",
+        "action": "VIEW_SETTINGS",
+        "status": "PENDING",
+        "ip_address": "192.168.1.183",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "20e3428d1f8eef1e",
+            "request_path": "/api/v1/resource/89",
+            "response_time_ms": 32,
+            "correlation_id": "433dfac463684718",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "17cd49e0981b1a1438b9b9f14f443115",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10031",
+        "timestamp": "2026-01-23T16:14:58.029850",
+        "user_id": "USER-862",
+        "action": "VIEW_SETTINGS",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.21",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "adef794498d61e6f",
+            "request_path": "/api/v1/resource/81",
+            "response_time_ms": 456,
+            "correlation_id": "1f4d8483cba2db0d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "e2e89936dacf1ea2864516e724c57291",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10032",
+        "timestamp": "2026-01-17T04:58:58.029862",
+        "user_id": "USER-922",
+        "action": "CREATE_REPORT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.176",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "1cbcb837c489581e",
+            "request_path": "/api/v1/resource/98",
+            "response_time_ms": 59,
+            "correlation_id": "56ccb574cbc78602",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "375c5fc1716538bfd92fd5123abc577d",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10033",
+        "timestamp": "2026-02-08T05:57:58.029875",
+        "user_id": "USER-886",
+        "action": "LOGIN",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.186",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d47f790d74d002d9",
+            "request_path": "/api/v1/resource/74",
+            "response_time_ms": 218,
+            "correlation_id": "e40f256bcafefb18",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "aa1294ae2c402ee8a14a532c6a35ee81",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10034",
+        "timestamp": "2025-12-27T09:28:58.029888",
+        "user_id": "USER-397",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.206",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "5fb11a235e161bff",
+            "request_path": "/api/v1/resource/54",
+            "response_time_ms": 192,
+            "correlation_id": "aeac5ed739250e9a",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "ae3230e4d74539192c20d03c21423890",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10035",
+        "timestamp": "2026-01-29T23:07:58.029903",
+        "user_id": "USER-827",
+        "action": "EXPORT_DATA",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.142",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "3eae4a6e9f499adc",
+            "request_path": "/api/v1/resource/46",
+            "response_time_ms": 127,
+            "correlation_id": "c64ccfd54a9aa136",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "3893d59715ef691752e160cd44ec97d5",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10036",
+        "timestamp": "2026-01-03T02:12:58.029916",
+        "user_id": "USER-335",
+        "action": "VIEW_SETTINGS",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.220",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "a774ccdfc292fcac",
+            "request_path": "/api/v1/resource/35",
+            "response_time_ms": 96,
+            "correlation_id": "f3bbb184ae3d085d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "41f8f7c8788d1390698abf8863ca811f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10037",
+        "timestamp": "2026-03-05T04:17:58.029932",
+        "user_id": "USER-168",
+        "action": "EXPORT_DATA",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.49",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "3ef49adeaf6cb649",
+            "request_path": "/api/v1/resource/95",
+            "response_time_ms": 81,
+            "correlation_id": "2a1a9ec48cf65508",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "2ca1ec0ecdbb5c58464eef88d4bc619e",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10038",
+        "timestamp": "2026-02-22T18:18:58.029946",
+        "user_id": "USER-223",
+        "action": "LOGOUT",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.102",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "2a45274447fc7aa9",
+            "request_path": "/api/v1/resource/45",
+            "response_time_ms": 236,
+            "correlation_id": "2a6777bb7dad8f1f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "b6ef8451085c654aea1a2ae1981e86e2",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10039",
+        "timestamp": "2025-12-28T02:20:58.029960",
+        "user_id": "USER-292",
+        "action": "LOGIN",
+        "status": "PENDING",
+        "ip_address": "192.168.1.229",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8c780d15997155f6",
+            "request_path": "/api/v1/resource/90",
+            "response_time_ms": 398,
+            "correlation_id": "4e5c060a5b2b4261",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "925a5e4e324c224296f06d80b6f84e1d",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10040",
+        "timestamp": "2025-12-28T14:39:58.029973",
+        "user_id": "USER-386",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.191",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "25d64ac5611c4f7",
+            "request_path": "/api/v1/resource/59",
+            "response_time_ms": 49,
+            "correlation_id": "15a870b68a5effa3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8b7ccbfb8d2d72ad045ccd63d7cc2b7b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10041",
+        "timestamp": "2026-01-11T03:02:58.029988",
+        "user_id": "USER-531",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.55",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "4bad17560fde85da",
+            "request_path": "/api/v1/resource/58",
+            "response_time_ms": 48,
+            "correlation_id": "9aad32b261df2883",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "0136c5ffe5e9b3d8de7c906e66257313",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10042",
+        "timestamp": "2026-02-22T03:42:58.030001",
+        "user_id": "USER-646",
+        "action": "DELETE_RECORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.28",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "94aa6165905716cf",
+            "request_path": "/api/v1/resource/41",
+            "response_time_ms": 320,
+            "correlation_id": "703328c6b37da518",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "f4e9fed6895159798a414da074dc1d37",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10043",
+        "timestamp": "2026-02-04T22:28:58.030014",
+        "user_id": "USER-394",
+        "action": "DELETE_RECORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.56",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8186d45764de3014",
+            "request_path": "/api/v1/resource/63",
+            "response_time_ms": 362,
+            "correlation_id": "9b69236b4a9f92d2",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "ff053d2721a4f63de531598cc1dd2714",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10044",
+        "timestamp": "2026-01-13T12:40:58.030028",
+        "user_id": "USER-937",
+        "action": "CHANGE_PASSWORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.114",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "fbb61c9cab6b446c",
+            "request_path": "/api/v1/resource/51",
+            "response_time_ms": 485,
+            "correlation_id": "2494ad859e7ddcd2",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "82877eb0d19837021360db46e1573c1f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10045",
+        "timestamp": "2026-01-16T00:03:58.030041",
+        "user_id": "USER-138",
+        "action": "CHANGE_PASSWORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.131",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "5604c18aa9aebc35",
+            "request_path": "/api/v1/resource/19",
+            "response_time_ms": 114,
+            "correlation_id": "2f02809a69cf3d07",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "515bbae4e0340a3f33ea5e9ae9616e09",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10046",
+        "timestamp": "2026-01-13T22:54:58.030054",
+        "user_id": "USER-454",
+        "action": "UPDATE_PROFILE",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.204",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "39fb1d7fa2eb4537",
+            "request_path": "/api/v1/resource/41",
+            "response_time_ms": 62,
+            "correlation_id": "dcfe38303016bcd0",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8231fdd8a0a60883e2d80dcc51c36ab9",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10047",
+        "timestamp": "2026-01-26T20:49:58.030067",
+        "user_id": "USER-855",
+        "action": "LOGOUT",
+        "status": "WARNING",
+        "ip_address": "192.168.1.106",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "ffead08339b9ce99",
+            "request_path": "/api/v1/resource/98",
+            "response_time_ms": 441,
+            "correlation_id": "bef66b5878d9d8f6",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "d5741791c8aadaea9bb7d65147674c24",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10048",
+        "timestamp": "2026-01-13T16:10:58.030080",
+        "user_id": "USER-966",
+        "action": "DELETE_RECORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.60",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "54f7964c0c61cd58",
+            "request_path": "/api/v1/resource/2",
+            "response_time_ms": 163,
+            "correlation_id": "19bc462f2f1dd6df",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "fd38087f9000d68f74b09aa3e39fc80f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10049",
+        "timestamp": "2026-02-13T21:28:58.030092",
+        "user_id": "USER-298",
+        "action": "DELETE_RECORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.177",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "23b8d8426643475c",
+            "request_path": "/api/v1/resource/92",
+            "response_time_ms": 327,
+            "correlation_id": "7b73cc9f83e859e3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "0dea7cf96dd2deee18094ab13d1a264e",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10050",
+        "timestamp": "2026-01-02T10:23:58.030107",
+        "user_id": "USER-668",
+        "action": "LOGIN",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.232",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "77e787f84b346a36",
+            "request_path": "/api/v1/resource/22",
+            "response_time_ms": 429,
+            "correlation_id": "5713ddde44a0ca6c",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "c935912dc7acfd9b2bfce82d4e134b7e",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10051",
+        "timestamp": "2026-02-01T02:25:58.030123",
+        "user_id": "USER-869",
+        "action": "LOGIN",
+        "status": "WARNING",
+        "ip_address": "192.168.1.133",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "90790162d8a7445",
+            "request_path": "/api/v1/resource/35",
+            "response_time_ms": 160,
+            "correlation_id": "48d5e61f46cbb4c3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "6bd4d2878dd1181a9b02bc7ae5230741",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10052",
+        "timestamp": "2025-12-31T11:17:58.030136",
+        "user_id": "USER-810",
+        "action": "CREATE_REPORT",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.38",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "6438b202ac4263b7",
+            "request_path": "/api/v1/resource/48",
+            "response_time_ms": 346,
+            "correlation_id": "0a277b82723091d8",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "204debb0b60e0ef6ad047994bc7b7a5a",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10053",
+        "timestamp": "2026-01-26T06:29:58.030150",
+        "user_id": "USER-391",
+        "action": "LOGOUT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.153",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "69a3fb56db118228",
+            "request_path": "/api/v1/resource/96",
+            "response_time_ms": 162,
+            "correlation_id": "446a01bf1d5dc28a",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "b0659c55ec13a61eb52889b51986ab10",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10054",
+        "timestamp": "2026-02-15T15:31:58.030162",
+        "user_id": "USER-615",
+        "action": "LOGOUT",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.146",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "97151c2e0971ab4d",
+            "request_path": "/api/v1/resource/47",
+            "response_time_ms": 293,
+            "correlation_id": "e4cc306ea26f0eb3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "7654f1aabd4fdfc35dd4810adfebd2ab",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10055",
+        "timestamp": "2026-01-10T23:34:58.030174",
+        "user_id": "USER-280",
+        "action": "CREATE_REPORT",
+        "status": "WARNING",
+        "ip_address": "192.168.1.2",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "76efec913f8f3d44",
+            "request_path": "/api/v1/resource/60",
+            "response_time_ms": 261,
+            "correlation_id": "8bcc82522405682f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "e887b73733646d81374e0b2c6cd8f110",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10056",
+        "timestamp": "2026-02-07T07:21:58.030187",
+        "user_id": "USER-294",
+        "action": "CREATE_REPORT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.66",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "6f9f7a9132fa93c6",
+            "request_path": "/api/v1/resource/80",
+            "response_time_ms": 347,
+            "correlation_id": "564a9ed74d6679bc",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "da686c00e967402bde71bb81f9389bf9",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10057",
+        "timestamp": "2026-03-04T06:29:58.030200",
+        "user_id": "USER-318",
+        "action": "DELETE_RECORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.131",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "c44578e96be236f5",
+            "request_path": "/api/v1/resource/96",
+            "response_time_ms": 188,
+            "correlation_id": "f7f4d25da68b1ab9",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "920072cee4cedf164fd8eb6f494adc21",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10058",
+        "timestamp": "2026-02-16T04:15:58.030216",
+        "user_id": "USER-215",
+        "action": "VIEW_SETTINGS",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.37",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "93bdcd95a9c58b80",
+            "request_path": "/api/v1/resource/54",
+            "response_time_ms": 176,
+            "correlation_id": "0d476d1e7b6b7393",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "a57161bc80ddbd7ea7b86a6c244b02da",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10059",
+        "timestamp": "2026-01-07T05:35:58.030228",
+        "user_id": "USER-689",
+        "action": "UPDATE_PROFILE",
+        "status": "PENDING",
+        "ip_address": "192.168.1.138",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "a1f7e916ed8bae1c",
+            "request_path": "/api/v1/resource/96",
+            "response_time_ms": 461,
+            "correlation_id": "19628281d1f8dfc4",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "5b30b73a84922eff7369783bc70ac81b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10060",
+        "timestamp": "2026-01-28T16:47:58.030241",
+        "user_id": "USER-871",
+        "action": "VIEW_SETTINGS",
+        "status": "WARNING",
+        "ip_address": "192.168.1.233",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d238893b034e8468",
+            "request_path": "/api/v1/resource/28",
+            "response_time_ms": 208,
+            "correlation_id": "df77ca8f7df2f5e7",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "4f4f4ef79a3b0520986789989d89e736",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10061",
+        "timestamp": "2026-01-14T05:18:58.030256",
+        "user_id": "USER-667",
+        "action": "UPDATE_PROFILE",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.90",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f2393fdf92e86c1b",
+            "request_path": "/api/v1/resource/82",
+            "response_time_ms": 272,
+            "correlation_id": "b32f192ab5b5f472",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "9607918fa98f59031d304c0f854dc603",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10062",
+        "timestamp": "2026-02-18T03:24:58.030269",
+        "user_id": "USER-488",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.40",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "41a0bd3254876329",
+            "request_path": "/api/v1/resource/5",
+            "response_time_ms": 51,
+            "correlation_id": "39da4907fd73c4a4",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "204d3d6f2046e7fa6ed6478d8bd83250",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10063",
+        "timestamp": "2026-01-28T06:43:58.030284",
+        "user_id": "USER-270",
+        "action": "CREATE_REPORT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.247",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8fe4e424fa26b6d3",
+            "request_path": "/api/v1/resource/64",
+            "response_time_ms": 217,
+            "correlation_id": "09909f42b0dc28f3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "124468045f5318dc1872b00471371160",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10064",
+        "timestamp": "2026-02-15T07:35:58.030297",
+        "user_id": "USER-892",
+        "action": "LOGIN",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.9",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "4680c0fa7c1471c8",
+            "request_path": "/api/v1/resource/29",
+            "response_time_ms": 116,
+            "correlation_id": "747d8cf67785d71d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "e1ab013338670feccccd03349cbb0e96",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10065",
+        "timestamp": "2026-02-08T07:49:58.030316",
+        "user_id": "USER-282",
+        "action": "DELETE_RECORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.44",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "80c1bf3251c367b2",
+            "request_path": "/api/v1/resource/17",
+            "response_time_ms": 426,
+            "correlation_id": "e4dbba3e6cecb260",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "90f78ac3f40007c3f1944307c30fcc18",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10066",
+        "timestamp": "2026-02-05T20:37:58.030329",
+        "user_id": "USER-987",
+        "action": "VIEW_SETTINGS",
+        "status": "WARNING",
+        "ip_address": "192.168.1.228",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "e2431e9ffcb5b426",
+            "request_path": "/api/v1/resource/14",
+            "response_time_ms": 404,
+            "correlation_id": "8617ed959ae4928f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "50fd9e8a6069d8a11f6b5d72c9703a71",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10067",
+        "timestamp": "2026-01-28T11:37:58.030342",
+        "user_id": "USER-525",
+        "action": "DELETE_RECORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.213",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "135b579775a54d6a",
+            "request_path": "/api/v1/resource/8",
+            "response_time_ms": 398,
+            "correlation_id": "09ee777ae80ab6f0",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "3c97315813006a140b4d16c521b40b50",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10068",
+        "timestamp": "2026-02-11T09:25:58.030355",
+        "user_id": "USER-369",
+        "action": "EXPORT_DATA",
+        "status": "WARNING",
+        "ip_address": "192.168.1.91",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "57f1ca4be22b222f",
+            "request_path": "/api/v1/resource/53",
+            "response_time_ms": 284,
+            "correlation_id": "b5e4720c9bae5ccc",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "5ae8bf2f626a1b8e46d6f136b11e6ef6",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10069",
+        "timestamp": "2026-03-05T03:08:58.030367",
+        "user_id": "USER-417",
+        "action": "VIEW_SETTINGS",
+        "status": "PENDING",
+        "ip_address": "192.168.1.114",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "33e94dcd149140e7",
+            "request_path": "/api/v1/resource/71",
+            "response_time_ms": 87,
+            "correlation_id": "0e6de55d8cb717b4",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "f33ee673a8f3197985dafad8082b4159",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10070",
+        "timestamp": "2026-02-14T03:17:58.030384",
+        "user_id": "USER-766",
+        "action": "CHANGE_PASSWORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.226",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "598d30065cfd03a",
+            "request_path": "/api/v1/resource/19",
+            "response_time_ms": 304,
+            "correlation_id": "84e26982b240b7b2",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "5233658aa5e093b87cc07130c3eaebfc",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10071",
+        "timestamp": "2026-01-22T22:43:58.030398",
+        "user_id": "USER-762",
+        "action": "DELETE_RECORD",
+        "status": "WARNING",
+        "ip_address": "192.168.1.252",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "dc13e732d71f1bd5",
+            "request_path": "/api/v1/resource/41",
+            "response_time_ms": 89,
+            "correlation_id": "822bfe88946bbc74",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8f49d633d15e9cc804093cfa3a99da7b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10072",
+        "timestamp": "2026-01-11T13:22:58.030413",
+        "user_id": "USER-171",
+        "action": "DELETE_RECORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.224",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "e2e591b7ae016e28",
+            "request_path": "/api/v1/resource/67",
+            "response_time_ms": 463,
+            "correlation_id": "eb53b4e678e9f412",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "be16b720f5adaf8c11180e7908b98f59",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10073",
+        "timestamp": "2026-02-23T22:04:58.030426",
+        "user_id": "USER-307",
+        "action": "UPDATE_PROFILE",
+        "status": "WARNING",
+        "ip_address": "192.168.1.185",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "293eea4b9fcee859",
+            "request_path": "/api/v1/resource/58",
+            "response_time_ms": 242,
+            "correlation_id": "7c53d9175cc21270",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "f772da378f66224ae59ca520cc68e320",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10074",
+        "timestamp": "2026-01-15T18:16:58.030438",
+        "user_id": "USER-253",
+        "action": "VIEW_SETTINGS",
+        "status": "WARNING",
+        "ip_address": "192.168.1.42",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "472146cad5309b09",
+            "request_path": "/api/v1/resource/52",
+            "response_time_ms": 128,
+            "correlation_id": "5a87a7dec595c443",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "0851e86ce85ca95a5c23785e8d5a2e30",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10075",
+        "timestamp": "2026-02-16T04:15:58.030451",
+        "user_id": "USER-273",
+        "action": "UPDATE_PROFILE",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.54",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "41dedc06c8ba5ff0",
+            "request_path": "/api/v1/resource/90",
+            "response_time_ms": 375,
+            "correlation_id": "aaf5f23866a8a8fb",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "ed2feaa987a6586f76ee143c60bd2860",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10076",
+        "timestamp": "2026-01-17T16:41:58.030464",
+        "user_id": "USER-496",
+        "action": "DELETE_RECORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.209",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "1258f6a099363baf",
+            "request_path": "/api/v1/resource/76",
+            "response_time_ms": 248,
+            "correlation_id": "30b48513cb960c8a",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "ce7e22cddb7626ca298db97686630fd7",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10077",
+        "timestamp": "2026-02-09T23:44:58.030483",
+        "user_id": "USER-795",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.23",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "ef46874a3c36bf0d",
+            "request_path": "/api/v1/resource/45",
+            "response_time_ms": 489,
+            "correlation_id": "8ef7862a8d9de1a6",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "d3c2c170ef57ff42fe35df1045859054",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10078",
+        "timestamp": "2026-01-10T18:43:58.030496",
+        "user_id": "USER-388",
+        "action": "VIEW_SETTINGS",
+        "status": "WARNING",
+        "ip_address": "192.168.1.51",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f4eb0b20c448fd29",
+            "request_path": "/api/v1/resource/88",
+            "response_time_ms": 172,
+            "correlation_id": "1608e288b0b68716",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "90e7a2852e8d1a3e7c2f70e16a22969b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10079",
+        "timestamp": "2026-01-08T07:43:58.030511",
+        "user_id": "USER-723",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.190",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "563c6f33d545b1ff",
+            "request_path": "/api/v1/resource/7",
+            "response_time_ms": 451,
+            "correlation_id": "8664087b39299589",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "2301177d89973f21bab58999529d8118",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10080",
+        "timestamp": "2026-01-13T11:55:58.030524",
+        "user_id": "USER-835",
+        "action": "CREATE_REPORT",
+        "status": "WARNING",
+        "ip_address": "192.168.1.171",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "7410c48bd031f7c2",
+            "request_path": "/api/v1/resource/75",
+            "response_time_ms": 66,
+            "correlation_id": "a244efc8301b62f4",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "a717dd1e47c93a16baf2a411b7f9a780",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10081",
+        "timestamp": "2026-02-11T11:51:58.030538",
+        "user_id": "USER-780",
+        "action": "CHANGE_PASSWORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.25",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "650e2a860349bf37",
+            "request_path": "/api/v1/resource/4",
+            "response_time_ms": 278,
+            "correlation_id": "25ed5af6fc9030bf",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "4dd2c3ad35e4cc85a45713f41831aa3c",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10082",
+        "timestamp": "2026-01-22T07:07:58.030551",
+        "user_id": "USER-741",
+        "action": "LOGOUT",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.234",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "78a4e4e4a2fd7849",
+            "request_path": "/api/v1/resource/30",
+            "response_time_ms": 440,
+            "correlation_id": "134e04bc5302a0e7",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "94bbe209dca451e96b2edb1fa2f69bb7",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10083",
+        "timestamp": "2026-02-13T23:47:58.030564",
+        "user_id": "USER-289",
+        "action": "LOGOUT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.11",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d9e2821e477f5ac1",
+            "request_path": "/api/v1/resource/12",
+            "response_time_ms": 480,
+            "correlation_id": "ca9a17e03d4f4085",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "1ecd30cc81ea5bd3a4c43be9f7b77715",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10084",
+        "timestamp": "2026-01-01T19:24:58.030576",
+        "user_id": "USER-799",
+        "action": "EXPORT_DATA",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.144",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "feb4a3df81f7ae38",
+            "request_path": "/api/v1/resource/40",
+            "response_time_ms": 153,
+            "correlation_id": "0fb0a54a0f0e98da",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "f5723abfc10624aab380ec1c305fd187",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10085",
+        "timestamp": "2026-01-24T22:34:58.030589",
+        "user_id": "USER-315",
+        "action": "EXPORT_DATA",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.127",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "7f811601dfe87b2e",
+            "request_path": "/api/v1/resource/25",
+            "response_time_ms": 284,
+            "correlation_id": "1f1d0404179d2ffd",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "36da302095aa6abc255e14dd68b3a1da",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10086",
+        "timestamp": "2026-02-19T14:50:58.030604",
+        "user_id": "USER-324",
+        "action": "LOGIN",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.160",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d69029c5abda34e1",
+            "request_path": "/api/v1/resource/22",
+            "response_time_ms": 485,
+            "correlation_id": "dd971466dee5c05f",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "10ac81bb704617bd01d923aad0395440",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10087",
+        "timestamp": "2026-01-25T01:28:58.030616",
+        "user_id": "USER-644",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.65",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "aff2e7555f5d8b3b",
+            "request_path": "/api/v1/resource/64",
+            "response_time_ms": 140,
+            "correlation_id": "0baf24a560f134a7",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "63174714f8e20497bed23d03236cddde",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10088",
+        "timestamp": "2026-02-12T16:21:58.030629",
+        "user_id": "USER-359",
+        "action": "LOGOUT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.140",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "30a6dc3108f27352",
+            "request_path": "/api/v1/resource/27",
+            "response_time_ms": 155,
+            "correlation_id": "6fde3d357f3f59f7",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "410e1355bbfa471aadb05d9f99a3ebe5",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10089",
+        "timestamp": "2026-01-04T00:18:58.030645",
+        "user_id": "USER-207",
+        "action": "LOGIN",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.159",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "770ed466900a9ed",
+            "request_path": "/api/v1/resource/35",
+            "response_time_ms": 390,
+            "correlation_id": "b2f4740dffed302d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "7918f01424c55e3c97acbb6aa8ae4576",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10090",
+        "timestamp": "2026-02-08T18:51:58.030658",
+        "user_id": "USER-405",
+        "action": "UPDATE_PROFILE",
+        "status": "PENDING",
+        "ip_address": "192.168.1.159",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "5e394940008eb1c3",
+            "request_path": "/api/v1/resource/12",
+            "response_time_ms": 485,
+            "correlation_id": "5440ad14884c4fd7",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "38b1eab22436bff6d6ed08fa38173073",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10091",
+        "timestamp": "2026-02-17T16:23:58.030672",
+        "user_id": "USER-825",
+        "action": "LOGIN",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.13",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "feead4e911ce014",
+            "request_path": "/api/v1/resource/56",
+            "response_time_ms": 70,
+            "correlation_id": "6c5c159116268bc8",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "79c918659e01d9b92cab69f5d37f8464",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10092",
+        "timestamp": "2026-01-20T23:16:58.030685",
+        "user_id": "USER-274",
+        "action": "LOGIN",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.218",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "55cd9c021da477a6",
+            "request_path": "/api/v1/resource/16",
+            "response_time_ms": 419,
+            "correlation_id": "b706b5cb5191df89",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "1636ff8e39639c8214b5f5460c95d026",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10093",
+        "timestamp": "2026-02-07T21:57:58.030699",
+        "user_id": "USER-330",
+        "action": "EXPORT_DATA",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.250",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "a462a3f2ba95a758",
+            "request_path": "/api/v1/resource/91",
+            "response_time_ms": 53,
+            "correlation_id": "5c10b6401e2a7695",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "c30de9c09259bd45a510393606bfcd6f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10094",
+        "timestamp": "2026-03-05T03:22:58.030714",
+        "user_id": "USER-772",
+        "action": "VIEW_SETTINGS",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.132",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d17f3e35b3cb2429",
+            "request_path": "/api/v1/resource/2",
+            "response_time_ms": 450,
+            "correlation_id": "bc96ad85fe2e9b71",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "a59b06338dc8bceb55b64598ad9d0e4a",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10095",
+        "timestamp": "2026-01-30T16:53:58.030727",
+        "user_id": "USER-675",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.73",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "74137a02d9716519",
+            "request_path": "/api/v1/resource/99",
+            "response_time_ms": 146,
+            "correlation_id": "39867c95ae9bf9a1",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "aa19e85847f47ac13cd35a4f1d376eb0",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10096",
+        "timestamp": "2026-02-15T01:55:58.030739",
+        "user_id": "USER-855",
+        "action": "DELETE_RECORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.22",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d6dca6631a442ce",
+            "request_path": "/api/v1/resource/46",
+            "response_time_ms": 211,
+            "correlation_id": "3748e869bae9a4e3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "27f594650b0f3810a7991fd452d07bc3",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10097",
+        "timestamp": "2026-02-17T06:53:58.030752",
+        "user_id": "USER-920",
+        "action": "CREATE_REPORT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.23",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f126e86d4fc46468",
+            "request_path": "/api/v1/resource/5",
+            "response_time_ms": 150,
+            "correlation_id": "ee7fabf2e677b087",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "defcd32ffc04d27dc95be2d1b5d5829a",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10098",
+        "timestamp": "2026-01-06T21:09:58.030766",
+        "user_id": "USER-892",
+        "action": "CREATE_REPORT",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.242",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d313232471749ad7",
+            "request_path": "/api/v1/resource/61",
+            "response_time_ms": 440,
+            "correlation_id": "2bc352e1d77fb3f8",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "2298cbe9618d169767a155bf65f7dce4",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10099",
+        "timestamp": "2026-02-05T18:11:58.030778",
+        "user_id": "USER-255",
+        "action": "EXPORT_DATA",
+        "status": "WARNING",
+        "ip_address": "192.168.1.148",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "5d264b235a01c375",
+            "request_path": "/api/v1/resource/28",
+            "response_time_ms": 59,
+            "correlation_id": "12aed1c8be7319e8",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "d5e2864b604462309bed390a55978644",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10100",
+        "timestamp": "2026-01-08T22:18:58.030792",
+        "user_id": "USER-872",
+        "action": "DELETE_RECORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.77",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "690c7faad9ce5f70",
+            "request_path": "/api/v1/resource/48",
+            "response_time_ms": 292,
+            "correlation_id": "1a4ed222bc47caa7",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "93345fc2a290c059d9c0c4f9ccbaf6bc",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10101",
+        "timestamp": "2026-01-08T13:53:58.030808",
+        "user_id": "USER-224",
+        "action": "CHANGE_PASSWORD",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.47",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "86c408843731eaca",
+            "request_path": "/api/v1/resource/64",
+            "response_time_ms": 30,
+            "correlation_id": "1941855943f943f3",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "2e2080070391b4bb5483a4723fc9412a",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10102",
+        "timestamp": "2026-02-22T02:32:58.030821",
+        "user_id": "USER-768",
+        "action": "CHANGE_PASSWORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.35",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "8a88c1129175d0dc",
+            "request_path": "/api/v1/resource/78",
+            "response_time_ms": 478,
+            "correlation_id": "7d7e7b310b0377cf",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "87cc886fbb130feb3ced4a0c3362213c",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10103",
+        "timestamp": "2026-02-19T18:26:58.030834",
+        "user_id": "USER-767",
+        "action": "LOGIN",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.89",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f13d6a2d9d5234ca",
+            "request_path": "/api/v1/resource/84",
+            "response_time_ms": 98,
+            "correlation_id": "f49f7f6bd5be1215",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "d2304ce3bc913bc4cac45eabd32dc506",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10104",
+        "timestamp": "2026-01-11T21:01:58.030847",
+        "user_id": "USER-237",
+        "action": "UPDATE_PROFILE",
+        "status": "WARNING",
+        "ip_address": "192.168.1.203",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "4f5a4a8d0efd3b7d",
+            "request_path": "/api/v1/resource/36",
+            "response_time_ms": 181,
+            "correlation_id": "e6383e7f8fe23471",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "647b5ef91735e7636611c255bfde66f8",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10105",
+        "timestamp": "2026-02-05T03:32:58.030860",
+        "user_id": "USER-769",
+        "action": "EXPORT_DATA",
+        "status": "PENDING",
+        "ip_address": "192.168.1.196",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "58c28159003175b3",
+            "request_path": "/api/v1/resource/10",
+            "response_time_ms": 133,
+            "correlation_id": "e8ad8a1e2a75317c",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "dca3d4c04c4d0c12c1ff993276e3ac19",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10106",
+        "timestamp": "2026-01-29T17:35:58.030874",
+        "user_id": "USER-564",
+        "action": "VIEW_SETTINGS",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.190",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "180cb1cd474e8a8b",
+            "request_path": "/api/v1/resource/63",
+            "response_time_ms": 318,
+            "correlation_id": "a9c25e99ab6abc9e",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "227d911647dc411bf4c3f47636d0e4c5",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10107",
+        "timestamp": "2026-02-16T15:44:58.030886",
+        "user_id": "USER-216",
+        "action": "LOGOUT",
+        "status": "SUCCESS",
+        "ip_address": "192.168.1.105",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "d05eaa25eca8c196",
+            "request_path": "/api/v1/resource/54",
+            "response_time_ms": 201,
+            "correlation_id": "06ebe9da30de0d4d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "fdcb9ba283c2ec3aa2b504fe50ad4d88",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10108",
+        "timestamp": "2026-02-06T13:41:58.030901",
+        "user_id": "USER-892",
+        "action": "LOGIN",
+        "status": "PENDING",
+        "ip_address": "192.168.1.34",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "2448f3ca6b08a476",
+            "request_path": "/api/v1/resource/79",
+            "response_time_ms": 90,
+            "correlation_id": "8fe2e4d2547b2748",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "95d8505078dc8d773fed1140c73b253f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10109",
+        "timestamp": "2026-02-28T07:51:58.030917",
+        "user_id": "USER-672",
+        "action": "CHANGE_PASSWORD",
+        "status": "WARNING",
+        "ip_address": "192.168.1.143",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "eb2869a031aee244",
+            "request_path": "/api/v1/resource/2",
+            "response_time_ms": 257,
+            "correlation_id": "d30af19fe682c605",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8ee8c74b1d0b39f1b91bf7817a3cbba2",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10110",
+        "timestamp": "2026-02-28T14:42:58.030930",
+        "user_id": "USER-607",
+        "action": "LOGIN",
+        "status": "WARNING",
+        "ip_address": "192.168.1.15",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "b880f6042dc70fe3",
+            "request_path": "/api/v1/resource/82",
+            "response_time_ms": 472,
+            "correlation_id": "deeb227bd1eb79ca",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "2e02f5cffa330268ff70ef125d818063",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10111",
+        "timestamp": "2026-03-05T02:02:58.030945",
+        "user_id": "USER-737",
+        "action": "DELETE_RECORD",
+        "status": "WARNING",
+        "ip_address": "192.168.1.242",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "4d122ac7210d0810",
+            "request_path": "/api/v1/resource/63",
+            "response_time_ms": 347,
+            "correlation_id": "8ea52438ecd5903a",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "539e99dd992d11cc7aada4f09dacef3b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10112",
+        "timestamp": "2026-02-28T15:12:58.030958",
+        "user_id": "USER-197",
+        "action": "LOGOUT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.175",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "b3a6a8f37536fb11",
+            "request_path": "/api/v1/resource/78",
+            "response_time_ms": 252,
+            "correlation_id": "c69a024914a07457",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "fb2d19609410bd2786bf0273f0272b7e",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10113",
+        "timestamp": "2026-01-29T11:21:58.030971",
+        "user_id": "USER-836",
+        "action": "CHANGE_PASSWORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.139",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "2caa5982b8ad5ef0",
+            "request_path": "/api/v1/resource/64",
+            "response_time_ms": 435,
+            "correlation_id": "70587aafa2780842",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "b51e1c837a341acfce2f7d0af55e8d9f",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10114",
+        "timestamp": "2026-03-04T19:16:58.030986",
+        "user_id": "USER-222",
+        "action": "LOGOUT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.125",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "4fc4ad3e8bcaac06",
+            "request_path": "/api/v1/resource/30",
+            "response_time_ms": 318,
+            "correlation_id": "359d1871b533e631",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "b8b182753a1150b7fcfbb612b834d28b",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10115",
+        "timestamp": "2026-01-30T06:48:58.031018",
+        "user_id": "USER-733",
+        "action": "UPDATE_PROFILE",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.157",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "2b029afcab25e2fe",
+            "request_path": "/api/v1/resource/46",
+            "response_time_ms": 104,
+            "correlation_id": "b8f42d3b99366d73",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "d7d6a62499d964dce5b85f7e3cddb947",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10116",
+        "timestamp": "2026-01-25T00:01:58.031031",
+        "user_id": "USER-647",
+        "action": "UPDATE_PROFILE",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.147",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "7300658b8857aa90",
+            "request_path": "/api/v1/resource/35",
+            "response_time_ms": 241,
+            "correlation_id": "2c87ea3a4487dd7d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "023882518384dcbf97e9d71b349ff3fa",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10117",
+        "timestamp": "2026-02-06T15:00:58.031043",
+        "user_id": "USER-952",
+        "action": "DELETE_RECORD",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.207",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "213098ae76c5d5b2",
+            "request_path": "/api/v1/resource/14",
+            "response_time_ms": 205,
+            "correlation_id": "f4086971357ec726",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "7f358bfb72d00d2f0700aeff875c3cbd",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10118",
+        "timestamp": "2026-03-04T07:52:58.031056",
+        "user_id": "USER-116",
+        "action": "LOGOUT",
+        "status": "WARNING",
+        "ip_address": "192.168.1.246",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f31b3416e31c4261",
+            "request_path": "/api/v1/resource/14",
+            "response_time_ms": 286,
+            "correlation_id": "fabcc840de24429b",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "8a7fdcd763b3d95f21badde4daf2bf3d",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10119",
+        "timestamp": "2026-02-24T20:43:58.031069",
+        "user_id": "USER-765",
+        "action": "CREATE_REPORT",
+        "status": "PENDING",
+        "ip_address": "192.168.1.191",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "52f14168ff0137f8",
+            "request_path": "/api/v1/resource/28",
+            "response_time_ms": 417,
+            "correlation_id": "90cbcc3b89fc4dfe",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "87aa1630f9d205f8a4d7ba337e980fec",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10120",
+        "timestamp": "2026-01-26T19:38:58.031082",
+        "user_id": "USER-114",
+        "action": "DELETE_RECORD",
+        "status": "PENDING",
+        "ip_address": "192.168.1.190",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "cfbf538fcea2e293",
+            "request_path": "/api/v1/resource/27",
+            "response_time_ms": 453,
+            "correlation_id": "27eaf65cf4bb761d",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "4d705279161c09c28372886fa6c22c08",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10121",
+        "timestamp": "2026-01-17T17:48:58.031097",
+        "user_id": "USER-372",
+        "action": "LOGOUT",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.36",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "f13abbf2fe3c9967",
+            "request_path": "/api/v1/resource/58",
+            "response_time_ms": 475,
+            "correlation_id": "2c81e3b64e4a0292",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "c1f7459816cdd0effdd8eec4674f5c92",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    },
+    {
+        "id": "LOG-10122",
+        "timestamp": "2026-01-27T10:39:58.031111",
+        "user_id": "USER-301",
+        "action": "EXPORT_DATA",
+        "status": "FAILURE",
+        "ip_address": "192.168.1.155",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "metadata": {
+            "browser": "Chrome",
+            "version": "91.0.4472.124",
+            "os": "Windows 10",
+            "session_id": "61bb24742b9d5f26",
+            "request_path": "/api/v1/resource/42",
+            "response_time_ms": 215,
+            "correlation_id": "cb9ad22a8317f1f8",
+            "tags": [
+                "audit",
+                "security",
+                "user-activity"
+            ]
+        },
+        "request_payload_checksum": "3513726cf8aba114cf2bd6c964c73ca1",
+        "is_archived": false,
+        "retention_policy": "90_DAYS"
+    }
