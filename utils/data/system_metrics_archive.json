@@ -1,0 +1,4346 @@
+[
+    {
+        "snapshot_id": "MET-SN-30000",
+        "collection_timestamp": "2025-12-15T14:34:32.865652",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 72.76,
+            "memory_usage_mb": 21572,
+            "disk_io_iops": 10041,
+            "network_throughput_kbps": 852874,
+            "load_average": [
+                5.58,
+                2.2,
+                0.54
+            ],
+            "active_threads": 1431,
+            "context_switches": 93726
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b191"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d732aa88a7fde91b"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30001",
+        "collection_timestamp": "2025-11-26T19:37:26.865769",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 58.09,
+            "memory_usage_mb": 1479,
+            "disk_io_iops": 9113,
+            "network_throughput_kbps": 987598,
+            "load_average": [
+                2.6,
+                7.78,
+                5.72
+            ],
+            "active_threads": 118,
+            "context_switches": 9615
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b949"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "5411f4c6c7026d76"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30002",
+        "collection_timestamp": "2026-02-14T13:55:29.865803",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 62.44,
+            "memory_usage_mb": 11314,
+            "disk_io_iops": 4067,
+            "network_throughput_kbps": 501058,
+            "load_average": [
+                5.13,
+                0.37,
+                6.46
+            ],
+            "active_threads": 3723,
+            "context_switches": 66085
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b939"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3859303db688b3c"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30003",
+        "collection_timestamp": "2025-07-02T17:51:51.865829",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 67.18,
+            "memory_usage_mb": 5255,
+            "disk_io_iops": 6777,
+            "network_throughput_kbps": 129969,
+            "load_average": [
+                5.97,
+                4.21,
+                5.13
+            ],
+            "active_threads": 3873,
+            "context_switches": 23683
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b942"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "42afae291495f49"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30004",
+        "collection_timestamp": "2026-02-08T01:50:05.865853",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 19.78,
+            "memory_usage_mb": 15521,
+            "disk_io_iops": 6435,
+            "network_throughput_kbps": 919792,
+            "load_average": [
+                7.92,
+                7.2,
+                2.28
+            ],
+            "active_threads": 2840,
+            "context_switches": 74220
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b315"
+        },
+        "anomalies_detected": [
+            {
+                "type": "MEM_LEAK",
+                "severity": "MEDIUM"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2bff361f5b82ee48"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30005",
+        "collection_timestamp": "2025-09-07T23:30:18.865877",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 46.07,
+            "memory_usage_mb": 13155,
+            "disk_io_iops": 6176,
+            "network_throughput_kbps": 137968,
+            "load_average": [
+                5.54,
+                1.78,
+                4.84
+            ],
+            "active_threads": 3676,
+            "context_switches": 54714
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b206"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "192fcde2788cb2e0"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30006",
+        "collection_timestamp": "2025-05-23T22:55:44.865907",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 63.35,
+            "memory_usage_mb": 2969,
+            "disk_io_iops": 1675,
+            "network_throughput_kbps": 401145,
+            "load_average": [
+                6.6,
+                7.75,
+                1.95
+            ],
+            "active_threads": 248,
+            "context_switches": 86475
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b974"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "9143387ad73660b2"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30007",
+        "collection_timestamp": "2025-08-05T13:44:31.865930",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 48.45,
+            "memory_usage_mb": 9720,
+            "disk_io_iops": 14665,
+            "network_throughput_kbps": 148735,
+            "load_average": [
+                7.74,
+                3.37,
+                7.98
+            ],
+            "active_threads": 4982,
+            "context_switches": 65346
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b842"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "ba1ed36fecb8ea8e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30008",
+        "collection_timestamp": "2025-07-26T13:05:05.865952",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 50.28,
+            "memory_usage_mb": 11353,
+            "disk_io_iops": 604,
+            "network_throughput_kbps": 241926,
+            "load_average": [
+                2.43,
+                7.48,
+                5.61
+            ],
+            "active_threads": 336,
+            "context_switches": 19328
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b982"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f06549b3f9bda07c"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30009",
+        "collection_timestamp": "2025-09-04T04:27:05.865978",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 37.01,
+            "memory_usage_mb": 30073,
+            "disk_io_iops": 5398,
+            "network_throughput_kbps": 941229,
+            "load_average": [
+                2.08,
+                2.12,
+                4.23
+            ],
+            "active_threads": 2204,
+            "context_switches": 53869
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b675"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "6a4437ab13a0ba2a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30010",
+        "collection_timestamp": "2025-03-27T07:41:42.866000",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 43.44,
+            "memory_usage_mb": 10016,
+            "disk_io_iops": 977,
+            "network_throughput_kbps": 417253,
+            "load_average": [
+                4.94,
+                3.52,
+                5.06
+            ],
+            "active_threads": 1070,
+            "context_switches": 30341
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b325"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c48c1e8141ad644d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30011",
+        "collection_timestamp": "2025-08-30T04:24:26.866022",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 40.12,
+            "memory_usage_mb": 21138,
+            "disk_io_iops": 12753,
+            "network_throughput_kbps": 321180,
+            "load_average": [
+                7.25,
+                7.97,
+                5.67
+            ],
+            "active_threads": 3872,
+            "context_switches": 10098
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b423"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "6f04864baf791edb"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30012",
+        "collection_timestamp": "2025-08-04T01:44:50.866043",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 24.53,
+            "memory_usage_mb": 10717,
+            "disk_io_iops": 7198,
+            "network_throughput_kbps": 532714,
+            "load_average": [
+                5.15,
+                4.88,
+                2.5
+            ],
+            "active_threads": 230,
+            "context_switches": 79526
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b689"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c565c30b9ecb955e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30013",
+        "collection_timestamp": "2026-01-09T04:00:51.866065",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 89.49,
+            "memory_usage_mb": 11140,
+            "disk_io_iops": 6346,
+            "network_throughput_kbps": 98893,
+            "load_average": [
+                0.95,
+                1.06,
+                6.13
+            ],
+            "active_threads": 4463,
+            "context_switches": 74247
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b945"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d16831ac09ef0524"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30014",
+        "collection_timestamp": "2025-06-05T19:25:04.866086",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 67.52,
+            "memory_usage_mb": 2778,
+            "disk_io_iops": 14986,
+            "network_throughput_kbps": 824733,
+            "load_average": [
+                7.92,
+                5.65,
+                3.1
+            ],
+            "active_threads": 4575,
+            "context_switches": 87032
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b369"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "e7c6b615bb0b9c9e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30015",
+        "collection_timestamp": "2026-01-27T19:54:00.866108",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 43.13,
+            "memory_usage_mb": 31071,
+            "disk_io_iops": 2364,
+            "network_throughput_kbps": 847271,
+            "load_average": [
+                0.62,
+                1.82,
+                7.74
+            ],
+            "active_threads": 4891,
+            "context_switches": 58945
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b948"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "66daefe60cdd9135"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30016",
+        "collection_timestamp": "2025-08-04T23:44:37.866133",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 53.38,
+            "memory_usage_mb": 31318,
+            "disk_io_iops": 14994,
+            "network_throughput_kbps": 285907,
+            "load_average": [
+                6.54,
+                1.09,
+                5.85
+            ],
+            "active_threads": 3060,
+            "context_switches": 53737
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b662"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "902c240b18f67b6f"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30017",
+        "collection_timestamp": "2025-08-02T06:23:47.866156",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 91.35,
+            "memory_usage_mb": 9277,
+            "disk_io_iops": 1673,
+            "network_throughput_kbps": 954973,
+            "load_average": [
+                7.49,
+                1.57,
+                4.38
+            ],
+            "active_threads": 1508,
+            "context_switches": 79941
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b619"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "4e40fbebfc02b622"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30018",
+        "collection_timestamp": "2025-11-19T23:46:18.866177",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 44.08,
+            "memory_usage_mb": 1501,
+            "disk_io_iops": 2613,
+            "network_throughput_kbps": 336064,
+            "load_average": [
+                4.88,
+                7.25,
+                2.42
+            ],
+            "active_threads": 4358,
+            "context_switches": 21380
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b923"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "25d42fbd5c6bc71b"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30019",
+        "collection_timestamp": "2025-07-09T14:26:49.866200",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 63.6,
+            "memory_usage_mb": 13497,
+            "disk_io_iops": 13458,
+            "network_throughput_kbps": 954604,
+            "load_average": [
+                5.57,
+                3.89,
+                2.28
+            ],
+            "active_threads": 2708,
+            "context_switches": 48107
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b912"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "9e29fb97d811b250"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30020",
+        "collection_timestamp": "2025-11-24T07:04:01.866223",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 87.07,
+            "memory_usage_mb": 15229,
+            "disk_io_iops": 4410,
+            "network_throughput_kbps": 260494,
+            "load_average": [
+                4.74,
+                0.18,
+                3.57
+            ],
+            "active_threads": 521,
+            "context_switches": 54186
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b314"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "7b4dc21c4bad822d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30021",
+        "collection_timestamp": "2026-01-21T10:15:33.866244",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 86.93,
+            "memory_usage_mb": 21899,
+            "disk_io_iops": 13714,
+            "network_throughput_kbps": 193888,
+            "load_average": [
+                1.78,
+                0.92,
+                2.93
+            ],
+            "active_threads": 2554,
+            "context_switches": 24100
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b807"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d46e13285ceb0be"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30022",
+        "collection_timestamp": "2025-08-02T23:18:04.866268",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 19.25,
+            "memory_usage_mb": 17250,
+            "disk_io_iops": 957,
+            "network_throughput_kbps": 469565,
+            "load_average": [
+                1.6,
+                1.1,
+                2.45
+            ],
+            "active_threads": 298,
+            "context_switches": 83845
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b622"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "51987fa4e58bc55d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30023",
+        "collection_timestamp": "2026-02-27T06:23:45.866292",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 40.7,
+            "memory_usage_mb": 11548,
+            "disk_io_iops": 11499,
+            "network_throughput_kbps": 433519,
+            "load_average": [
+                1.3,
+                2.27,
+                7.38
+            ],
+            "active_threads": 1443,
+            "context_switches": 95450
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b788"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "4d37ad1ebbc73d65"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30024",
+        "collection_timestamp": "2026-02-28T18:58:35.866316",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 6.55,
+            "memory_usage_mb": 6171,
+            "disk_io_iops": 1043,
+            "network_throughput_kbps": 809545,
+            "load_average": [
+                6.95,
+                7.43,
+                1.1
+            ],
+            "active_threads": 3091,
+            "context_switches": 39769
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b227"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "4538942a18c5835a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30025",
+        "collection_timestamp": "2025-03-11T05:34:24.866337",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 48.92,
+            "memory_usage_mb": 2846,
+            "disk_io_iops": 14975,
+            "network_throughput_kbps": 908444,
+            "load_average": [
+                3.85,
+                7.55,
+                7.14
+            ],
+            "active_threads": 758,
+            "context_switches": 25405
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b708"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2d798102ba56ca40"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30026",
+        "collection_timestamp": "2025-11-01T17:34:39.866361",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 83.42,
+            "memory_usage_mb": 31542,
+            "disk_io_iops": 8016,
+            "network_throughput_kbps": 901049,
+            "load_average": [
+                7.9,
+                4.29,
+                7.02
+            ],
+            "active_threads": 275,
+            "context_switches": 48733
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b432"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "6d6191628c968d24"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30027",
+        "collection_timestamp": "2025-12-22T06:42:10.866383",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 64.49,
+            "memory_usage_mb": 29285,
+            "disk_io_iops": 5381,
+            "network_throughput_kbps": 947426,
+            "load_average": [
+                5.63,
+                7.76,
+                2.24
+            ],
+            "active_threads": 2834,
+            "context_switches": 51088
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b862"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "158312d4aaa596a2"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30028",
+        "collection_timestamp": "2026-02-18T04:46:25.866405",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 7.72,
+            "memory_usage_mb": 9922,
+            "disk_io_iops": 4298,
+            "network_throughput_kbps": 842862,
+            "load_average": [
+                3.56,
+                0.39,
+                1.57
+            ],
+            "active_threads": 2576,
+            "context_switches": 8243
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b470"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "68ee8eb750142314"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30029",
+        "collection_timestamp": "2025-12-14T23:32:35.866429",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 82.3,
+            "memory_usage_mb": 2777,
+            "disk_io_iops": 7215,
+            "network_throughput_kbps": 729006,
+            "load_average": [
+                5.28,
+                4.64,
+                6.86
+            ],
+            "active_threads": 3523,
+            "context_switches": 52398
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b435"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f99f3df8c63bbbc2"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30030",
+        "collection_timestamp": "2025-06-26T06:43:37.866450",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 38.2,
+            "memory_usage_mb": 20120,
+            "disk_io_iops": 8165,
+            "network_throughput_kbps": 697327,
+            "load_average": [
+                7.42,
+                1.6,
+                5.82
+            ],
+            "active_threads": 2493,
+            "context_switches": 1133
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b277"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "546c565d4b42d55e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30031",
+        "collection_timestamp": "2025-09-16T12:33:31.866471",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 51.41,
+            "memory_usage_mb": 23856,
+            "disk_io_iops": 6919,
+            "network_throughput_kbps": 694768,
+            "load_average": [
+                7.75,
+                6.88,
+                5.86
+            ],
+            "active_threads": 842,
+            "context_switches": 96311
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b238"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "7df0d6600b464e98"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30032",
+        "collection_timestamp": "2026-01-09T03:09:10.866493",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 54.06,
+            "memory_usage_mb": 29873,
+            "disk_io_iops": 9303,
+            "network_throughput_kbps": 509504,
+            "load_average": [
+                4.21,
+                0.79,
+                5.73
+            ],
+            "active_threads": 2163,
+            "context_switches": 47304
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b179"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "6a07a0a4b6079b5d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30033",
+        "collection_timestamp": "2025-06-04T18:25:49.866515",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 90.09,
+            "memory_usage_mb": 8824,
+            "disk_io_iops": 13197,
+            "network_throughput_kbps": 618450,
+            "load_average": [
+                7.06,
+                0.77,
+                1.04
+            ],
+            "active_threads": 1143,
+            "context_switches": 5113
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b311"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3126daac8dde653"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30034",
+        "collection_timestamp": "2025-09-01T11:06:23.866536",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 34.83,
+            "memory_usage_mb": 6726,
+            "disk_io_iops": 13873,
+            "network_throughput_kbps": 692763,
+            "load_average": [
+                0.52,
+                6.76,
+                2.56
+            ],
+            "active_threads": 4848,
+            "context_switches": 11971
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b880"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "ed4d088650c1bc3"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30035",
+        "collection_timestamp": "2025-10-30T11:02:16.866562",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 14.91,
+            "memory_usage_mb": 18740,
+            "disk_io_iops": 14370,
+            "network_throughput_kbps": 587741,
+            "load_average": [
+                6.46,
+                2.56,
+                5.45
+            ],
+            "active_threads": 4778,
+            "context_switches": 98592
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b111"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2086e894c11fc096"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30036",
+        "collection_timestamp": "2025-06-24T14:46:02.866588",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 31.43,
+            "memory_usage_mb": 18446,
+            "disk_io_iops": 5520,
+            "network_throughput_kbps": 392423,
+            "load_average": [
+                6.05,
+                2.96,
+                3.35
+            ],
+            "active_threads": 508,
+            "context_switches": 17323
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b115"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "1a60d43110a46e12"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30037",
+        "collection_timestamp": "2025-06-14T21:00:37.866608",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 79.55,
+            "memory_usage_mb": 21574,
+            "disk_io_iops": 9289,
+            "network_throughput_kbps": 613448,
+            "load_average": [
+                0.15,
+                2.08,
+                3.25
+            ],
+            "active_threads": 3063,
+            "context_switches": 92674
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "d",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b395"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "685200903c38942a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30038",
+        "collection_timestamp": "2025-03-24T01:44:55.866629",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 11.67,
+            "memory_usage_mb": 24525,
+            "disk_io_iops": 7949,
+            "network_throughput_kbps": 83606,
+            "load_average": [
+                3.08,
+                0.24,
+                0.98
+            ],
+            "active_threads": 799,
+            "context_switches": 33955
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b126"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "14b33cf6c1044129"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30039",
+        "collection_timestamp": "2025-09-22T01:31:47.866650",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 27.61,
+            "memory_usage_mb": 11648,
+            "disk_io_iops": 10267,
+            "network_throughput_kbps": 171214,
+            "load_average": [
+                3.75,
+                7.58,
+                0.7
+            ],
+            "active_threads": 1430,
+            "context_switches": 78097
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b159"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "74d716083b94a26a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30040",
+        "collection_timestamp": "2026-01-22T23:35:57.866672",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 71.48,
+            "memory_usage_mb": 22777,
+            "disk_io_iops": 780,
+            "network_throughput_kbps": 64871,
+            "load_average": [
+                0.39,
+                5.75,
+                0.6
+            ],
+            "active_threads": 3617,
+            "context_switches": 86982
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "d",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b767"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "8b9a237738963eb9"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30041",
+        "collection_timestamp": "2025-03-16T14:05:29.866695",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 59.34,
+            "memory_usage_mb": 3657,
+            "disk_io_iops": 10267,
+            "network_throughput_kbps": 916917,
+            "load_average": [
+                4.92,
+                6.77,
+                2.93
+            ],
+            "active_threads": 172,
+            "context_switches": 3589
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b883"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "42d89f2a66a9d4eb"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30042",
+        "collection_timestamp": "2025-11-07T08:34:14.866719",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 37.01,
+            "memory_usage_mb": 14535,
+            "disk_io_iops": 5164,
+            "network_throughput_kbps": 792852,
+            "load_average": [
+                4.31,
+                6.4,
+                4.46
+            ],
+            "active_threads": 3208,
+            "context_switches": 36753
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b446"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "671f6195fed8a053"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30043",
+        "collection_timestamp": "2025-03-24T22:51:50.866740",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 11.38,
+            "memory_usage_mb": 30990,
+            "disk_io_iops": 4113,
+            "network_throughput_kbps": 975611,
+            "load_average": [
+                0.11,
+                2.35,
+                7.6
+            ],
+            "active_threads": 4474,
+            "context_switches": 24347
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b789"
+        },
+        "anomalies_detected": [
+            {
+                "type": "MEM_LEAK",
+                "severity": "MEDIUM"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "cb1fe363c403ef20"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30044",
+        "collection_timestamp": "2026-01-29T02:28:07.866762",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 86.82,
+            "memory_usage_mb": 24950,
+            "disk_io_iops": 8022,
+            "network_throughput_kbps": 984422,
+            "load_average": [
+                6.7,
+                7.87,
+                5.56
+            ],
+            "active_threads": 2186,
+            "context_switches": 15947
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b602"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "1599726e36862795"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30045",
+        "collection_timestamp": "2025-03-26T15:08:40.866785",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 88.21,
+            "memory_usage_mb": 22473,
+            "disk_io_iops": 1499,
+            "network_throughput_kbps": 799775,
+            "load_average": [
+                1.61,
+                3.93,
+                5.94
+            ],
+            "active_threads": 2821,
+            "context_switches": 12785
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b449"
+        },
+        "anomalies_detected": [
+            {
+                "type": "MEM_LEAK",
+                "severity": "MEDIUM"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "cad0db18cafaf6ba"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30046",
+        "collection_timestamp": "2025-06-05T20:25:51.866806",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 40.94,
+            "memory_usage_mb": 30032,
+            "disk_io_iops": 13586,
+            "network_throughput_kbps": 115845,
+            "load_average": [
+                4.46,
+                2.9,
+                0.61
+            ],
+            "active_threads": 4743,
+            "context_switches": 32821
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b579"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "cb00235bf5ec60b3"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30047",
+        "collection_timestamp": "2025-12-13T01:41:19.866827",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 74.7,
+            "memory_usage_mb": 10085,
+            "disk_io_iops": 9181,
+            "network_throughput_kbps": 807198,
+            "load_average": [
+                1.38,
+                5.48,
+                7.3
+            ],
+            "active_threads": 2334,
+            "context_switches": 27576
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b804"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d25617e3fbee8720"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30048",
+        "collection_timestamp": "2025-03-17T21:28:27.866854",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 87.32,
+            "memory_usage_mb": 28190,
+            "disk_io_iops": 5245,
+            "network_throughput_kbps": 230043,
+            "load_average": [
+                4.62,
+                1.92,
+                0.32
+            ],
+            "active_threads": 1561,
+            "context_switches": 90453
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b208"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "b0394c54a1a75f04"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30049",
+        "collection_timestamp": "2026-02-06T13:33:10.866876",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 46.62,
+            "memory_usage_mb": 2982,
+            "disk_io_iops": 6414,
+            "network_throughput_kbps": 844181,
+            "load_average": [
+                5.78,
+                1.19,
+                5.15
+            ],
+            "active_threads": 4306,
+            "context_switches": 17293
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b870"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3bce902ae852cad3"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30050",
+        "collection_timestamp": "2025-03-20T08:32:38.866900",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 86.47,
+            "memory_usage_mb": 21973,
+            "disk_io_iops": 4758,
+            "network_throughput_kbps": 741342,
+            "load_average": [
+                1.09,
+                5.3,
+                0.82
+            ],
+            "active_threads": 4672,
+            "context_switches": 78495
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b228"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c09d7509fafe1e6d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30051",
+        "collection_timestamp": "2025-11-29T05:07:18.866921",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 28.58,
+            "memory_usage_mb": 14393,
+            "disk_io_iops": 8959,
+            "network_throughput_kbps": 492918,
+            "load_average": [
+                1.34,
+                2.93,
+                4.86
+            ],
+            "active_threads": 1577,
+            "context_switches": 65481
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b333"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "727b1ff0f903d13e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30052",
+        "collection_timestamp": "2025-04-04T17:23:25.866942",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 95.34,
+            "memory_usage_mb": 3942,
+            "disk_io_iops": 6532,
+            "network_throughput_kbps": 495913,
+            "load_average": [
+                6.32,
+                3.97,
+                0.61
+            ],
+            "active_threads": 3399,
+            "context_switches": 25717
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b416"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "55d50b7cc7069268"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30053",
+        "collection_timestamp": "2025-09-01T05:09:40.866963",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 86.24,
+            "memory_usage_mb": 1275,
+            "disk_io_iops": 14199,
+            "network_throughput_kbps": 794522,
+            "load_average": [
+                1.15,
+                0.95,
+                4.72
+            ],
+            "active_threads": 3415,
+            "context_switches": 6134
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b427"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "4a5d8ea255d72aa5"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30054",
+        "collection_timestamp": "2025-12-09T07:35:46.866993",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 64.17,
+            "memory_usage_mb": 6135,
+            "disk_io_iops": 13174,
+            "network_throughput_kbps": 933639,
+            "load_average": [
+                2.41,
+                3.02,
+                7.74
+            ],
+            "active_threads": 1059,
+            "context_switches": 51394
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b647"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "24cf44e1032ed10f"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30055",
+        "collection_timestamp": "2025-12-08T06:16:12.867033",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 37.8,
+            "memory_usage_mb": 24176,
+            "disk_io_iops": 10860,
+            "network_throughput_kbps": 394423,
+            "load_average": [
+                6.16,
+                3.03,
+                0.72
+            ],
+            "active_threads": 227,
+            "context_switches": 33445
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b113"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f14e312d0faedc9a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30056",
+        "collection_timestamp": "2025-04-09T18:35:35.867055",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 46.24,
+            "memory_usage_mb": 6631,
+            "disk_io_iops": 5798,
+            "network_throughput_kbps": 556069,
+            "load_average": [
+                4.1,
+                0.82,
+                3.43
+            ],
+            "active_threads": 1230,
+            "context_switches": 92896
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b592"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "926ed835f82b5e3e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30057",
+        "collection_timestamp": "2025-04-14T14:22:24.867077",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 64.37,
+            "memory_usage_mb": 5640,
+            "disk_io_iops": 809,
+            "network_throughput_kbps": 987731,
+            "load_average": [
+                6.4,
+                4.49,
+                1.66
+            ],
+            "active_threads": 3593,
+            "context_switches": 47237
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b878"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "e4625b45ce47e491"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30058",
+        "collection_timestamp": "2025-12-15T03:02:52.867098",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 50.13,
+            "memory_usage_mb": 2271,
+            "disk_io_iops": 14322,
+            "network_throughput_kbps": 551450,
+            "load_average": [
+                4.57,
+                1.27,
+                5.86
+            ],
+            "active_threads": 1805,
+            "context_switches": 9846
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b691"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c75449cbbe3620c1"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30059",
+        "collection_timestamp": "2025-11-11T08:14:37.867119",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 22.79,
+            "memory_usage_mb": 29379,
+            "disk_io_iops": 12797,
+            "network_throughput_kbps": 744881,
+            "load_average": [
+                3.69,
+                5.06,
+                4.95
+            ],
+            "active_threads": 483,
+            "context_switches": 54891
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b429"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "fc4ae6b7d2b1f7d9"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30060",
+        "collection_timestamp": "2025-11-13T17:38:12.867145",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 84.82,
+            "memory_usage_mb": 11111,
+            "disk_io_iops": 11009,
+            "network_throughput_kbps": 355088,
+            "load_average": [
+                3.35,
+                5.66,
+                3.32
+            ],
+            "active_threads": 3675,
+            "context_switches": 63958
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b528"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "97e2da4274718abc"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30061",
+        "collection_timestamp": "2025-09-13T05:48:30.867169",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 45.96,
+            "memory_usage_mb": 29806,
+            "disk_io_iops": 12777,
+            "network_throughput_kbps": 669533,
+            "load_average": [
+                7.3,
+                6.01,
+                4.37
+            ],
+            "active_threads": 2787,
+            "context_switches": 6757
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b437"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "9f6ffb7e52c523c5"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30062",
+        "collection_timestamp": "2026-01-21T19:58:17.867191",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 92.9,
+            "memory_usage_mb": 2250,
+            "disk_io_iops": 1267,
+            "network_throughput_kbps": 809543,
+            "load_average": [
+                2.46,
+                3.31,
+                1.32
+            ],
+            "active_threads": 3164,
+            "context_switches": 82869
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b508"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c39ba75bad1dc542"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30063",
+        "collection_timestamp": "2025-10-02T23:57:55.867212",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 76.02,
+            "memory_usage_mb": 19342,
+            "disk_io_iops": 9483,
+            "network_throughput_kbps": 372019,
+            "load_average": [
+                4.73,
+                4.67,
+                0.42
+            ],
+            "active_threads": 2551,
+            "context_switches": 30190
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b907"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "7074c7efc1b74643"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30064",
+        "collection_timestamp": "2025-03-29T10:50:56.867236",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 5.82,
+            "memory_usage_mb": 11339,
+            "disk_io_iops": 1503,
+            "network_throughput_kbps": 475714,
+            "load_average": [
+                7.44,
+                5.47,
+                1.24
+            ],
+            "active_threads": 4760,
+            "context_switches": 51172
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b202"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2fcdbbe714e741e4"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30065",
+        "collection_timestamp": "2025-07-28T22:48:35.867261",
+        "node_hostname": "srv-prod-02",
+        "system_stats": {
+            "cpu_usage_percent": 11.79,
+            "memory_usage_mb": 19039,
+            "disk_io_iops": 2442,
+            "network_throughput_kbps": 992345,
+            "load_average": [
+                7.03,
+                3.53,
+                4.87
+            ],
+            "active_threads": 4708,
+            "context_switches": 17557
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b899"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "a7d39d650e68672f"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30066",
+        "collection_timestamp": "2025-08-10T17:45:34.867283",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 79.91,
+            "memory_usage_mb": 30612,
+            "disk_io_iops": 13872,
+            "network_throughput_kbps": 683055,
+            "load_average": [
+                5.01,
+                1.46,
+                4.48
+            ],
+            "active_threads": 2103,
+            "context_switches": 19545
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b266"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d7e37dd606d652d8"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30067",
+        "collection_timestamp": "2025-08-14T14:29:16.867306",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 12.2,
+            "memory_usage_mb": 31848,
+            "disk_io_iops": 3449,
+            "network_throughput_kbps": 100411,
+            "load_average": [
+                5.27,
+                6.68,
+                3.62
+            ],
+            "active_threads": 2989,
+            "context_switches": 12734
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b747"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c518990dfc1dd983"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30068",
+        "collection_timestamp": "2025-04-22T15:26:31.867327",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 72.13,
+            "memory_usage_mb": 30319,
+            "disk_io_iops": 7007,
+            "network_throughput_kbps": 948543,
+            "load_average": [
+                6.81,
+                7.89,
+                5.04
+            ],
+            "active_threads": 4994,
+            "context_switches": 35957
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b374"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "4332490ab27ac3fe"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30069",
+        "collection_timestamp": "2025-12-23T19:49:58.867348",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 55.19,
+            "memory_usage_mb": 23764,
+            "disk_io_iops": 13202,
+            "network_throughput_kbps": 491643,
+            "load_average": [
+                2.2,
+                5.47,
+                5.45
+            ],
+            "active_threads": 1729,
+            "context_switches": 91922
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b157"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3f6d1abe91044736"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30070",
+        "collection_timestamp": "2025-07-22T19:03:33.867369",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 77.07,
+            "memory_usage_mb": 25209,
+            "disk_io_iops": 10236,
+            "network_throughput_kbps": 75489,
+            "load_average": [
+                6.21,
+                7.18,
+                7.01
+            ],
+            "active_threads": 4179,
+            "context_switches": 72512
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b667"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3e23037b147b81c4"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30071",
+        "collection_timestamp": "2025-10-12T08:40:38.867390",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 81.51,
+            "memory_usage_mb": 19244,
+            "disk_io_iops": 1216,
+            "network_throughput_kbps": 455837,
+            "load_average": [
+                0.95,
+                6.72,
+                0.33
+            ],
+            "active_threads": 3729,
+            "context_switches": 73445
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b578"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "be1feba7e92cd2ea"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30072",
+        "collection_timestamp": "2025-03-18T00:29:13.867411",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 43.25,
+            "memory_usage_mb": 2841,
+            "disk_io_iops": 8294,
+            "network_throughput_kbps": 762249,
+            "load_average": [
+                4.03,
+                2.36,
+                2.07
+            ],
+            "active_threads": 2540,
+            "context_switches": 79738
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b924"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "ed8687664d1ce731"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30073",
+        "collection_timestamp": "2026-01-04T22:07:50.867437",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 30.95,
+            "memory_usage_mb": 7228,
+            "disk_io_iops": 11489,
+            "network_throughput_kbps": 222248,
+            "load_average": [
+                0.31,
+                4.45,
+                2.73
+            ],
+            "active_threads": 573,
+            "context_switches": 77475
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b263"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "42c8734daf87d45d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30074",
+        "collection_timestamp": "2025-05-13T13:56:51.867459",
+        "node_hostname": "srv-prod-02",
+        "system_stats": {
+            "cpu_usage_percent": 57.61,
+            "memory_usage_mb": 28804,
+            "disk_io_iops": 751,
+            "network_throughput_kbps": 290416,
+            "load_average": [
+                3.72,
+                0.96,
+                1.58
+            ],
+            "active_threads": 2158,
+            "context_switches": 83991
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b147"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "76b6e40938c0c8ad"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30075",
+        "collection_timestamp": "2025-05-12T19:29:44.867482",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 44.66,
+            "memory_usage_mb": 9147,
+            "disk_io_iops": 11555,
+            "network_throughput_kbps": 259326,
+            "load_average": [
+                4.5,
+                6.56,
+                4.65
+            ],
+            "active_threads": 2253,
+            "context_switches": 28366
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b402"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3962a8dc12691df6"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30076",
+        "collection_timestamp": "2025-06-13T05:51:46.867508",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 49.3,
+            "memory_usage_mb": 18640,
+            "disk_io_iops": 8577,
+            "network_throughput_kbps": 411965,
+            "load_average": [
+                2.28,
+                6.88,
+                1.35
+            ],
+            "active_threads": 1419,
+            "context_switches": 6248
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b267"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "cf0d3d3e0bfe1122"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30077",
+        "collection_timestamp": "2025-06-12T03:15:00.867532",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 63.14,
+            "memory_usage_mb": 4243,
+            "disk_io_iops": 12101,
+            "network_throughput_kbps": 179905,
+            "load_average": [
+                6.36,
+                6.28,
+                7.27
+            ],
+            "active_threads": 865,
+            "context_switches": 46585
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b113"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d19e1744e0b82467"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30078",
+        "collection_timestamp": "2026-02-14T14:29:30.867554",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 15.5,
+            "memory_usage_mb": 7064,
+            "disk_io_iops": 9917,
+            "network_throughput_kbps": 742534,
+            "load_average": [
+                0.99,
+                6.6,
+                4.59
+            ],
+            "active_threads": 3971,
+            "context_switches": 82184
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b104"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "807695affd6c9983"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30079",
+        "collection_timestamp": "2025-06-06T01:12:06.867575",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 37.68,
+            "memory_usage_mb": 20052,
+            "disk_io_iops": 12577,
+            "network_throughput_kbps": 635538,
+            "load_average": [
+                0.39,
+                6.85,
+                5.19
+            ],
+            "active_threads": 2937,
+            "context_switches": 36136
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b295"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f50579962b210c5b"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30080",
+        "collection_timestamp": "2025-08-09T16:30:40.867605",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 41.06,
+            "memory_usage_mb": 29367,
+            "disk_io_iops": 2868,
+            "network_throughput_kbps": 56345,
+            "load_average": [
+                3.74,
+                0.48,
+                6.94
+            ],
+            "active_threads": 1087,
+            "context_switches": 61813
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "d",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b641"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "b4469e36957b7f34"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30081",
+        "collection_timestamp": "2025-04-17T04:05:04.867638",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 67.51,
+            "memory_usage_mb": 20435,
+            "disk_io_iops": 660,
+            "network_throughput_kbps": 637755,
+            "load_average": [
+                5.46,
+                6.02,
+                1.05
+            ],
+            "active_threads": 3632,
+            "context_switches": 21898
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b264"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "61cb739ac174a48"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30082",
+        "collection_timestamp": "2025-12-06T04:40:57.867663",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 18.56,
+            "memory_usage_mb": 12098,
+            "disk_io_iops": 10513,
+            "network_throughput_kbps": 958648,
+            "load_average": [
+                5.89,
+                1.33,
+                7.11
+            ],
+            "active_threads": 2904,
+            "context_switches": 49597
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b356"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3a1e18f9d816cfc4"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30083",
+        "collection_timestamp": "2026-01-23T12:12:43.867685",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 59.0,
+            "memory_usage_mb": 17130,
+            "disk_io_iops": 6174,
+            "network_throughput_kbps": 779380,
+            "load_average": [
+                3.58,
+                3.06,
+                1.12
+            ],
+            "active_threads": 3712,
+            "context_switches": 75976
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "d",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b924"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "7536d5af144bce20"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30084",
+        "collection_timestamp": "2025-11-30T20:06:44.867713",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 77.75,
+            "memory_usage_mb": 9422,
+            "disk_io_iops": 14515,
+            "network_throughput_kbps": 349921,
+            "load_average": [
+                6.68,
+                0.94,
+                1.81
+            ],
+            "active_threads": 1746,
+            "context_switches": 92795
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b308"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "7ee85209460be810"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30085",
+        "collection_timestamp": "2025-03-30T22:55:25.867753",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 5.96,
+            "memory_usage_mb": 2955,
+            "disk_io_iops": 3500,
+            "network_throughput_kbps": 330180,
+            "load_average": [
+                7.3,
+                2.46,
+                2.48
+            ],
+            "active_threads": 4175,
+            "context_switches": 33194
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b457"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "69fdd2a942c3f1ef"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30086",
+        "collection_timestamp": "2025-09-18T11:54:53.867806",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 94.61,
+            "memory_usage_mb": 28155,
+            "disk_io_iops": 13845,
+            "network_throughput_kbps": 33599,
+            "load_average": [
+                7.49,
+                4.78,
+                7.66
+            ],
+            "active_threads": 265,
+            "context_switches": 19270
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b448"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "1270d50e511c19a2"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30087",
+        "collection_timestamp": "2026-02-06T23:14:21.867831",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 72.44,
+            "memory_usage_mb": 27810,
+            "disk_io_iops": 6057,
+            "network_throughput_kbps": 574295,
+            "load_average": [
+                3.81,
+                5.76,
+                6.59
+            ],
+            "active_threads": 2126,
+            "context_switches": 92158
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b409"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "b863a16ef984568a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30088",
+        "collection_timestamp": "2025-06-29T19:03:35.867867",
+        "node_hostname": "srv-prod-02",
+        "system_stats": {
+            "cpu_usage_percent": 5.07,
+            "memory_usage_mb": 29497,
+            "disk_io_iops": 13612,
+            "network_throughput_kbps": 691618,
+            "load_average": [
+                4.49,
+                0.75,
+                4.83
+            ],
+            "active_threads": 3234,
+            "context_switches": 79173
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "d",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b502"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "7268376cc67ef7b1"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30089",
+        "collection_timestamp": "2025-04-17T04:45:47.867901",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 29.12,
+            "memory_usage_mb": 28526,
+            "disk_io_iops": 7763,
+            "network_throughput_kbps": 859903,
+            "load_average": [
+                1.48,
+                1.72,
+                0.97
+            ],
+            "active_threads": 1074,
+            "context_switches": 34772
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b386"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f6b64e5b0364d363"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30090",
+        "collection_timestamp": "2025-07-06T10:58:07.867948",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 2.87,
+            "memory_usage_mb": 12182,
+            "disk_io_iops": 5397,
+            "network_throughput_kbps": 698313,
+            "load_average": [
+                2.12,
+                4.17,
+                4.49
+            ],
+            "active_threads": 3581,
+            "context_switches": 43481
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b895"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "3d4d9d23e1b0e260"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30091",
+        "collection_timestamp": "2025-04-10T10:06:03.867989",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 70.27,
+            "memory_usage_mb": 32564,
+            "disk_io_iops": 2673,
+            "network_throughput_kbps": 728091,
+            "load_average": [
+                4.34,
+                3.84,
+                3.6
+            ],
+            "active_threads": 104,
+            "context_switches": 95679
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b834"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "b08d7cb664361e06"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30092",
+        "collection_timestamp": "2025-08-21T00:06:22.868022",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 48.85,
+            "memory_usage_mb": 12565,
+            "disk_io_iops": 4075,
+            "network_throughput_kbps": 259147,
+            "load_average": [
+                5.94,
+                5.28,
+                6.73
+            ],
+            "active_threads": 2568,
+            "context_switches": 16367
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b242"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2c247d7a1d429a95"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30093",
+        "collection_timestamp": "2025-08-17T01:40:06.868070",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 86.3,
+            "memory_usage_mb": 1435,
+            "disk_io_iops": 5334,
+            "network_throughput_kbps": 53670,
+            "load_average": [
+                3.65,
+                7.15,
+                4.65
+            ],
+            "active_threads": 459,
+            "context_switches": 24724
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "d",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b578"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "8e2681120c4f2eeb"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30094",
+        "collection_timestamp": "2025-10-21T08:02:42.868099",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 96.8,
+            "memory_usage_mb": 14560,
+            "disk_io_iops": 6760,
+            "network_throughput_kbps": 524888,
+            "load_average": [
+                0.85,
+                1.98,
+                5.92
+            ],
+            "active_threads": 1620,
+            "context_switches": 31259
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b248"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2aad30552d6030eb"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30095",
+        "collection_timestamp": "2025-06-17T16:02:21.868121",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 58.79,
+            "memory_usage_mb": 14342,
+            "disk_io_iops": 10336,
+            "network_throughput_kbps": 564558,
+            "load_average": [
+                2.22,
+                7.95,
+                5.85
+            ],
+            "active_threads": 694,
+            "context_switches": 59637
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b234"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "d6d0d6c615ced96c"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30096",
+        "collection_timestamp": "2026-02-13T10:17:32.868145",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 26.49,
+            "memory_usage_mb": 20546,
+            "disk_io_iops": 12433,
+            "network_throughput_kbps": 681631,
+            "load_average": [
+                6.97,
+                3.13,
+                5.06
+            ],
+            "active_threads": 572,
+            "context_switches": 38059
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b530"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "83cda296a6126cf6"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30097",
+        "collection_timestamp": "2025-11-22T12:31:32.868167",
+        "node_hostname": "srv-prod-10",
+        "system_stats": {
+            "cpu_usage_percent": 21.43,
+            "memory_usage_mb": 23857,
+            "disk_io_iops": 12578,
+            "network_throughput_kbps": 898428,
+            "load_average": [
+                1.58,
+                2.16,
+                5.26
+            ],
+            "active_threads": 2090,
+            "context_switches": 43119
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b683"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "829a2d70c43ccb72"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30098",
+        "collection_timestamp": "2025-04-28T22:52:32.868188",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 89.77,
+            "memory_usage_mb": 26099,
+            "disk_io_iops": 11953,
+            "network_throughput_kbps": 958067,
+            "load_average": [
+                4.78,
+                5.89,
+                3.33
+            ],
+            "active_threads": 2253,
+            "context_switches": 9497
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "d",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b791"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "1b79243e4015129a"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30099",
+        "collection_timestamp": "2026-01-23T20:50:22.868240",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 93.32,
+            "memory_usage_mb": 8451,
+            "disk_io_iops": 8520,
+            "network_throughput_kbps": 693957,
+            "load_average": [
+                4.38,
+                2.52,
+                1.66
+            ],
+            "active_threads": 3334,
+            "context_switches": 31569
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b686"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "dc3818203a80ba0e"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30100",
+        "collection_timestamp": "2026-01-12T07:50:37.868287",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 91.1,
+            "memory_usage_mb": 14940,
+            "disk_io_iops": 9887,
+            "network_throughput_kbps": 207028,
+            "load_average": [
+                6.64,
+                1.62,
+                1.54
+            ],
+            "active_threads": 1209,
+            "context_switches": 8775
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b294"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "5f8d160357d0da4d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30101",
+        "collection_timestamp": "2026-02-10T07:51:05.868312",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 75.91,
+            "memory_usage_mb": 18569,
+            "disk_io_iops": 9259,
+            "network_throughput_kbps": 480574,
+            "load_average": [
+                5.49,
+                3.03,
+                4.53
+            ],
+            "active_threads": 3996,
+            "context_switches": 77384
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b782"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "fa8bf689e062e298"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30102",
+        "collection_timestamp": "2025-04-05T14:58:35.868334",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 39.01,
+            "memory_usage_mb": 30260,
+            "disk_io_iops": 3378,
+            "network_throughput_kbps": 844398,
+            "load_average": [
+                3.22,
+                2.71,
+                0.78
+            ],
+            "active_threads": 157,
+            "context_switches": 36602
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b212"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "741c16624123e6d0"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30103",
+        "collection_timestamp": "2025-05-31T07:15:38.868356",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 83.19,
+            "memory_usage_mb": 7993,
+            "disk_io_iops": 2729,
+            "network_throughput_kbps": 689407,
+            "load_average": [
+                5.79,
+                2.05,
+                3.65
+            ],
+            "active_threads": 2735,
+            "context_switches": 3732
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b646"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "ca6287726c040f1b"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30104",
+        "collection_timestamp": "2025-10-12T00:02:33.868382",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 41.2,
+            "memory_usage_mb": 31544,
+            "disk_io_iops": 7742,
+            "network_throughput_kbps": 686766,
+            "load_average": [
+                2.18,
+                5.68,
+                5.0
+            ],
+            "active_threads": 2180,
+            "context_switches": 41220
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b868"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "bdce6e9f74736618"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30105",
+        "collection_timestamp": "2026-01-08T14:11:16.868419",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 52.28,
+            "memory_usage_mb": 14073,
+            "disk_io_iops": 8140,
+            "network_throughput_kbps": 756819,
+            "load_average": [
+                0.36,
+                5.48,
+                7.78
+            ],
+            "active_threads": 1663,
+            "context_switches": 20683
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b828"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "ac2a26e02537c006"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30106",
+        "collection_timestamp": "2025-05-01T05:02:36.868473",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 83.0,
+            "memory_usage_mb": 32768,
+            "disk_io_iops": 14937,
+            "network_throughput_kbps": 899964,
+            "load_average": [
+                0.85,
+                4.99,
+                1.36
+            ],
+            "active_threads": 2069,
+            "context_switches": 48006
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b476"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "a40864a7c98da279"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30107",
+        "collection_timestamp": "2025-04-04T09:01:14.868502",
+        "node_hostname": "srv-prod-03",
+        "system_stats": {
+            "cpu_usage_percent": 60.22,
+            "memory_usage_mb": 25088,
+            "disk_io_iops": 13743,
+            "network_throughput_kbps": 603085,
+            "load_average": [
+                2.72,
+                4.69,
+                4.79
+            ],
+            "active_threads": 1280,
+            "context_switches": 28247
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b997"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "74acc7ee5561c143"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30108",
+        "collection_timestamp": "2026-02-15T18:00:38.868524",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 89.16,
+            "memory_usage_mb": 2366,
+            "disk_io_iops": 10974,
+            "network_throughput_kbps": 25099,
+            "load_average": [
+                4.63,
+                1.43,
+                1.97
+            ],
+            "active_threads": 1813,
+            "context_switches": 93580
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b791"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "60bac08ba98a1ffb"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30109",
+        "collection_timestamp": "2026-01-18T06:36:07.868549",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 55.84,
+            "memory_usage_mb": 20976,
+            "disk_io_iops": 5622,
+            "network_throughput_kbps": 1028,
+            "load_average": [
+                3.9,
+                2.93,
+                2.19
+            ],
+            "active_threads": 1338,
+            "context_switches": 40836
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b875"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "761854115cdb4c6d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30110",
+        "collection_timestamp": "2025-08-22T20:45:27.868575",
+        "node_hostname": "srv-prod-08",
+        "system_stats": {
+            "cpu_usage_percent": 27.93,
+            "memory_usage_mb": 29687,
+            "disk_io_iops": 9100,
+            "network_throughput_kbps": 298418,
+            "load_average": [
+                7.8,
+                4.31,
+                6.12
+            ],
+            "active_threads": 2978,
+            "context_switches": 99323
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b729"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "11b3a0c2b401deaa"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30111",
+        "collection_timestamp": "2025-03-30T18:31:34.868618",
+        "node_hostname": "srv-prod-06",
+        "system_stats": {
+            "cpu_usage_percent": 82.13,
+            "memory_usage_mb": 3187,
+            "disk_io_iops": 7411,
+            "network_throughput_kbps": 166200,
+            "load_average": [
+                7.36,
+                3.12,
+                5.74
+            ],
+            "active_threads": 3777,
+            "context_switches": 16585
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "d",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b541"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "8e8218d06eac0cd2"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30112",
+        "collection_timestamp": "2025-09-02T21:01:07.868649",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 50.73,
+            "memory_usage_mb": 2739,
+            "disk_io_iops": 2351,
+            "network_throughput_kbps": 770794,
+            "load_average": [
+                4.92,
+                0.12,
+                7.28
+            ],
+            "active_threads": 4122,
+            "context_switches": 67007
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b977"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "8358c77f79d88c15"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30113",
+        "collection_timestamp": "2026-01-11T02:32:58.868672",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 25.72,
+            "memory_usage_mb": 20323,
+            "disk_io_iops": 1530,
+            "network_throughput_kbps": 946319,
+            "load_average": [
+                3.44,
+                1.53,
+                5.76
+            ],
+            "active_threads": 1415,
+            "context_switches": 84666
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "a",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b774"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "6c86f6738cbe0aca"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30114",
+        "collection_timestamp": "2026-01-03T22:28:26.868696",
+        "node_hostname": "srv-prod-01",
+        "system_stats": {
+            "cpu_usage_percent": 49.82,
+            "memory_usage_mb": 25713,
+            "disk_io_iops": 2879,
+            "network_throughput_kbps": 253244,
+            "load_average": [
+                4.99,
+                1.23,
+                5.68
+            ],
+            "active_threads": 180,
+            "context_switches": 1833
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "c",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b135"
+        },
+        "anomalies_detected": [
+            {
+                "type": "CPU_SPIKE",
+                "severity": "HIGH"
+            }
+        ],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "807745a1c56f02a0"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30115",
+        "collection_timestamp": "2026-02-14T06:34:44.868718",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 93.27,
+            "memory_usage_mb": 17419,
+            "disk_io_iops": 2943,
+            "network_throughput_kbps": 999607,
+            "load_average": [
+                2.81,
+                6.31,
+                7.7
+            ],
+            "active_threads": 4986,
+            "context_switches": 27268
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b894"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "c8ab0b77c03cb543"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30116",
+        "collection_timestamp": "2026-02-03T01:00:26.868740",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 24.15,
+            "memory_usage_mb": 31884,
+            "disk_io_iops": 12605,
+            "network_throughput_kbps": 732626,
+            "load_average": [
+                2.93,
+                4.98,
+                2.06
+            ],
+            "active_threads": 1049,
+            "context_switches": 68480
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b331"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "874a1dbfbe90df16"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30117",
+        "collection_timestamp": "2025-12-06T11:50:08.868761",
+        "node_hostname": "srv-prod-09",
+        "system_stats": {
+            "cpu_usage_percent": 34.16,
+            "memory_usage_mb": 29046,
+            "disk_io_iops": 10941,
+            "network_throughput_kbps": 653185,
+            "load_average": [
+                5.95,
+                3.09,
+                1.79
+            ],
+            "active_threads": 3514,
+            "context_switches": 72250
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b343"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "6ea8ad3c69df4cde"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30118",
+        "collection_timestamp": "2025-05-23T02:05:05.868785",
+        "node_hostname": "srv-prod-02",
+        "system_stats": {
+            "cpu_usage_percent": 25.25,
+            "memory_usage_mb": 21829,
+            "disk_io_iops": 10269,
+            "network_throughput_kbps": 307774,
+            "load_average": [
+                6.31,
+                6.15,
+                2.89
+            ],
+            "active_threads": 3603,
+            "context_switches": 23021
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b214"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "895678aaa5e4425f"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30119",
+        "collection_timestamp": "2026-03-03T21:38:52.868807",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 77.92,
+            "memory_usage_mb": 20379,
+            "disk_io_iops": 2039,
+            "network_throughput_kbps": 209630,
+            "load_average": [
+                1.8,
+                0.22,
+                0.73
+            ],
+            "active_threads": 602,
+            "context_switches": 13972
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "c",
+            "instance_type": "c5.2xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b841"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "b38958882f2ec84d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30120",
+        "collection_timestamp": "2025-10-24T21:00:18.868829",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 36.43,
+            "memory_usage_mb": 12911,
+            "disk_io_iops": 2415,
+            "network_throughput_kbps": 865595,
+            "load_average": [
+                0.57,
+                4.91,
+                7.32
+            ],
+            "active_threads": 3823,
+            "context_switches": 1535
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b181"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "236298efc4ef0d99"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30121",
+        "collection_timestamp": "2025-06-27T17:10:45.868850",
+        "node_hostname": "srv-prod-07",
+        "system_stats": {
+            "cpu_usage_percent": 11.86,
+            "memory_usage_mb": 19348,
+            "disk_io_iops": 1076,
+            "network_throughput_kbps": 168097,
+            "load_average": [
+                3.1,
+                3.11,
+                6.17
+            ],
+            "active_threads": 1628,
+            "context_switches": 10077
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b687"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "830fe7f3613dbd0c"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30122",
+        "collection_timestamp": "2025-03-27T13:45:51.868871",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 52.17,
+            "memory_usage_mb": 26091,
+            "disk_io_iops": 12456,
+            "network_throughput_kbps": 912951,
+            "load_average": [
+                1.59,
+                3.43,
+                6.93
+            ],
+            "active_threads": 4293,
+            "context_switches": 52183
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b709"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "13be8ba6b3533b56"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30123",
+        "collection_timestamp": "2025-10-13T02:15:30.868895",
+        "node_hostname": "srv-prod-11",
+        "system_stats": {
+            "cpu_usage_percent": 73.83,
+            "memory_usage_mb": 26321,
+            "disk_io_iops": 1841,
+            "network_throughput_kbps": 686523,
+            "load_average": [
+                1.61,
+                6.29,
+                2.65
+            ],
+            "active_threads": 4973,
+            "context_switches": 4540
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b347"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "32d54d5c68123a2d"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30124",
+        "collection_timestamp": "2026-01-24T20:25:29.868918",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 39.74,
+            "memory_usage_mb": 25548,
+            "disk_io_iops": 8468,
+            "network_throughput_kbps": 368819,
+            "load_average": [
+                1.9,
+                1.68,
+                1.73
+            ],
+            "active_threads": 781,
+            "context_switches": 21675
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "a",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b157"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "a9423645a0f80483"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30125",
+        "collection_timestamp": "2025-06-17T00:45:32.868942",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 70.99,
+            "memory_usage_mb": 22663,
+            "disk_io_iops": 10659,
+            "network_throughput_kbps": 320597,
+            "load_average": [
+                7.83,
+                7.46,
+                3.21
+            ],
+            "active_threads": 614,
+            "context_switches": 97490
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "c",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": true,
+            "deployment_version": "v4.2.0-b646"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f4c28bc885e43baa"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30126",
+        "collection_timestamp": "2025-03-12T07:14:08.868968",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 68.22,
+            "memory_usage_mb": 31196,
+            "disk_io_iops": 4860,
+            "network_throughput_kbps": 213323,
+            "load_average": [
+                3.0,
+                3.58,
+                6.21
+            ],
+            "active_threads": 1296,
+            "context_switches": 16793
+        },
+        "environment_context": {
+            "region": "us-west-2",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b763"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "f6487434f10b4853"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30127",
+        "collection_timestamp": "2025-07-25T12:42:54.868990",
+        "node_hostname": "srv-prod-12",
+        "system_stats": {
+            "cpu_usage_percent": 23.05,
+            "memory_usage_mb": 31290,
+            "disk_io_iops": 2594,
+            "network_throughput_kbps": 962322,
+            "load_average": [
+                5.89,
+                2.08,
+                2.82
+            ],
+            "active_threads": 4916,
+            "context_switches": 80392
+        },
+        "environment_context": {
+            "region": "us-east-1",
+            "availability_zone": "b",
+            "instance_type": "m5.large",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b167"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "2b7edf6894abf608"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30128",
+        "collection_timestamp": "2025-03-24T12:15:33.869011",
+        "node_hostname": "srv-prod-05",
+        "system_stats": {
+            "cpu_usage_percent": 22.11,
+            "memory_usage_mb": 16058,
+            "disk_io_iops": 2218,
+            "network_throughput_kbps": 669328,
+            "load_average": [
+                6.11,
+                0.93,
+                5.03
+            ],
+            "active_threads": 1784,
+            "context_switches": 72456
+        },
+        "environment_context": {
+            "region": "ap-southeast-1",
+            "availability_zone": "b",
+            "instance_type": "r5.xlarge",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b195"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "947b0a85a34dc9dc"
+        }
+    },
+    {
+        "snapshot_id": "MET-SN-30129",
+        "collection_timestamp": "2025-04-30T15:54:44.869056",
+        "node_hostname": "srv-prod-04",
+        "system_stats": {
+            "cpu_usage_percent": 74.67,
+            "memory_usage_mb": 10767,
+            "disk_io_iops": 7876,
+            "network_throughput_kbps": 980290,
+            "load_average": [
+                0.76,
+                4.19,
+                7.48
+            ],
+            "active_threads": 347,
+            "context_switches": 63392
+        },
+        "environment_context": {
+            "region": "eu-west-1",
+            "availability_zone": "c",
+            "instance_type": "t3.medium",
+            "is_spot_instance": false,
+            "deployment_version": "v4.2.0-b510"
+        },
+        "anomalies_detected": [],
+        "aggregation_bucket": "60_SECONDS",
+        "is_reconciled": true,
+        "metadata": {
+            "collector_version": "1.8.4",
+            "schema_version": "2.4.0",
+            "internal_tracking_id": "600929d5f6718c6f"
+        }
+    }
